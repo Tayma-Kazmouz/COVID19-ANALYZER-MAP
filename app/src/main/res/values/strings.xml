@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="covid_analyzer_map">COVID ANALYZER MAP</string>
+    <string name="register">Register</string>
+
+
+    <string name="register_with_us_to_be_informed_about_covid_19">Register with us to be informed about COVID-19</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_in">Sign in</string>
+</resources>

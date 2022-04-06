@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/title_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/covid_analyzer_map"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:typeface="normal" />
+
+    <TextView
+        android:id="@+id/register_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/roboto_medium"
+        android:letterSpacing="0.01"
+        android:text="@string/register"
+        android:textAlignment="center"
+        android:textColor="#FF647C"
+        android:textSize="24sp"
+        android:typeface="normal" />
+
+    <TextView
+        android:id="@+id/registertext_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="@string/register_with_us_to_be_informed_about_covid_19"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:typeface="normal" />
+
+    <EditText
+        android:id="@+id/et_fullname_id"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="50dp"
+        android:hint="@string/full_name"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:inputType="text"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/et_email_id"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/email"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:inputType="textEmailAddress"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/et_password_id"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:longClickable="false"
+        android:drawableRight="@drawable/passwordicon"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/bt_register_id"
+        android:layout_width="172dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/capbuttonpressselector"
+        android:letterSpacing="0.02"
+        android:text="@string/register"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:enabled="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_alreadyhave_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/already_have_an_account"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:typeface="normal" />
+
+        <TextView
+            android:id="@+id/sign_in_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginLeft="3dp"
+            android:text="@string/sign_in"
+            android:textAlignment="center"
+            android:textColor="#029072"
+            android:textSize="16sp"
+            android:typeface="normal" />
+
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
