@@ -1,19 +1,22 @@
 package com.example.myapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
 
     EditText email, password;
     boolean passwordVisible;
+    TextView goToDashBoard;
 
 
     @Override
@@ -52,5 +55,20 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-    }
-}
+
+        goToDashBoard = findViewById(R.id.textViewGoDashBoard_id);
+        goToDashBoard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,DashBoard.class));
+            }
+        });
+
+
+
+
+    }//end of onCreate
+
+
+
+}//end of class
