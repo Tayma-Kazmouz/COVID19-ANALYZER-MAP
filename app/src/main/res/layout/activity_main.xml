@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="30dp"
+    android:gravity="center_horizontal"
     tools:context=".MainActivity">
 
 
@@ -12,45 +14,46 @@
         android:id="@+id/title_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginBottom="10dp"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/covid_analyzer_map"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:typeface="normal" />
 
     <TextView
         android:id="@+id/register_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/roboto_medium"
         android:letterSpacing="0.01"
         android:text="@string/register"
         android:textAlignment="center"
         android:textColor="#FF647C"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:typeface="normal" />
 
     <TextView
         android:id="@+id/registertext_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/roboto_light"
         android:text="@string/register_with_us_to_be_informed_about_covid_19"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:typeface="normal" />
 
     <EditText
         android:id="@+id/et_fullname_id"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edittext_newlook"
+        android:paddingTop="15dp"
+        android:layout_marginTop="40dp"
         android:hint="@string/full_name"
         android:paddingBottom="20dp"
         android:paddingLeft="10dp"
@@ -59,10 +62,11 @@
 
     <EditText
         android:id="@+id/et_email_id"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edittext_newlook"
+        android:paddingTop="15dp"
+        android:layout_marginTop="15dp"
         android:hint="@string/email"
         android:paddingBottom="20dp"
         android:paddingLeft="10dp"
@@ -71,24 +75,26 @@
 
     <EditText
         android:id="@+id/et_password_id"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edittext_newlook"
+        android:gravity="center_vertical"
+        android:paddingTop="15dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="15dp"
+        android:layout_marginTop="15dp"
         android:hint="@string/password"
         android:inputType="textPassword"
         android:longClickable="false"
         android:drawableRight="@drawable/passwordicon"
-        android:paddingBottom="20dp"
-        android:paddingLeft="10dp"
         android:textSize="14sp" />
 
     <Button
         android:id="@+id/bt_register_id"
-        android:layout_width="172dp"
+        android:layout_width="150dp"
         android:layout_height="55dp"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="35dp"
         android:background="@drawable/capbuttonpressselector"
         android:letterSpacing="0.02"
         android:text="@string/register"
@@ -98,14 +104,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tv_alreadyhave_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="90dp"
             android:layout_marginTop="25dp"
             android:fontFamily="@font/roboto_light"
             android:text="@string/already_have_an_account"
@@ -132,6 +138,16 @@
 
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewGoDashBoard_id"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:text="GO TO DASHBOARD (FOR TESTING)" />
 
 
 </LinearLayout>
