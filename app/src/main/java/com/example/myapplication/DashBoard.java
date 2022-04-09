@@ -240,9 +240,19 @@ public class DashBoard extends AppCompatActivity {
 
     }//end of onCreate
 
+
+
     @Override
     protected void onStart() {
         super.onStart();
+
+        plotData();
+
+
+    }// end of onStart
+
+
+    void plotData(){
 
 
 
@@ -348,7 +358,10 @@ public class DashBoard extends AppCompatActivity {
 
 
 
-    }// end of onStart
+
+    }//end of plotData
+
+
 
     private synchronized void getCasesDeathsData(){
 
@@ -369,6 +382,11 @@ public class DashBoard extends AppCompatActivity {
                 try {
                     dSCases = response.getJSONObject("cases");
                     dSDeaths = response.getJSONObject("deaths");
+
+                    // parse the JsonObjects outside...
+                    parseJsonObjs(dSCases,dSDeaths);
+
+
 
                     // This Causes Our Issue If The Data Is Not Found For Today Yet...
                     valMx = dSCases.getString(jsonFetchM);
@@ -458,8 +476,130 @@ public class DashBoard extends AppCompatActivity {
 
     }//end of getCasesData
 
+    private void parseJsonObjs(JSONObject dSCases, JSONObject dSDeaths) throws JSONException {
+
+        valMx = dSCases.getString(jsonFetchM);
+        valM = Long.valueOf(valMx);
+        valMx1 = dSCases.getString(jsonFetchM1);
+        valM1 =  Long.valueOf(valMx1);
+        valMx2 = dSCases.getString(jsonFetchM2);
+        valM2 =  Long.valueOf(valMx2);
+        valMx3 = dSCases.getString(jsonFetchM3);
+        valM3 =  Long.valueOf(valMx3);
+        valMx4 = dSCases.getString(jsonFetchM4);
+        valM4 =  Long.valueOf(valMx4);
+        valMx5 = dSCases.getString(jsonFetchM5);
+        valM5 =  Long.valueOf(valMx5);
+
+        valDx = dSDeaths.getString(jsonFetchM);
+        valD = Long.valueOf(valDx);
+        valDx1 = dSDeaths.getString(jsonFetchM1);
+        valD1 = Long.valueOf(valDx1);
+        valDx2 = dSDeaths.getString(jsonFetchM2);
+        valD2 = Long.valueOf(valDx2);
+        valDx3 = dSDeaths.getString(jsonFetchM3);
+        valD3 = Long.valueOf(valDx3);
+        valDx4 = dSDeaths.getString(jsonFetchM4);
+        valD4 = Long.valueOf(valDx4);
+        valDx5 = dSDeaths.getString(jsonFetchM5);
+        valD5 = Long.valueOf(valDx5);
 
 
+        ///// ------------------------------PLOT THE DATA ABOVE------------------------------------------
+
+
+        // Step 1 -- Array List with Entries
+        ArrayList<Entry> activeCasesEntries = new ArrayList<Entry>();
+        activeCasesEntries.add(new Entry(0,valM5));
+        activeCasesEntries.add(new Entry(1,valM4));
+        activeCasesEntries.add(new Entry(2,valM3));
+        activeCasesEntries.add(new Entry(3,valM2));
+        activeCasesEntries.add(new Entry(4,valM1));
+        activeCasesEntries.add(new Entry(5,valM));
+
+        //Step 2 DataSet
+
+        LineDataSet lineDataSetCases = new LineDataSet(activeCasesEntries,"Worldwide Case Statistics");
+
+        ArrayList<ILineDataSet> iLineDataSets = new ArrayList<>();
+        iLineDataSets.add(lineDataSetCases);
+
+        // Step3 link Data to obj
+        LineData lineData = new LineData((iLineDataSets));
+        myLineChart.setData(lineData);
+        myLineChart.invalidate();
+
+        // Customize
+        myLineChart.setNoDataText("Data Not Found");
+        myLineChart.getLegend().setEnabled(false);
+        myLineChart.getDescription().setEnabled(false);
+        myLineChart.animateY(1400, Easing.EaseInOutExpo);
+        myLineChart.getAxisLeft().setDrawGridLines(false);
+        myLineChart.getAxisRight().setDrawGridLines(false);
+        myLineChart.getXAxis().setDrawGridLines(false);
+        myLineChart.getAxisRight().setEnabled(false);
+        myLineChart.getXAxis().setPosition(XAxis.XAxisPosition.BOTTOM);
+        myLineChart.getXAxis().setGranularity(1f);
+        myLineChart.setExtraLeftOffset(15);
+        myLineChart.setExtraRightOffset(15);
+        myLineChart.setScaleEnabled(false); // for zooming in and out
+
+
+        // GIVING THE X AXIS THE NAMES ACCORDING TO OUR CURRENT MONTH DYNAMICALLY
+        List<String> xAxisValues = new ArrayList<>(Arrays.asList(nameM5,nameM4,nameM3,nameM2,nameM1,nameM));
+
+        myLineChart.getXAxis().setValueFormatter(new IndexAxisValueFormatter(xAxisValues)); // sets the x axis to the Month Strings created above
+
+        myLineChart.getLineData().setValueFormatter(new LargeValueFormatter()); // Makes the large values appear with m for millions
+
+        lineDataSetCases.setLineWidth(5);
+        lineDataSetCases.setValueTextSize(10);
+        lineDataSetCases.setValueTextColor(Color.parseColor("#99000000"));
+        lineDataSetCases.setMode(LineDataSet.Mode.CUBIC_BEZIER);// Makes The Line Plotting have curvature
+
+
+
+
+// Another List of Deaths Data On The Same Line Graph ...
+        ArrayList<Entry> DeathsEntries = new ArrayList<Entry>();
+        DeathsEntries.add(new Entry(0,valD5));
+        DeathsEntries.add(new Entry(1,valD4));
+        DeathsEntries.add(new Entry(2,valD3));
+        DeathsEntries.add(new Entry(3,valD2));
+        DeathsEntries.add(new Entry(4,valD1));
+        DeathsEntries.add(new Entry(5,valD));
+
+
+        LineDataSet deathsDataSet = new LineDataSet(DeathsEntries,"Worldwide Statistics Death");
+        ArrayList<ILineDataSet> deathsIDataSets = new ArrayList<>();
+        deathsIDataSets.add(deathsDataSet);
+
+
+        deathsDataSet.setLineWidth(5);
+        deathsDataSet.setValueTextSize(10);
+        deathsDataSet.setValueTextColor(Color.parseColor("#99000000"));
+        deathsDataSet.setColor(Color.parseColor("#FF0000"));
+        deathsDataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER); // Makes The Line Plotting have curvature
+        deathsDataSet.setCircleColor(Color.parseColor("#FF0000")); // changes the dot value color
+        deathsDataSet.setValueFormatter(new LargeValueFormatter()); // makes large values show millions as m
+
+        LineData combineData = new LineData(lineDataSetCases ,deathsDataSet);
+
+        //Disables the y Axis
+        YAxis rightYAxis = myLineChart.getAxisRight();
+        rightYAxis.setEnabled(false);
+        YAxis leftYAxis = myLineChart.getAxisLeft();
+        leftYAxis.setEnabled(false);
+
+
+
+        myLineChart.setData(combineData);
+        myLineChart.invalidate();
+
+
+
+
+    }//end of parseJsonObjs
 
 
 }//end of class
