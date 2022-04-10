@@ -45,5 +45,8 @@ dependencies {
     // added this to fetch json
     implementation 'com.android.volley:volley:1.2.1'
 
+    //added this for the shimmer effect
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
 
 }
