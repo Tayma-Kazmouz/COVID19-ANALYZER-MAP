@@ -1,11 +1,13 @@
 package com.example.myapplication;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
@@ -27,6 +29,7 @@ import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.github.mikephil.charting.formatter.LargeValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+import com.google.android.material.card.MaterialCardView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -129,12 +132,27 @@ public class DashBoard extends AppCompatActivity {
     long valD5;
 
 
+    MaterialCardView coronaCasesCv;
+
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board);
+
+
+        coronaCasesCv = findViewById(R.id.coronaCasesCV_id);
+        coronaCasesCv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DashBoard.this,CoronaCasesList.class));
+            }
+        });
+
+
+
+
 
         //Define
 
