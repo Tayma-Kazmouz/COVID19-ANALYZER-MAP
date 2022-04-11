@@ -24,11 +24,12 @@ public class MainActivity extends AppCompatActivity {
 
     EditText email, password, username;
     boolean passwordVisible;
-//    TextView goToDashBoard;
+//  TextView goToDashBoard;
     TextView gotosigninpage;
     TextView gotoverification;
     FirebaseAuth firebaseAuth;
     Button register;
+    TextView teststatus;
 
 
     @Override
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        teststatus = findViewById(R.id.tv_alreadyhave_id);
         email = findViewById(R.id.et_email_id);
         password = findViewById(R.id.et_password_id);
         username = findViewById(R.id.et_fullname_id);
@@ -140,6 +143,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        teststatus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,ReportStatus2.class));
+            }
+        });
 
 
     }//end of onCreate
