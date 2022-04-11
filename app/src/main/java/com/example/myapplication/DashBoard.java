@@ -18,7 +18,6 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.XAxis;
@@ -133,6 +132,7 @@ public class DashBoard extends AppCompatActivity {
 
 
     MaterialCardView coronaCasesCv;
+    MaterialCardView vaccineCV;
 
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -149,6 +149,15 @@ public class DashBoard extends AppCompatActivity {
                 startActivity(new Intent(DashBoard.this,CoronaCasesList.class));
             }
         });
+        vaccineCV = findViewById(R.id.VaccinesCV_id);
+        vaccineCV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DashBoard.this,VaccineList.class));
+            }
+        });
+
+
 
 
 
@@ -156,7 +165,7 @@ public class DashBoard extends AppCompatActivity {
 
         //Define
 
-        rq = Volley.newRequestQueue(DashBoard.this);
+        rq = VolleySingleton.getInstance(this).getRequestQueue();
 
 
 

@@ -38,7 +38,7 @@
 
 
     <TextView
-        android:id="@+id/countryCases_id"
+        android:id="@+id/countryCasesDoses_id"
         android:layout_marginLeft="5dp"
         android:layout_width="0dp"
         android:layout_weight="5"
@@ -48,7 +48,7 @@
         android:fontFamily="@font/poppins_medium"
         android:text="10m"/>
     <TextView
-        android:id="@+id/countryDeaths_id"
+        android:id="@+id/countryDeathsCoverage_id"
         android:layout_weight="5"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
