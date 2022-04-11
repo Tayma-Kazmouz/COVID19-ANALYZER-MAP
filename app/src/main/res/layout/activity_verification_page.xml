@@ -100,7 +100,7 @@
         android:background="@drawable/capbuttonpressselector"
         android:enabled="true"
         android:letterSpacing="0.02"
-        android:onClick="gotosignin"
+        android:onClick="gotoreportstatus1"
         android:text="@string/Continue"
         android:textAllCaps="false"
         android:textSize="20sp"

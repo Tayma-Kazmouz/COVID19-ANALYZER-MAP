@@ -17,4 +17,18 @@
     <string name="please_verify_your_email_to_be_able_to_continue">Please verify your email to be able to continue!</string>
     <string name="a_verification_link_has_been_sent_to_your_email">A verification link has been sent to your Email</string>
     <string name="Continue">Continue</string>
+    <string name="report_of_status">Report of Status</string>
+    <string name="biontech">Biontech</string>
+    <string name="johnson_johnson">Johnson Johnson</string>
+    <string name="moderna">Moderna</string>
+    <string name="sinovac">Sinovac</string>
+    <string name="astrazeneca">AstraZeneca</string>
+    <string name="none">None</string>
+    <string name="submit">Submit</string>
+    <string name="specify_the_vaccine_s_you_took">Specify the vaccine(s) you took:</string>
+    <string name="specify_the_covid_condition_s">Specify the covid condition(s):</string>
+    <string name="positive">Positive</string>
+    <string name="negative">Negative</string>
+    <string name="contacted_before">Contacted Before</string>
+
 </resources>
