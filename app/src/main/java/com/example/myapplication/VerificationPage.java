@@ -14,8 +14,8 @@ public class VerificationPage extends AppCompatActivity {
         setContentView(R.layout.activity_verification_page);
     }
 
-    public void gotosignin(View view) {
-        Intent i= new Intent(VerificationPage.this, SignInPage.class);
+    public void gotoreportstatus1(View view) {
+        Intent i= new Intent(VerificationPage.this, ReportStatus1.class);
         startActivity(i);
     }
 }
