@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -44,6 +45,7 @@ public class CoronaCasesList extends AppCompatActivity {
         shimmer = findViewById(R.id.ItemShimmer_id);
 
 
+
         lv = findViewById(R.id.lvCases_id);
 
         rq = VolleySingleton.getInstance(this).getRequestQueue();
@@ -52,6 +54,21 @@ public class CoronaCasesList extends AppCompatActivity {
         gson = new GsonBuilder().create();
 
         enableShimmer();
+
+
+        ImageView back = findViewById(R.id.imageViewCasesBack_id);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CoronaCasesList.this,DashBoard.class));
+                finish();
+            }
+        });
+
+
+
+
+
 
         getJsonData(new VolleyResponseListener() {
             @Override
@@ -98,12 +115,33 @@ public class CoronaCasesList extends AppCompatActivity {
                         String countryNameVal = dS[i].getCountryInfo().getIso2();
                         String countryTotalCasesVal = dS[i].getCases().toString();
                         String countryTotalDeathsVal = dS[i].getDeaths().toString();
+                        String countryFullName = dS[i].getCountry().toString();
 
 
                         Picasso.get().load(flagUrl).into(flag);
                         countryName.setText(countryNameVal);
+                        countryName.setTextSize(14);
                         countryCases.setText(countryTotalCasesVal);
                         countryDeaths.setText(countryTotalDeathsVal);
+
+                        // The Following are Cruise Ships which only have a full name attribute and no Iso names
+
+                        if (countryFullName.equals("Diamond Princess")){
+                            countryName.setText("Diamond\nPrincess");
+                            countryName.setTextSize(5);
+
+                            // since it belongs to the UK
+                            Picasso.get().load("https://disease.sh/assets/img/flags/gb.png").into(flag);
+
+                        }
+
+                        if (countryFullName.equals("MS Zaandam")){
+                            countryName.setText("MS\nZaandam");
+                            countryName.setTextSize(5);
+
+                            // since it belongs to the Netherlands
+                            Picasso.get().load("https://disease.sh/assets/img/flags/nl.png").into(flag);
+                        }
 
 
                         return view;
@@ -117,7 +155,8 @@ public class CoronaCasesList extends AppCompatActivity {
 
     }//end onCreate
 
-    public void enableShimmer() {
+    private void enableShimmer() {
+
         ba = new BaseAdapter() {
             @Override
             public int getCount() {
@@ -142,7 +181,10 @@ public class CoronaCasesList extends AppCompatActivity {
                 }
 
                 shimmer = view.findViewById(R.id.ItemShimmer_id);
+                shimmer.setEnabled(true);
                 shimmer.startShimmer();
+                if ( !shimmer.isShimmerVisible())
+                    shimmer.setVisibility(View.VISIBLE);
                 return view;
             }
         };
@@ -152,18 +194,24 @@ public class CoronaCasesList extends AppCompatActivity {
     }
 
     public void disableShimmer() {
-        shimmer.stopShimmer();
+        Log.e("TAG", "disableShimmer: " + shimmer.isShimmerStarted()+ " "+shimmer.isShimmerVisible());
+
+        if ( shimmer.isShimmerStarted()){
+            shimmer.stopShimmer();
+            shimmer.hideShimmer();
+            shimmer.setEnabled(false);
+        }
 
     }
 
-    public interface VolleyResponseListener {
+    private interface VolleyResponseListener {
         void onError(String message);
 
         void onResponse(Corona[] dS);
     }
 
 
-    public void getJsonData(VolleyResponseListener volleyResponseListener) {
+    private void getJsonData(VolleyResponseListener volleyResponseListener) {
 
         String url = "https://disease.sh/v3/covid-19/countries";
 
@@ -179,8 +227,7 @@ public class CoronaCasesList extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getApplicationContext(), "Error Fetching Json: " + error.getMessage(), Toast.LENGTH_LONG).show();
-                volleyResponseListener.onError("Error Fetching Data");
+                volleyResponseListener.onError("Error Fetching Data "+error.getMessage());
             }
         });
 

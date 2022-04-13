@@ -24,7 +24,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewCasesBack_id"
         android:layout_width="44dp"
         android:layout_height="34dp"
         android:adjustViewBounds="true"
