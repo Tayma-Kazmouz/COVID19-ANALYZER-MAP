@@ -8,7 +8,7 @@
     tools:context=".VaccineList">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/vaccineTitle_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
@@ -59,6 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:paddingRight="12dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -87,7 +88,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/poppins_medium"
                     android:gravity="center"
-                    android:text="Coverage"
+                    android:text="Per 100 People"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -115,7 +116,7 @@
         app:layout_constraintGuide_percent="0.07" />
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/vaccineSwitch_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/materialCardView2"
