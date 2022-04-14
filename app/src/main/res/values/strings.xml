@@ -30,5 +30,8 @@
     <string name="positive">Positive</string>
     <string name="negative">Negative</string>
     <string name="contacted_before">Contacted Before</string>
+    <string name="coronavirus_disease_covid_19_is_an_infectious_disease_caused_by_the_sars_cov_2_virus">Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus</string>
+    <string name="symptoms">Symptoms</string>
+    <string name="the_infectious_disease_covid_19">The infectious disease Covid-19</string>
 
 </resources>

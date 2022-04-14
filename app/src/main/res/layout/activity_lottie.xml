@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#1AFF647C">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/covid_id"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@id/firstlottieend"
+            app:layout_constraintStart_toStartOf="@id/firstlottiestart"
+            app:layout_constraintTop_toTopOf="@id/firstlottieHORstart"
+            app:layout_constraintBottom_toBottomOf="@id/firstlottieHORend"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/virus_covid">
+
+        </com.airbnb.lottie.LottieAnimationView>
+
+        <TextView
+            android:id="@+id/tv_lottie1_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/bree_serif"
+            android:text="@string/the_infectious_disease_covid_19"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="@id/lottieend"
+            app:layout_constraintStart_toStartOf="@id/lottiestart"
+            app:layout_constraintTop_toBottomOf="@id/covid_id" />
+
+        <TextView
+            android:id="@+id/headersymp_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/bree_serif"
+            android:text="@string/symptoms"
+            android:textColor="#FF647C"
+            android:textAlignment="center"
+            android:textSize="35sp"
+            app:layout_constraintEnd_toEndOf="@id/lottieend"
+            app:layout_constraintStart_toStartOf="@id/lottiestart"
+            app:layout_constraintTop_toBottomOf="@id/tv_lottie1_id" />
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/fever_id"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@id/lottieend"
+            app:layout_constraintStart_toStartOf="@id/lottiestart"
+            app:layout_constraintTop_toBottomOf="@id/headersymp_id"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/fever"></com.airbnb.lottie.LottieAnimationView>
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/shortness_breath_id"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@id/lottieend"
+            app:layout_constraintStart_toStartOf="@id/lottiestart"
+            app:layout_constraintTop_toBottomOf="@id/fever_id"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/shortness_of_breath"></com.airbnb.lottie.LottieAnimationView>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/drycough_id"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@id/lottieend"
+            app:layout_constraintStart_toStartOf="@id/lottiestart"
+            app:layout_constraintTop_toBottomOf="@id/shortness_breath_id"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/dry_cough"></com.airbnb.lottie.LottieAnimationView>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/fatigue_id"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@id/lottieend"
+            app:layout_constraintStart_toStartOf="@id/lottiestart"
+            app:layout_constraintTop_toBottomOf="@id/drycough_id"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/fatigue"></com.airbnb.lottie.LottieAnimationView>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/sore_throat_id"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@id/lottieend"
+            app:layout_constraintStart_toStartOf="@id/lottiestart"
+            app:layout_constraintTop_toBottomOf="@id/fatigue_id"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/sore_throat"></com.airbnb.lottie.LottieAnimationView>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/diarrhea_id"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@id/lottieend"
+            app:layout_constraintStart_toStartOf="@id/lottiestart"
+            app:layout_constraintTop_toBottomOf="@id/sore_throat_id"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/diarrhea"></com.airbnb.lottie.LottieAnimationView>
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lottiestart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lottieend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.8" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/firstlottiestart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/firstlottieend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/firstlottieHORstart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="40dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/firstlottieHORend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="550dp"  />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
