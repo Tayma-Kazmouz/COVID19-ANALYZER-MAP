@@ -27,6 +27,8 @@ public class SignInPage extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     boolean passwordVisible;
     TextView gotoregisterpage;
+    TextView gotolottie;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,8 +71,14 @@ public class SignInPage extends AppCompatActivity {
         });
 
 
-
-
+    //going to lottie test
+    gotolottie= findViewById(R.id.tv_donthaveacc_id);
+    gotolottie.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            startActivity(new Intent(SignInPage.this,Lottie.class));
+        }
+    });
 
 
 
