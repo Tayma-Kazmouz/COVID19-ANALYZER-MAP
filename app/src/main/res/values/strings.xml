@@ -36,11 +36,9 @@
 
 
 
+    <string name="skip">Skip</string>
 
-
-
-
-//testing
+    //Lottie1 text below
 
     //Headings
     <string name="heading_one">COVID-19</string>
@@ -51,6 +49,7 @@
     <string name="heading_sixth">Symptom#5</string>
     <string name="heading_seventh">Symptom#6</string>
 
+
     //Description
     <string name="desc_one">Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus.
 Most people infected with the virus will experience mild to moderate respiratory illness.</string>
@@ -60,6 +59,41 @@ Most people infected with the virus will experience mild to moderate respiratory
     <string name="desc_fifth">Fatigue is very common after viral infections, such as COVID and normally it settles after 2 or 3 weeks. However, in some people it can linger for weeks or months.</string>
     <string name="desc_sixth">Paired with previously mentioned symptoms like Fever and Cough; a sore throat indicates the possibly of being infected with COVID-19.</string>
     <string name="desc_seventh">Diarrhoea is an early sign of COVID-19, starting on the first day of infection and building in intensity during the first week. It lasts 2-7 days in adults.</string>
+
+
+
+    //lottie2 text below
+
+    //precaution name
+    <string name="pre_one">Get Vaccinated!</string>
+    <string name="pre_two">Stay At Home</string>
+    <string name="pre_third">Wash Hands</string>
+    <string name="pre_fourth">Use Masks</string>
+    <string name="pre_fifth">Use Hand Sanitizer</string>
+    <string name="pre_sixth">Do NOT touch your Face</string>
+    <string name="pre_seventh">Avoid Contacts</string>
+    <string name="pre_eight">Avoid Crowd Places</string>
+    <string name="pre_nine">Social Distancing</string>
+
+
+    //description
+
+    <string name="predesc_one">Ensure you are fully vaccinated including the booster shot.</string>
+    <string name="predesc_two">It is better to quarantine yourself especially if you have any sypmtoms to protect yourself and others.</string>
+    <string name="predesc_third">Wash your hands for at least 20 seconds with water and soap.</string>
+    <string name="predesc_fourth">If you have to leave home, always keep your mask on.</string>
+    <string name="predesc_fifth">Sanitize your hands before and after interacting with anything to lessen the chances of getting infected.</string>
+    <string name="predesc_sixth"> Our hands carry a lot of germs from our day to day activities so avoid touching your face as much as possible.</string>
+    <string name="predesc_seventh">Avoid getting in contact with people as much as possible, avoid handshakes or hugging.</string>
+    <string name="predesc_eight">Avoid going to crowded places. More people = Higher chances of infection.</string>
+    <string name="predesc_nine">If you must contact people or go outside ensure to maintain social distance for your and others safety.</string>
+
+
+
+
+
+
+
 
 
 </resources>
