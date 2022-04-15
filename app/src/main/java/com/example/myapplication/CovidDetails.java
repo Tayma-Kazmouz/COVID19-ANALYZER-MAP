@@ -75,7 +75,8 @@ public class CovidDetails extends AppCompatActivity {
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(CovidDetails.this,CoronaCasesList.class));
+                startActivity(new Intent(getApplicationContext(),CoronaCasesList.class));
+                finish();
             }
         });
 
