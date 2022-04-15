@@ -76,7 +76,7 @@ public class SignInPage extends AppCompatActivity {
     gotolottie.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            startActivity(new Intent(SignInPage.this,Lottie.class));
+            startActivity(new Intent(SignInPage.this,NewLottie.class));
         }
     });
 
