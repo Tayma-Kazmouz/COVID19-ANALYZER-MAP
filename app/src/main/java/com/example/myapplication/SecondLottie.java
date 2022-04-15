@@ -11,21 +11,19 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-
-public class NewLottie extends AppCompatActivity {
+public class SecondLottie extends AppCompatActivity {
 
     ViewPager mSLideViewPager;
     LinearLayout mDotLayout;
     Button backbtn, nextbtn, skipbtn;
 
     TextView[] dots;
-    ViewPagerAdapter viewPagerAdapter;
+    ViewPagerAdapter2 viewPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_lottie);
-
+        setContentView(R.layout.activity_second_lottie);
 
 
 //        backbtn = findViewById(R.id.backbtn);
@@ -67,7 +65,7 @@ public class NewLottie extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                Intent i = new Intent(NewLottie.this,SecondLottie.class);
+                Intent i = new Intent(SecondLottie.this,DashBoard.class);
                 startActivity(i);
                 finish();
 
@@ -77,7 +75,7 @@ public class NewLottie extends AppCompatActivity {
         mSLideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
         mDotLayout = (LinearLayout) findViewById(R.id.indicator_layout);
 
-        viewPagerAdapter = new ViewPagerAdapter(this);
+        viewPagerAdapter = new ViewPagerAdapter2(this);
 
         mSLideViewPager.setAdapter(viewPagerAdapter);
 
@@ -88,7 +86,7 @@ public class NewLottie extends AppCompatActivity {
 
     public void setUpindicator(int position){
 
-        dots = new TextView[7];
+        dots = new TextView[9];
         mDotLayout.removeAllViews();
 
         for (int i = 0 ; i < dots.length ; i++){
@@ -138,6 +136,13 @@ public class NewLottie extends AppCompatActivity {
 
         return mSLideViewPager.getCurrentItem() + i;
     }
+
+
+
+
+
+
+
 
 
 
