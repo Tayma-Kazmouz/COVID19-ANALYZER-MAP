@@ -33,11 +33,11 @@
         android:adjustViewBounds="true"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@+id/guide1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintEnd_toStartOf="@+id/detailedTitle_id"
+        app:layout_constraintHorizontal_bias="0.717"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.028"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_backbuttonsvg" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -340,7 +340,7 @@
                            android:layout_width="0dp"
                            android:layout_height="wrap_content"
                            android:gravity="end"
-                           android:layout_weight="5"
+                           android:layout_weight="2"
                            android:text="1234567(XX%)"
                            android:fontFamily="@font/poppins_medium"
                            android:layout_marginRight="10dp"
