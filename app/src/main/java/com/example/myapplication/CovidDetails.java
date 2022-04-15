@@ -76,7 +76,6 @@ public class CovidDetails extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(CovidDetails.this,CoronaCasesList.class));
-                finish();
             }
         });
 
