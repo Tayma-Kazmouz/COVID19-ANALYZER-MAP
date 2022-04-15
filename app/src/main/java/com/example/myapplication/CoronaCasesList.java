@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -150,8 +151,33 @@ public class CoronaCasesList extends AppCompatActivity {
 
                 lv.setAdapter(ba);
 
+
+
+                // when item is clicked its sends that item's Corona Parcelable class object to the next activity so we can access its data
+                lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                        Intent intent = new Intent(CoronaCasesList.this,CovidDetails.class);
+
+                        intent.putExtra("getCoronaParcelable",dS[i]);
+
+                        startActivity(intent);
+
+                    }
+                });
+
+
+
+
             }//end of onResponse
         });
+
+
+
+
+
+
 
     }//end onCreate
 
