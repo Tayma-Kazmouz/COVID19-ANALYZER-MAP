@@ -26,20 +26,6 @@
         app:layout_constraintVertical_bias="0.0" />
 
 
-    <ImageView
-        android:id="@+id/imageViewDetailedBack_id"
-        android:layout_width="44dp"
-        android:layout_height="34dp"
-        android:adjustViewBounds="true"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toTopOf="@+id/guide1"
-        app:layout_constraintEnd_toStartOf="@+id/detailedTitle_id"
-        app:layout_constraintHorizontal_bias="0.717"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_backbuttonsvg" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide1"
         android:layout_width="wrap_content"
@@ -114,8 +100,8 @@
 
                     <TextView
                         android:id="@+id/countryPopulation_id"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="176dp"
+                        android:layout_height="64dp"
                         android:fontFamily="@font/poppins"
                         android:gravity="center"
                         android:text="Population\n83.24 m"
@@ -130,8 +116,8 @@
 
                     <TextView
                         android:id="@+id/countryContinent_id"
-                        android:layout_width="124dp"
-                        android:layout_height="89dp"
+                        android:layout_width="175dp"
+                        android:layout_height="85dp"
                         android:fontFamily="@font/poppins"
                         android:gravity="center"
                         android:text="Continent\nEurope"

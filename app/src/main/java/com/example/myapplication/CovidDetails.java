@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -70,15 +69,6 @@ public class CovidDetails extends AppCompatActivity {
         TextView tvTitle = findViewById(R.id.detailedTitle_id);
         tvTitle.setText(coronaData.getCountry()+" Details");
 
-
-        ImageView ivBack = findViewById(R.id.imageViewDetailedBack_id);
-        ivBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),CoronaCasesList.class));
-                finish();
-            }
-        });
 
 
 
