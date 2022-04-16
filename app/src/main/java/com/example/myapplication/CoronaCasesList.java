@@ -253,7 +253,8 @@ public class CoronaCasesList extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                volleyResponseListener.onError("Error Fetching Data "+error.getMessage());
+                volleyResponseListener.onError("Error Fetching Data ");
+                Log.e("x", "onErrorResponse: "+error.getMessage());
             }
         });
 

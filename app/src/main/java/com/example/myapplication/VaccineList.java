@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
@@ -235,6 +236,29 @@ public class VaccineList extends AppCompatActivity {
 
                 lv.setAdapter(ba);
 
+                // when item is clicked its sends that item's Country Name String to the next activity so we can access its data
+                lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                        Intent intent = new Intent(VaccineList.this,VaccineDetails.class);
+
+                        try {
+                            intent.putExtra("getVaccineCountry",vaccineDS.getJSONObject(i).getString("country"));
+
+                            intent.putExtra("getSimpleCountryInfo",(mapNameSimpleCountry.get(vaccineDS.getJSONObject(i).getString("country"))));
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+
+                        startActivity(intent);
+
+                    }
+                });
+
+
             }
         });
 
@@ -326,7 +350,8 @@ public class VaccineList extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                countryVolleyResponseListener.onError("Error Fetching Country Data " + error.getMessage());
+                countryVolleyResponseListener.onError("Error Fetching Country Data ");
+                Log.e("x", "on Country ErrorResponse: "+error.getMessage());
             }
         });
 
@@ -352,7 +377,8 @@ public class VaccineList extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                vaccineVolleyResponseListener.onError("Error Fetching Vaccine Date " + error.getMessage());
+                vaccineVolleyResponseListener.onError("Error Fetching Vaccine Date ");
+                Log.e("x", "on Vaccine ErrorResponse: "+error.getMessage());
             }
         });
 

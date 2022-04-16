@@ -9,9 +9,10 @@
         <entry key="..\:/FYP/CapstoneCovidAnalyzerMap/app/src/main/res/font/poppins_medium.xml" value="0.35648148148148145" />
         <entry key="..\:/FYP/CapstoneCovidAnalyzerMap/app/src/main/res/font/roboto_bold.xml" value="0.35648148148148145" />
         <entry key="..\:/FYP/CapstoneCovidAnalyzerMap/app/src/main/res/layout/activity_corona_cases_list.xml" value="0.22" />
-        <entry key="..\:/FYP/CapstoneCovidAnalyzerMap/app/src/main/res/layout/activity_covid_details.xml" value="0.25" />
+        <entry key="..\:/FYP/CapstoneCovidAnalyzerMap/app/src/main/res/layout/activity_covid_details.xml" value="0.324988620846609" />
         <entry key="..\:/FYP/CapstoneCovidAnalyzerMap/app/src/main/res/layout/activity_dash_board.xml" value="0.33" />
         <entry key="..\:/FYP/CapstoneCovidAnalyzerMap/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/FYP/CapstoneCovidAnalyzerMap/app/src/main/res/layout/activity_vaccine_details.xml" value="0.5" />
         <entry key="..\:/FYP/CapstoneCovidAnalyzerMap/app/src/main/res/layout/activity_vaccine_list.xml" value="0.33" />
         <entry key="..\:/FYP/CapstoneCovidAnalyzerMap/app/src/main/res/layout/item.xml" value="0.33" />
         <entry key="..\:/FYP/CapstoneCovidAnalyzerMap/app/src/main/res/layout/item_shimmer.xml" value="0.2953703703703704" />
