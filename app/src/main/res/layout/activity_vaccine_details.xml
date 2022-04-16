@@ -106,14 +106,15 @@
 
                     <TextView
                         android:id="@+id/countryPopulationVaccine_id"
-                        android:layout_width="176dp"
-                        android:layout_height="64dp"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="3dp"
                         android:fontFamily="@font/poppins"
                         android:gravity="center"
                         android:text="Population\n83.24 m"
                         android:textColor="#999999"
-                        android:textSize="18sp"
-                        app:layout_constraintBottom_toTopOf="@+id/guide3"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@+id/guide6"
                         app:layout_constraintEnd_toStartOf="@+id/guide4"
                         app:layout_constraintHorizontal_bias="0.433"
                         app:layout_constraintStart_toStartOf="parent"
@@ -122,18 +123,19 @@
 
                     <TextView
                         android:id="@+id/countryContinentVaccine_id"
-                        android:layout_width="95dp"
-                        android:layout_height="101dp"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="3dp"
                         android:fontFamily="@font/poppins"
                         android:gravity="center"
                         android:text="Continent\nEurope"
                         android:textColor="#999999"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         app:layout_constraintBottom_toTopOf="@+id/guide3"
                         app:layout_constraintEnd_toStartOf="@+id/guide4"
                         app:layout_constraintHorizontal_bias="0.448"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/guide2"
+                        app:layout_constraintTop_toTopOf="@+id/guide6"
                         app:layout_constraintVertical_bias="0.984" />
 
                     <View
@@ -194,6 +196,13 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         app:layout_constraintGuide_percent="0.93" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guide6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.6" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
