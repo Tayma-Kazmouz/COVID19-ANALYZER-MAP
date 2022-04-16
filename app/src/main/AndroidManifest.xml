@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".VaccineDetails"
+            android:exported="false" />
+        <activity
             android:name=".CovidDetails"
             android:exported="false" />
         <activity
