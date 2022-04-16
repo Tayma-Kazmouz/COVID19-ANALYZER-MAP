@@ -13,9 +13,9 @@
     <TextView
         android:id="@+id/detailedTitle_id"
         android:layout_width="0dp"
-        android:gravity="center"
         android:layout_height="0dp"
         android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
         android:text="Corona Details"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -85,15 +85,15 @@
                         app:shapeAppearanceOverlay="@style/roundedflagimage" />
 
                     <TextView
-                        android:layout_marginLeft="1dp"
-                        android:layout_marginRight="1dp"
-                        android:layout_marginTop="1dp"
                         android:id="@+id/CountryFullName_id"
-                        android:gravity="center|bottom"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="1dp"
                         android:layout_marginBottom="18dp"
                         android:fontFamily="@font/poppins"
+                        android:gravity="center|bottom"
                         android:text="Country"
                         android:textColor="@color/black"
                         android:textSize="19sp"
@@ -106,14 +106,15 @@
 
                     <TextView
                         android:id="@+id/countryPopulation_id"
-                        android:layout_width="176dp"
-                        android:layout_height="64dp"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="3dp"
                         android:fontFamily="@font/poppins"
                         android:gravity="center"
                         android:text="Population\n83.24 m"
                         android:textColor="#999999"
-                        android:textSize="18sp"
-                        app:layout_constraintBottom_toTopOf="@+id/guide3"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@+id/guideline6"
                         app:layout_constraintEnd_toStartOf="@+id/guide4"
                         app:layout_constraintHorizontal_bias="0.433"
                         app:layout_constraintStart_toStartOf="parent"
@@ -122,19 +123,20 @@
 
                     <TextView
                         android:id="@+id/countryContinent_id"
-                        android:layout_width="95dp"
-                        android:layout_height="101dp"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="3dp"
                         android:fontFamily="@font/poppins"
                         android:gravity="center"
                         android:text="Continent\nEurope"
                         android:textColor="#999999"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         app:layout_constraintBottom_toTopOf="@+id/guide3"
                         app:layout_constraintEnd_toStartOf="@+id/guide4"
-                        app:layout_constraintHorizontal_bias="0.448"
+                        app:layout_constraintHorizontal_bias="0.442"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/guide2"
-                        app:layout_constraintVertical_bias="0.984" />
+                        app:layout_constraintTop_toTopOf="@+id/guideline6"
+                        app:layout_constraintVertical_bias="0.529" />
 
                     <View
                         android:id="@+id/view3"
@@ -178,7 +180,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        app:layout_constraintGuide_percent="0.9" />
+                        app:layout_constraintGuide_begin="253dp" />
 
 
                     <androidx.constraintlayout.widget.Guideline
@@ -194,6 +196,20 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         app:layout_constraintGuide_percent="0.93" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_begin="20dp" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.6" /> " />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -489,7 +505,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:fontFamily="@font/poppins_black"
-                        android:text="+160,914"
+                        android:text="160,914"
                         android:textColor="#FFD66B"
                         android:textSize="28sp" />
 
@@ -508,30 +524,6 @@
                         android:layout_margin="10dp"
                         android:background="#66E4E4E4" />
 
-                    <TextView
-                        android:id="@+id/moreCritical_id"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:fontFamily="@font/poppins_black"
-                        android:text="+265,300"
-                        android:textColor="#B71818"
-                        android:textSize="28sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:fontFamily="@font/poppins"
-                        android:text="Critical Cases"
-                        android:textColor="#999999"
-                        android:textSize="17sp" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_margin="19dp"
-                        android:background="#66E4E4E4" />
 
                     <TextView
                         android:id="@+id/moreActive_id"
@@ -539,8 +531,34 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:fontFamily="@font/poppins_black"
-                        android:text="+309"
+                        android:text="309"
                         android:textColor="#646AFF"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Currently Active Cases"
+                        android:textColor="#999999"
+                        android:textSize="17sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="#66E4E4E4" />
+
+
+                    <TextView
+                        android:id="@+id/moreCritical_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/poppins_black"
+                        android:text="65"
+                        android:textColor="#B71818"
                         android:textSize="28sp" />
 
                     <TextView
@@ -549,7 +567,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/poppins"
-                        android:text="Active Cases"
+                        android:text="Currently Critical Cases"
                         android:textColor="#999999"
                         android:textSize="17sp" />
 
@@ -567,7 +585,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0"/>
+        app:layout_constraintGuide_percent="0" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
@@ -575,6 +593,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="1" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
