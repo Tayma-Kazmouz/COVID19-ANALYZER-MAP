@@ -35,7 +35,6 @@
     <string name="the_infectious_disease_covid_19">The infectious disease Covid-19</string>
 
 
-
     <string name="skip">Skip</string>
 
     //Lottie1 text below
@@ -59,7 +58,6 @@ Most people infected with the virus will experience mild to moderate respiratory
     <string name="desc_fifth">Fatigue is very common after viral infections, such as COVID and normally it settles after 2 or 3 weeks. However, in some people it can linger for weeks or months.</string>
     <string name="desc_sixth">Paired with previously mentioned symptoms like Fever and Cough; a sore throat indicates the possibly of being infected with COVID-19.</string>
     <string name="desc_seventh">Diarrhoea is an early sign of COVID-19, starting on the first day of infection and building in intensity during the first week. It lasts 2-7 days in adults.</string>
-
 
 
     //lottie2 text below
@@ -87,13 +85,11 @@ Most people infected with the virus will experience mild to moderate respiratory
     <string name="predesc_seventh">Avoid getting in contact with people as much as possible, avoid handshakes or hugging.</string>
     <string name="predesc_eight">Avoid going to crowded places. More people = Higher chances of infection.</string>
     <string name="predesc_nine">If you must contact people or go outside ensure to maintain social distance for your and others safety.</string>
-
-
-
-
-
-
-
+    <string name="date_of_birth">Date of Birth:</string>
+    <string name="gender">Gender:</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="country">Country:</string>
 
 
 </resources>
