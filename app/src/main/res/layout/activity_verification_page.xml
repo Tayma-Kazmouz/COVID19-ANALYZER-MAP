@@ -100,11 +100,13 @@
         android:background="@drawable/capbuttonpressselector"
         android:enabled="true"
         android:letterSpacing="0.02"
-        android:onClick="gotoreportstatus1"
+        android:onClick="gotosigninpage"
         android:text="@string/Continue"
         android:textAllCaps="false"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/verifytext_id" />
 
