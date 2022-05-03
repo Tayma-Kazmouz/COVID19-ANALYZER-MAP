@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="450dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:padding="20dp"
+    android:orientation="vertical"
+    android:background="@drawable/infoboxbackground"
+
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivflagmapinfo_id"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:adjustViewBounds="true"
+                android:elevation="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_sampleflagsvg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.047"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.072"
+                app:shapeAppearanceOverlay="@style/roundedflagimage" />
+
+            <TextView
+                android:id="@+id/mapinfoFullName_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Full Name"
+                android:textSize="19sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/mapinfoCases_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="555 "
+                android:textSize="17sp"
+                android:fontFamily="@font/poppins_black"
+                android:textColor="#3AC4FF"
+                />
+            <TextView
+                android:id="@+id/mapinfocasestext_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="total cases reported "
+                android:fontFamily="@font/poppins"
+                android:textColor="#999999"
+                />
+            <TextView
+            android:id="@+id/mapinfoActive_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="555 "
+            android:textSize="17sp"
+            android:fontFamily="@font/poppins_black"
+            android:textColor="#646AFF"
+            />
+            <TextView
+                android:id="@+id/mapinfoactivetext_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="active cases reported "
+                android:fontFamily="@font/poppins"
+                android:textColor="#999999"
+                />
+            <TextView
+            android:id="@+id/mapinfoRecovered_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="555 "
+            android:textSize="17sp"
+            android:fontFamily="@font/poppins_black"
+            android:textColor="#00BFA6"
+            />
+            <TextView
+                android:id="@+id/mapinforecoveredtext_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="recovered cases reported "
+                android:fontFamily="@font/poppins"
+                android:textColor="#999999"
+                />
+            <TextView
+            android:id="@+id/mapinfoDeaths_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="555 "
+            android:textSize="17sp"
+            android:fontFamily="@font/poppins_black"
+            android:textColor="#FF647C"
+                />
+            <TextView
+                android:id="@+id/mapinfodeathstext_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="death cases reported "
+                android:fontFamily="@font/poppins"
+                android:textColor="#999999"
+                />
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</LinearLayout>

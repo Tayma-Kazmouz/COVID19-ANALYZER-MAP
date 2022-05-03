@@ -133,6 +133,7 @@ public class DashBoard extends AppCompatActivity {
 
     MaterialCardView coronaCasesCv;
     MaterialCardView vaccineCV;
+    MaterialCardView mapsCV;
 
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -154,6 +155,14 @@ public class DashBoard extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(DashBoard.this,VaccineList.class));
+            }
+        });
+
+        mapsCV = findViewById(R.id.mapsCV_id);
+        mapsCV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DashBoard.this,MapsActivity.class));
             }
         });
 
