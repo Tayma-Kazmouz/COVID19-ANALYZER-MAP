@@ -264,11 +264,11 @@ public class VaccineDetails extends AppCompatActivity {
 
                         Log.e("x", "onResponse: ja first object Date "+ja.getJSONObject(0).getString("date") );
 
-                        // Setting up the Today CV with data of the second to last object in the array as today's data may be not updated yet...
+                        // Setting up the Today CV with data of the fifth to last object in the array as today's data may be not updated yet...
                         TextView tvDosesToday = findViewById(R.id.todayDosesVaccine_id);
                         TextView tvDosesMill = findViewById(R.id.todayDosesPerMillionVaccine_id);
-                        tvDosesToday.setText("+"+ja.optJSONObject(ja.length()-2).getString("daily"));
-                        tvDosesMill.setText("+"+ja.optJSONObject(ja.length()-2).getString("dailyPerMillion"));
+                        tvDosesToday.setText("+"+ja.optJSONObject(ja.length()-5).getString("daily"));
+                        tvDosesMill.setText("+"+ja.optJSONObject(ja.length()-5).getString("dailyPerMillion"));
 
 
                         // Setting up the vaccine line chart ...
