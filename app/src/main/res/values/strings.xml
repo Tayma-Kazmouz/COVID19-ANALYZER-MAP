@@ -11,4 +11,10 @@
 
     <string name="already_have_an_account">Already have an account?</string>
     <string name="sign_in">Sign in</string>
+    <string name="sign_in_with_us_to_be_informed_about_covid_19">Sign in with us to be informed about Covid-19</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="verification">Verification</string>
+    <string name="please_verify_your_email_to_be_able_to_continue">Please verify your email to be able to continue!</string>
+    <string name="a_verification_link_has_been_sent_to_your_email">A verification link has been sent to your Email</string>
+    <string name="Continue">Continue</string>
 </resources>
