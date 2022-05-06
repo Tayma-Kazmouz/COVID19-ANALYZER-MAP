@@ -98,6 +98,7 @@
         android:background="@drawable/capbuttonpressselector"
         android:letterSpacing="0.02"
         android:text="@string/register"
+        android:textColor="@color/white"
         android:textAllCaps="false"
         android:textSize="20sp"
         android:enabled="true"/>
