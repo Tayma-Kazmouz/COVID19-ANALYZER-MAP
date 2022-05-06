@@ -93,7 +93,7 @@ public class UserInput extends AppCompatActivity {
         int month = cal.get(Calendar.MONTH);
         int day = cal.get(Calendar.DAY_OF_MONTH);
 
-        int style = android.R.style.Theme_Material_Light_Dialog;
+        int style = android.R.style.ThemeOverlay_Material_Dialog; //THIS CHANGED IT
 
 
         datePickerDialog = new DatePickerDialog(this, style, dateSetListener, year, month, day);
