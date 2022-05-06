@@ -65,7 +65,7 @@ public class SecondLottie extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                Intent i = new Intent(SecondLottie.this,DashBoard.class);
+                Intent i = new Intent(SecondLottie.this,UserInput.class);
                 startActivity(i);
                 finish();
 

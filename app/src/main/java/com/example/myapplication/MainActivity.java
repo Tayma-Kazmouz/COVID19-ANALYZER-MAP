@@ -143,12 +143,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        teststatus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,ReportStatus2.class));
-            }
-        });
+//        teststatus.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(MainActivity.this,ReportStatus2.class));
+//            }
+//        });
 
 
     }//end of onCreate
