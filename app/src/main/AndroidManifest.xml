@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".VerificationPage"
+            android:exported="false" />
+        <activity
+            android:name=".SignInPage"
+            android:exported="false" />
+        <activity
             android:name=".DashBoard"
             android:exported="false" />
         <activity
