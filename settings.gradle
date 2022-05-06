@@ -13,6 +13,7 @@ dependencyResolutionManagement {
         mavenCentral()
         // added the below line for the MPAndroidCharts Library
         maven { url 'https://jitpack.io' }
+        maven { url "https://jitpack.io" }
     }
 }
 rootProject.name = "My Application"

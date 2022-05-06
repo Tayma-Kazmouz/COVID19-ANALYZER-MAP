@@ -57,7 +57,7 @@ public class SignInPage extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             if (firebaseAuth.getCurrentUser().isEmailVerified()){
-                                Intent i= new Intent(SignInPage.this, DashBoard.class);
+                                Intent i= new Intent(SignInPage.this, NewLottie.class);
                                 startActivity(i);
                             }else{
                                 Toast.makeText(SignInPage.this,"Please verify your email!", Toast.LENGTH_LONG).show();
@@ -71,14 +71,14 @@ public class SignInPage extends AppCompatActivity {
         });
 
 
-    //going to lottie test
-    gotolottie= findViewById(R.id.tv_donthaveacc_id);
-    gotolottie.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            startActivity(new Intent(SignInPage.this,NewLottie.class));
-        }
-    });
+//    //going to lottie test
+//    gotolottie= findViewById(R.id.tv_donthaveacc_id);
+//    gotolottie.setOnClickListener(new View.OnClickListener() {
+//        @Override
+//        public void onClick(View view) {
+//            startActivity(new Intent(SignInPage.this,NewLottie.class));
+//        }
+//    });
 
 
 
