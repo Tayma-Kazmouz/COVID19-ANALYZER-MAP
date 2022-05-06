@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".NewLottie"
+            android:exported="false" />
+        <activity
+            android:name=".Lottie"
+            android:exported="false" />
+        <activity
             android:name=".ReportStatus2"
             android:exported="false" />
         <activity

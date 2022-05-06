@@ -30,5 +30,36 @@
     <string name="positive">Positive</string>
     <string name="negative">Negative</string>
     <string name="contacted_before">Contacted Before</string>
+    <string name="coronavirus_disease_covid_19_is_an_infectious_disease_caused_by_the_sars_cov_2_virus">Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus</string>
+    <string name="symptoms">Symptoms</string>
+    <string name="the_infectious_disease_covid_19">The infectious disease Covid-19</string>
+
+
+
+
+
+
+
+//testing
+
+    //Headings
+    <string name="heading_one">COVID-19</string>
+    <string name="heading_two">Symptom#1</string>
+    <string name="heading_three">Symptom#2</string>
+    <string name="heading_fourth">Symptom#3</string>
+    <string name="heading_fifth">Symptom#4</string>
+    <string name="heading_sixth">Symptom#5</string>
+    <string name="heading_seventh">Symptom#6</string>
+
+    //Description
+    <string name="desc_one">Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus.
+Most people infected with the virus will experience mild to moderate respiratory illness.</string>
+    <string name="desc_two">COVID-19 symptoms, including fever, can start anywhere from 2 days to 2 weeks after exposure to the virus.According to the CDC, you have a fever if your temperature is 100.4°F (38°C) or greater.</string>
+    <string name="desc_three">Known clinically as dyspnea, shortness of breath is one of the hallmark symptoms of COVID-19. This symptom can persist and quickly escalate in people with COVID-19.</string>
+    <string name="desc_fourth">Dry cough means you’re coughing but nothing is coming up, like phlegm or mucus.Ultimately, it feels a lot like your lungs are irritated.</string>
+    <string name="desc_fifth">Fatigue is very common after viral infections, such as COVID and normally it settles after 2 or 3 weeks. However, in some people it can linger for weeks or months.</string>
+    <string name="desc_sixth">Paired with previously mentioned symptoms like Fever and Cough; a sore throat indicates the possibly of being infected with COVID-19.</string>
+    <string name="desc_seventh">Diarrhoea is an early sign of COVID-19, starting on the first day of infection and building in intensity during the first week. It lasts 2-7 days in adults.</string>
+
 
 </resources>

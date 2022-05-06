@@ -47,5 +47,6 @@ dependencies {
     // added this to fetch json
     implementation 'com.android.volley:volley:1.2.1'
 
-
+    //lottie
+    implementation 'com.airbnb.android:lottie:5.0.3'
 }
