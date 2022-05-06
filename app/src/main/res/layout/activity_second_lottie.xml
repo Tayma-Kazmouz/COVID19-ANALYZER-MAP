@@ -19,7 +19,7 @@
         android:background="#00000000"
         android:fontFamily="@font/poppins_bold"
         android:letterSpacing="0"
-        android:text="@string/skip"
+        android:text="@string/Continue"
         android:textColor="#FF647C"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
