@@ -51,7 +51,13 @@ dependencies {
     implementation 'com.airbnb.android:lottie:5.0.3'
 
 
-    //test28/4
+    //CountryPicker
     implementation 'com.github.yesterselga:country-picker-android:2.0'
+
+
+    //dialog trial
+    implementation 'com.google.android.material:material:1.7.0-alpha01'
+
+
 
 }

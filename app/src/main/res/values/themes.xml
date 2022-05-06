@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.MyApplication" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.MyApplication" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">#FF647C</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -15,6 +15,16 @@
     </style>
 
 
+
+<!--    <style name="Theme.MyApplication." parent= "ThemeOverlay.MaterialComponents.Dialog">-->
+<!--        <item name="colorPrimary">#FF647C</item>-->
+<!--        <item name="colorTertiary">#FF647C</item>-->
+<!--        <item name="colorSecondary">#FF647C</item>-->
+<!--        <item name="colorAccent">#FF647C</item>-->
+<!--        <item name="colorContainer">#FF647C</item>-->
+<!--        <item name="backgroundColor">#FF647C</item>-->
+<!--        <item name="android:backgroundDimAmount">70</item>-->
+<!--    </style>-->
 
 
 
