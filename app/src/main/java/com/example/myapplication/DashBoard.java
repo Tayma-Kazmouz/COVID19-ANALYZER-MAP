@@ -1,11 +1,13 @@
 package com.example.myapplication;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
@@ -16,7 +18,6 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.XAxis;
@@ -27,6 +28,7 @@ import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.github.mikephil.charting.formatter.LargeValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+import com.google.android.material.card.MaterialCardView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -129,6 +131,10 @@ public class DashBoard extends AppCompatActivity {
     long valD5;
 
 
+    MaterialCardView coronaCasesCv;
+    MaterialCardView vaccineCV;
+    MaterialCardView mapsCV;
+
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -136,9 +142,39 @@ public class DashBoard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board);
 
+
+        coronaCasesCv = findViewById(R.id.coronaCasesCV_id);
+        coronaCasesCv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DashBoard.this,CoronaCasesList.class));
+            }
+        });
+        vaccineCV = findViewById(R.id.VaccinesCV_id);
+        vaccineCV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DashBoard.this,VaccineList.class));
+            }
+        });
+
+        mapsCV = findViewById(R.id.mapsCV_id);
+        mapsCV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DashBoard.this,MapsActivity.class));
+            }
+        });
+
+
+
+
+
+
+
         //Define
 
-        rq = Volley.newRequestQueue(DashBoard.this);
+        rq = VolleySingleton.getInstance(this).getRequestQueue();
 
 
 
