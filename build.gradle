@@ -6,14 +6,11 @@ buildscript {
 
 
 plugins {
-<<<<<<< HEAD
+
     id 'com.android.application' version '7.1.2' apply false
     id 'com.android.library' version '7.1.2' apply false
     id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin' version '2.0.1' apply false
-=======
-    id 'com.android.application' version '7.1.3' apply false
-    id 'com.android.library' version '7.1.3' apply false
->>>>>>> 047f82c5de7d36720dfa8b1336eaf463e1afa6f8
+
 }
 
 

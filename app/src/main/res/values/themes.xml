@@ -14,7 +14,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-<<<<<<< HEAD
+
     <style name="roundedflagimage" parent="">
 
         <item name="cornerFamily">rounded</item>
@@ -22,7 +22,7 @@
         <item name="color">@color/white</item>
 
     </style>
-=======
+
 
 
 <!--    <style name="Theme.MyApplication." parent= "ThemeOverlay.MaterialComponents.Dialog">-->
@@ -37,5 +37,4 @@
 
 
 
->>>>>>> 047f82c5de7d36720dfa8b1336eaf463e1afa6f8
 </resources>
