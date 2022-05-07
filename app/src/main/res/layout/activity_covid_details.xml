@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingTop="20dp"
+    android:paddingRight="20dp"
+    tools:context=".CovidDetails">
+
+    <TextView
+        android:id="@+id/detailedTitle_id"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:text="Corona Details"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/guide1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guide1"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/countrypopulationCV_id"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="10dp"
+                app:strokeColor="#22000000"
+                app:strokeWidth="2dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivFlag_id"
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:adjustViewBounds="true"
+                        android:elevation="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_sampleflagsvg"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.047"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.072"
+                        app:shapeAppearanceOverlay="@style/roundedflagimage" />
+
+                    <TextView
+                        android:id="@+id/CountryFullName_id"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginBottom="18dp"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center|bottom"
+                        android:text="Country"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        app:layout_constraintBottom_toTopOf="@+id/view3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.049"
+                        app:layout_constraintStart_toEndOf="@+id/ivFlag_id"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.484" />
+
+                    <TextView
+                        android:id="@+id/countryPopulation_id"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="3dp"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:text="Population\n83.24 m"
+                        android:textColor="#999999"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+                        app:layout_constraintEnd_toStartOf="@+id/guide4"
+                        app:layout_constraintHorizontal_bias="0.433"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guide2"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/countryContinent_id"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="3dp"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:text="Continent\nEurope"
+                        android:textColor="#999999"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@+id/guide3"
+                        app:layout_constraintEnd_toStartOf="@+id/guide4"
+                        app:layout_constraintHorizontal_bias="0.442"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guideline6"
+                        app:layout_constraintVertical_bias="0.529" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="15dp"
+                        android:background="#E4E4E4"
+                        app:layout_constraintBottom_toTopOf="@+id/guide2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.466"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0" />
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivMap_id"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:adjustViewBounds="true"
+                        android:elevation="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background"
+                        app:layout_constraintBottom_toTopOf="@+id/guide3"
+                        app:layout_constraintEnd_toStartOf="@+id/guide5"
+                        app:layout_constraintHorizontal_bias="0.528"
+                        app:layout_constraintStart_toStartOf="@+id/guide4"
+                        app:layout_constraintTop_toTopOf="@+id/guide2"
+                        app:layout_constraintVertical_bias="0.604"
+                        app:shapeAppearanceOverlay="@style/roundedflagimage" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guide2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.35" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guide3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_begin="253dp" />
+
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guide4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.4" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guide5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.93" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_begin="20dp" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.6" /> " />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/piechartCV_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="10dp"
+                app:strokeColor="#22000000"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Country Statistics"
+                        android:textColor="@color/black"
+                        android:textSize="22sp" />
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/detailedPieChart_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="10dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Cases"
+                            android:textColor="#66000000" />
+
+                        <TextView
+                            android:id="@+id/tvCasesPie_id"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="end"
+                            android:text="1234567(XX%)"
+                            android:textColor="#66000000"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <SeekBar
+                        android:id="@+id/sbCases_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:max="10000"
+                        android:min="0"
+                        android:progress="30"
+                        android:progressTint="#3AC4FF"
+                        android:thumb="@null" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Recovered"
+                            android:textColor="#66000000" />
+
+                        <TextView
+                            android:id="@+id/tvRecoveredPie_id"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="end"
+                            android:text="1234567(XX%)"
+                            android:textColor="#66000000"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <SeekBar
+                        android:id="@+id/sbRecovered_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:max="10000"
+                        android:min="0"
+                        android:progress="50"
+                        android:progressTint="#00BFA6"
+                        android:thumb="@null" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Deaths"
+                            android:textColor="#66000000" />
+
+                        <TextView
+                            android:id="@+id/tvDeathsPie_id"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="end"
+                            android:text="1234567(XX%)"
+                            android:textColor="#66000000"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <SeekBar
+                        android:id="@+id/sbDeaths_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:max="10000"
+                        android:min="0"
+                        android:progress="20"
+                        android:progressTint="#FF565E"
+                        android:thumb="@null" />
+
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/todayCV_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="10dp"
+                app:strokeColor="#22000000"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Today"
+                        android:textColor="@color/black"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/todayCases_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/poppins_black"
+                        android:text="+160,914"
+                        android:textColor="#3AC4FF"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Infected cases reported today"
+                        android:textColor="#999999"
+                        android:textSize="17sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="#66E4E4E4" />
+
+                    <TextView
+                        android:id="@+id/today_Recovered_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/poppins_black"
+                        android:text="+265,300"
+                        android:textColor="#00BFA6"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Recovered cases reported today"
+                        android:textColor="#999999"
+                        android:textSize="17sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="19dp"
+                        android:background="#66E4E4E4" />
+
+                    <TextView
+                        android:id="@+id/todayDeaths_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/poppins_black"
+                        android:text="+309"
+                        android:textColor="#FF647C"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Death cases reported today"
+                        android:textColor="#999999"
+                        android:textSize="17sp" />
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/moreData_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="10dp"
+                app:strokeColor="#22000000"
+                app:strokeWidth="2dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="More"
+                        android:textColor="@color/black"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/moreTests_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/poppins_black"
+                        android:text="160,914"
+                        android:textColor="#FFD66B"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Total Tests Done"
+                        android:textColor="#999999"
+                        android:textSize="17sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="#66E4E4E4" />
+
+
+                    <TextView
+                        android:id="@+id/moreActive_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/poppins_black"
+                        android:text="309"
+                        android:textColor="#646AFF"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Currently Active Cases"
+                        android:textColor="#999999"
+                        android:textSize="17sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="#66E4E4E4" />
+
+
+                    <TextView
+                        android:id="@+id/moreCritical_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/poppins_black"
+                        android:text="65"
+                        android:textColor="#B71818"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Currently Critical Cases"
+                        android:textColor="#999999"
+                        android:textSize="17sp" />
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

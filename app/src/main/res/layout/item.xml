@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:weightSum="10"
+    android:padding="10dp">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/flag_id"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/roundedflagimage"
+            android:src="@drawable/ic_sampleflagsvg"/>
+
+        <TextView
+            android:id="@+id/countryName_id"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_medium"
+            android:text="UN"/>
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/countryCasesDoses_id"
+        android:layout_marginLeft="5dp"
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_medium"
+        android:text="10m"/>
+    <TextView
+        android:id="@+id/countryDeathsCoverage_id"
+        android:layout_weight="5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_medium"
+        android:text="2m"/>
+
+
+
+</LinearLayout>
