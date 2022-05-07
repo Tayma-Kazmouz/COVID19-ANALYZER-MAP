@@ -11,9 +11,9 @@
 
     <string name="already_have_an_account">Already have an account?</string>
     <string name="sign_in">Sign in</string>
-<<<<<<< HEAD
+
     <string name="title_activity_maps">MapsActivity</string>
-=======
+
     <string name="sign_in_with_us_to_be_informed_about_covid_19">Sign in with us to be informed about Covid-19</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="verification">Verification</string>
@@ -95,5 +95,4 @@ Most people infected with the virus will experience mild to moderate respiratory
     <string name="country">Country:</string>
 
 
->>>>>>> 047f82c5de7d36720dfa8b1336eaf463e1afa6f8
 </resources>

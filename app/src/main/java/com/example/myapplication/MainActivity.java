@@ -38,13 +38,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-<<<<<<< HEAD
+
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
-=======
+
 
         teststatus = findViewById(R.id.tv_alreadyhave_id);
->>>>>>> 047f82c5de7d36720dfa8b1336eaf463e1afa6f8
+
         email = findViewById(R.id.et_email_id);
         password = findViewById(R.id.et_password_id);
         username = findViewById(R.id.et_fullname_id);
