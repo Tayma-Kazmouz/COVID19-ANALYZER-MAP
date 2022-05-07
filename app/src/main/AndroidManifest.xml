@@ -45,6 +45,30 @@
             android:name=".CoronaCasesList"
             android:exported="false" />
         <activity
+            android:name=".UserInput"
+            android:exported="false" />
+        <activity
+            android:name=".SecondLottie"
+            android:exported="false" />
+        <activity
+            android:name=".NewLottie"
+            android:exported="false" />
+        <activity
+            android:name=".Lottie"
+            android:exported="false" />
+        <activity
+            android:name=".ReportStatus2"
+            android:exported="false" />
+        <activity
+            android:name=".ReportStatus1"
+            android:exported="false" />
+        <activity
+            android:name=".VerificationPage"
+            android:exported="false" />
+        <activity
+            android:name=".SignInPage"
+            android:exported="false" />
+        <activity
             android:name=".DashBoard"
             android:exported="false" />
         <activity
