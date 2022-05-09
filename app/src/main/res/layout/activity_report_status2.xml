@@ -118,43 +118,46 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="5dp"
                 android:background="@android:color/darker_gray"
-                app:layout_constraintBottom_toTopOf="@+id/checkBox1"
+                app:layout_constraintBottom_toTopOf="@+id/radiobtns_id"
                 app:layout_constraintEnd_toStartOf="@id/containerend_id"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="@id/containerstart_id"
                 app:layout_constraintTop_toBottomOf="@+id/tv_specify_vac_id"/>
 
-            <CheckBox
+
+
+
+            <RadioGroup
+                android:id="@+id/radiobtns_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/horizontalline1_id"
+                app:layout_constraintStart_toStartOf="@id/containerstart_id"
+                app:layout_constraintEnd_toEndOf="@id/containerend_id"
+                android:orientation="vertical">
+
+            <RadioButton
                 android:id="@+id/checkBox1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
                 android:text="@string/positive"
                 android:textSize="12sp"
                 android:fontFamily="@font/roboto_light"
-                app:layout_constraintBottom_toTopOf="@+id/horizontalline2_id"
-                app:layout_constraintEnd_toStartOf="@id/startguidline"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="@id/containerstart_id"
-                app:layout_constraintTop_toBottomOf="@+id/horizontalline1_id" />
+               />
 
             <View
                 android:id="@+id/horizontalline2_id"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="1dp"
                 android:layout_marginTop="1dp"
                 android:background="@android:color/darker_gray"
-                app:layout_constraintBottom_toTopOf="@+id/checkBox2"
-                app:layout_constraintEnd_toStartOf="@id/containerend_id"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="@id/containerstart_id"
-                app:layout_constraintTop_toBottomOf="@+id/checkBox1" />
 
-            <CheckBox
+                />
+
+            <RadioButton
                 android:id="@+id/checkBox2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
                 android:text="@string/negative"
                 android:textSize="12sp"
                 android:fontFamily="@font/roboto_light"
@@ -166,67 +169,48 @@
 
             <View
                 android:id="@+id/horizontalline3_id"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="1dp"
                 android:layout_marginTop="1dp"
                 android:background="@android:color/darker_gray"
-                app:layout_constraintBottom_toTopOf="@+id/checkBox3"
-                app:layout_constraintEnd_toStartOf="@id/containerend_id"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="@id/containerstart_id"
-                app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+                />
 
-            <CheckBox
+            <RadioButton
                 android:id="@+id/checkBox3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="70dp"
                 android:text="@string/contacted_before"
                 android:textSize="12sp"
                 android:fontFamily="@font/roboto_light"
-                app:layout_constraintBottom_toTopOf="@+id/horizontalline4_id"
-                app:layout_constraintEnd_toStartOf="@id/startguidline"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="@id/containerstart_id"
-                app:layout_constraintTop_toBottomOf="@+id/horizontalline3_id" />
+                 />
 
             <View
                 android:id="@+id/horizontalline4_id"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="1dp"
                 android:layout_marginTop="1dp"
                 android:background="@android:color/darker_gray"
-                app:layout_constraintBottom_toTopOf="@+id/checkBox4"
-                app:layout_constraintEnd_toStartOf="@id/containerend_id"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="@id/containerstart_id"
-                app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+               />
 
-            <CheckBox
+            <RadioButton
                 android:id="@+id/checkBox4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="6dp"
+
                 android:text="@string/none"
                 android:textSize="12sp"
                 android:fontFamily="@font/roboto_light"
-                app:layout_constraintBottom_toTopOf="@+id/horizontalline4_id"
-                app:layout_constraintEnd_toStartOf="@id/startguidline"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="@id/containerstart_id"
-                app:layout_constraintTop_toBottomOf="@+id/horizontalline4_id" />
-
-
+                />
 
             <View
                 android:id="@+id/horizontalline7_id"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="1dp"
                 android:layout_marginTop="1dp"
                 android:background="@android:color/darker_gray"
-                app:layout_constraintEnd_toStartOf="@id/containerend_id"
-                app:layout_constraintStart_toStartOf="@id/containerstart_id"
-                app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+                />
+            </RadioGroup>
+
 
             <Button
                 android:id="@+id/bt_continue_id"
@@ -244,7 +228,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/imgendguide_id"
                 app:layout_constraintStart_toStartOf="@id/imgstartguide_id"
-                app:layout_constraintTop_toBottomOf="@+id/horizontalline7_id" />
+                app:layout_constraintTop_toBottomOf="@+id/radiobtns_id" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
