@@ -43,6 +43,14 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        TextView tempTV = findViewById(R.id.register_id);
+        tempTV.setOnClickListener(view -> {
+            startActivity(new Intent(MainActivity.this,DashBoard.class));
+        });
+
+
+
+
         teststatus = findViewById(R.id.tv_alreadyhave_id);
 
         email = findViewById(R.id.et_email_id);

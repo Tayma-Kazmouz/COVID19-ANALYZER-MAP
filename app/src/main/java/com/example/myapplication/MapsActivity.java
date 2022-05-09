@@ -20,7 +20,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.myapplication.databinding.ActivityMapsBinding;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMapOptions;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
@@ -71,21 +73,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
     }
 
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         infoBox = new Dialog(this);
         // set up the theme of the map
         mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(this,R.raw.custom_map_style));
+
 
         getJsonData(new VolleyResponseListener() {
             @Override
@@ -136,16 +131,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }); //  end of getJsonData
 
 
+
         mMap.setOnCameraChangeListener(new GoogleMap.OnCameraChangeListener() {
             @Override
             public void onCameraChange(@NonNull CameraPosition position) {
-
                 for (Map.Entry<Circle,Double> entry:mapCircleRadius.entrySet()) {
                     double newRadius;
                     double INITIAL_RADIUS = entry.getValue();
 
                     // when max zoom out
-                    if (position.zoom == 2.0){
+                    if (position.zoom == mMap.getMinZoomLevel()){
                         newRadius = INITIAL_RADIUS;
                     }
                     // when zoom out
@@ -173,6 +168,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 previousZoomLevel = position.zoom;
             }
         });
+
+
 
 
         mMap.setOnCircleClickListener(new GoogleMap.OnCircleClickListener() {
