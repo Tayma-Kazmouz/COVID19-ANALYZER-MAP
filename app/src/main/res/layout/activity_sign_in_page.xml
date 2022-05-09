@@ -6,164 +6,197 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
+    android:scrollbars="none"
     >
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SignInPage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/covid_analyzer_map"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:typeface="normal"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/startgui"
+            app:layout_constraintEnd_toEndOf="@id/endgui"
+            />
+
+        <TextView
+            android:id="@+id/sign_in_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_medium"
+            android:letterSpacing="0.01"
+            android:text="@string/sign_in"
+            android:textAlignment="center"
+            android:textColor="#FF647C"
+            android:textSize="20sp"
+            android:typeface="normal"
+            app:layout_constraintTop_toBottomOf="@id/title_id"
+            app:layout_constraintStart_toStartOf="@id/startgui"
+            app:layout_constraintEnd_toEndOf="@id/endgui"
+            />
+
+        <TextView
+            android:id="@+id/sigintext_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/sign_in_with_us_to_be_informed_about_covid_19"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:typeface="normal"
+            app:layout_constraintTop_toBottomOf="@id/sign_in_id"
+            app:layout_constraintStart_toStartOf="@id/startgui"
+            app:layout_constraintEnd_toEndOf="@id/endgui"
+            />
 
 
-    <TextView
-        android:id="@+id/title_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="85dp"
-        android:fontFamily="@font/roboto_bold"
-        android:text="@string/covid_analyzer_map"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:typeface="normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.876"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/sign_in_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="174dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="174dp"
-        android:fontFamily="@font/roboto_medium"
-        android:letterSpacing="0.01"
-        android:text="@string/sign_in"
-        android:textAlignment="center"
-        android:textColor="#FF647C"
-        android:textSize="20sp"
-        android:typeface="normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_id" />
+        <EditText
+            android:id="@+id/et_email_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/edittext_newlook"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="20dp"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/sigintext_id"
+            app:layout_constraintStart_toStartOf="@id/startgui"
+            app:layout_constraintEnd_toEndOf="@id/endgui"
+            />
 
-    <TextView
-        android:id="@+id/signintext_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="64dp"
-        android:fontFamily="@font/roboto_light"
-        android:text="@string/sign_in_with_us_to_be_informed_about_covid_19"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        android:typeface="normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_in_id" />
+        <EditText
+            android:id="@+id/et_password_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edittext_newlook"
+            android:drawableRight="@drawable/passwordicon"
+            android:gravity="center_vertical"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:longClickable="false"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="15dp"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/et_email_id"
+            app:layout_constraintStart_toStartOf="@id/startgui"
+            app:layout_constraintEnd_toEndOf="@id/endgui"
 
+            />
 
-    <EditText
-        android:id="@+id/et_email_id"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="10dp"
-        android:background="@drawable/edittext_newlook"
-        android:hint="@string/email"
-        android:inputType="textEmailAddress"
-        android:paddingLeft="10dp"
-        android:paddingTop="15dp"
-        android:paddingBottom="20dp"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signintext_id" />
-
-    <EditText
-        android:id="@+id/et_password_id"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="31dp"
-        android:background="@drawable/edittext_newlook"
-        android:drawableRight="@drawable/passwordicon"
-        android:gravity="center_vertical"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:longClickable="false"
-        android:paddingLeft="10dp"
-        android:paddingTop="15dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="15dp"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_email_id" />
-
-    <Button
-        android:id="@+id/bt_signin_id"
-        android:layout_width="150dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="131dp"
-        android:background="@drawable/capbuttonpressselector"
-        android:enabled="true"
-        android:letterSpacing="0.02"
-        android:text="@string/sign_in"
-        android:textAllCaps="false"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_password_id" />
-
-    <TextView
-        android:id="@+id/tv_donthaveacc_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="25dp"
-        android:fontFamily="@font/roboto_light"
-        android:text="@string/don_t_have_an_account"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        android:typeface="normal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_signin_id" />
-
-    <TextView
-        android:id="@+id/register_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="107dp"
+        <Button
+            android:id="@+id/bt_signin_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/capbuttonpressselector"
+            android:enabled="true"
+            android:letterSpacing="0.02"
+            android:text="@string/sign_in"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/et_password_id"
+            app:layout_constraintStart_toStartOf="@id/btnsgui"
+            app:layout_constraintEnd_toEndOf="@id/btnegui"
+            />
 
 
-        android:fontFamily="@font/roboto_medium"
-        android:text="@string/register"
-        android:textAlignment="center"
-        android:textColor="#029072"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_donthaveacc_id"
-        app:layout_constraintTop_toBottomOf="@+id/bt_signin_id">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/bt_signin_id"
+            android:layout_marginTop="15dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_alreadyhave_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/don_t_have_an_account"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:typeface="normal"
+                />
 
 
-    </TextView>
+            <TextView
+                android:id="@+id/register_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/register"
+                android:layout_marginLeft="10dp"
+                android:textColor="#029072"
+                android:textSize="16sp"
+                android:typeface="normal"
+                />
+        </LinearLayout>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/btnsgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/btnegui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.8" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/midgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </ScrollView>
