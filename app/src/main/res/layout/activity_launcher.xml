@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Launcher">
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/launchlottie_id"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/covid_19"
+        app:layout_constraintStart_toStartOf="@id/btnstart"
+        app:layout_constraintEnd_toEndOf="@id/btnend"
+        >
+
+
+    </com.airbnb.lottie.LottieAnimationView>
+
+
+    <TextView
+        android:id="@+id/launchtitle_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/covid_analyzer_map"
+        android:textAlignment="center"
+        android:textColor="@color/ourfav"
+        android:textSize="20sp"
+        android:typeface="normal"
+        app:layout_constraintTop_toBottomOf="@id/launchlottie_id"
+        app:layout_constraintStart_toStartOf="@id/lotstart"
+        app:layout_constraintEnd_toEndOf="@id/lotend"
+        ></TextView>
+
+
+    <TextView
+        android:id="@+id/launchinfo_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="@string/a_center_to_reach_information_and_statistics_about_the_covid_19_pandemic_in_a_simple_and_user_friendly_way"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:typeface="normal"
+        app:layout_constraintTop_toBottomOf="@id/launchtitle_id"
+        app:layout_constraintStart_toStartOf="@id/btnstart"
+        app:layout_constraintEnd_toEndOf="@id/btnend"/>
+
+    <Button
+        android:id="@+id/bt_register_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/capbuttonpressselector"
+        android:letterSpacing="0.02"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:enabled="true"
+        app:layout_constraintTop_toBottomOf="@id/launchinfo_id"
+        app:layout_constraintStart_toStartOf="@id/btnstart"
+        app:layout_constraintEnd_toEndOf="@id/btnsep"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+
+        />
+
+    <Button
+        android:id="@+id/bt_Signin_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/capbuttonpressselector"
+        android:letterSpacing="0.02"
+        android:text="@string/sign_in"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:enabled="true"
+        app:layout_constraintTop_toBottomOf="@id/launchinfo_id"
+        app:layout_constraintStart_toStartOf="@id/btnsep"
+        app:layout_constraintEnd_toEndOf="@id/btnend"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="10dp"
+
+
+        />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lotstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lotend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/btnstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/btnend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/btnsep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
