@@ -9,7 +9,9 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.ScrollView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -48,7 +50,8 @@ public class VaccineList extends AppCompatActivity {
     Map<String, SimpleCountry> mapNameSimpleCountry = new HashMap<>();
     Gson gson; // imported to fill up dS POJOs with Json data
     Switch sw;
-
+    ScrollView analyzedListSV;
+    LinearLayout headings;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +69,9 @@ public class VaccineList extends AppCompatActivity {
 
         gson = new GsonBuilder().create();
 
+        analyzedListSV = findViewById(R.id.analyzedListSV_id);
+
+        headings = findViewById(R.id.headingsTVsLL_id);
 
         sw = findViewById(R.id.vaccineSwitch_id);
 
@@ -76,10 +82,17 @@ public class VaccineList extends AppCompatActivity {
                 if (isChecked){
                     tvTitle.setText("Analyzed Data");
                     lv.setVisibility(View.GONE);
+                    headings.setVisibility(View.GONE);
+                    analyzedListSV.setVisibility(View.VISIBLE);
+
+
+
                 }else{
 
                     tvTitle.setText("Vaccine Data");
                     lv.setVisibility(View.VISIBLE);
+                    headings.setVisibility(View.VISIBLE);
+                    analyzedListSV.setVisibility(View.GONE);
                 }
 
 
