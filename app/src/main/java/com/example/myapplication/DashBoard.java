@@ -8,6 +8,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
@@ -135,6 +136,7 @@ public class DashBoard extends AppCompatActivity {
     MaterialCardView vaccineCV;
     MaterialCardView mapsCV;
 
+    ImageView ivExtras;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -163,6 +165,14 @@ public class DashBoard extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(DashBoard.this,MapsActivity.class));
+            }
+        });
+
+        ivExtras = findViewById(R.id.extras_id);
+        ivExtras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DashBoard.this,Extras.class));
             }
         });
 

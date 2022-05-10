@@ -93,6 +93,7 @@ Most people infected with the virus will experience mild to moderate respiratory
     <string name="male">Male</string>
     <string name="female">Female</string>
     <string name="country">Country:</string>
+    <string name="symptoms_and_precautions">Symptoms &amp; Precautions</string>
 
 
 </resources>
