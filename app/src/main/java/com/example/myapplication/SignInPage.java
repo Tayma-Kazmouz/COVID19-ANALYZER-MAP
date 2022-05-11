@@ -57,7 +57,7 @@ public class SignInPage extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             if (firebaseAuth.getCurrentUser().isEmailVerified()){
-                                Intent i= new Intent(SignInPage.this, NewLottie.class);
+                                Intent i= new Intent(SignInPage.this, UserInput.class);
                                 startActivity(i);
                             }else{
                                 Toast.makeText(SignInPage.this,"Please verify your email!", Toast.LENGTH_LONG).show();
