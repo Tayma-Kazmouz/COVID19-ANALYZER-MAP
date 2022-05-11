@@ -139,7 +139,7 @@ public class AnalyzedVariant extends AppCompatActivity {
         BarDataSet barSetSD = new BarDataSet(yValsSD,"Data Set SD");
         barSetSD.setColor(Color.parseColor("#FF647C"));
         barSetSD.setDrawValues(true); // values on top of each bar
-        barSetSD.setHighlightEnabled(false);
+        barSetSD.setHighlightEnabled(true);
         barSetSD.setValueTextSize(10);
         barSetSD.setValueTextColor(Color.parseColor("#99000000"));
         barSetSD.setValueFormatter(new PercentFormatter());
