@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.app.Dialog;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -196,15 +197,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 // Set Values
                 Picasso.get().load(dataCircleMap.get(circle).getCountryInfo().getFlag()).placeholder(R.drawable.ic_sampleflagsvg).into(countyFlag);
                 countryFullNameTv.setText(nameTag);
-                countryFullNameTv.setTypeface(ResourcesCompat.getFont(getApplicationContext(),R.font.poppins));
+//                countryFullNameTv.setTypeface(ResourcesCompat.getFont(getApplicationContext(),R.font.poppins));
                 countryCasesTv.setText("+"+dataCircleMap.get(circle).getCases());
-                countryCasesTv.setTypeface(ResourcesCompat.getFont(getApplicationContext(),R.font.poppins_black));
+//                countryCasesTv.setTypeface(ResourcesCompat.getFont(getApplicationContext(),R.font.poppins_black));
                 countryActiveTv.setText("+"+dataCircleMap.get(circle).getActive());
-                countryActiveTv.setTypeface(ResourcesCompat.getFont(getApplicationContext(),R.font.poppins_black));
+//                countryActiveTv.setTypeface(ResourcesCompat.getFont(getApplicationContext(),R.font.poppins_black));
                 countryRecoveredTv.setText("+"+dataCircleMap.get(circle).getRecovered());
-                countryRecoveredTv.setTypeface(ResourcesCompat.getFont(getApplicationContext(),R.font.poppins_black));
+//                countryRecoveredTv.setTypeface(ResourcesCompat.getFont(getApplicationContext(),R.font.poppins_black));
                 countryDeathsTv.setText("+"+dataCircleMap.get(circle).getDeaths());
-                countryDeathsTv.setTypeface(ResourcesCompat.getFont(getApplicationContext(),R.font.poppins_black));
+//                countryDeathsTv.setTypeface(ResourcesCompat.getFont(getApplicationContext(),R.font.poppins_black));
 
 
                 // change font
@@ -213,11 +214,27 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 TextView tvActive = infoBox.findViewById(R.id.mapinfoactivetext_id);
                 TextView tvRecovered = infoBox.findViewById(R.id.mapinforecoveredtext_id);
                 TextView tvDeaths = infoBox.findViewById(R.id.mapinfodeathstext_id);
+//
+//                tvCases.setTypeface(ResourcesCompat.getFont(getApplicationContext(),R.font.poppins));
+//                tvActive.setTypeface(ResourcesCompat.getFont(getApplicationContext(),R.font.poppins));
+//                tvRecovered.setTypeface(ResourcesCompat.getFont(getApplicationContext(),R.font.poppins));
+//                tvDeaths.setTypeface(ResourcesCompat.getFont(getApplicationContext(),R.font.poppins));
 
-                tvCases.setTypeface(ResourcesCompat.getFont(getApplicationContext(),R.font.poppins));
-                tvActive.setTypeface(ResourcesCompat.getFont(getApplicationContext(),R.font.poppins));
-                tvRecovered.setTypeface(ResourcesCompat.getFont(getApplicationContext(),R.font.poppins));
-                tvDeaths.setTypeface(ResourcesCompat.getFont(getApplicationContext(),R.font.poppins));
+
+                Typeface font = Typeface.createFromAsset(getAssets(),"fonts/poppins.ttf");
+                tvCases.setTypeface(font);
+                tvActive.setTypeface(font);
+                tvRecovered.setTypeface(font);
+                tvDeaths.setTypeface(font);
+                countryFullNameTv.setTypeface(font);
+
+                Typeface fontB = Typeface.createFromAsset(getAssets(),"fonts/poppins_black.ttf");
+                countryCasesTv.setTypeface(fontB);
+                countryActiveTv.setTypeface(fontB);
+                countryDeathsTv.setTypeface(fontB);
+                countryRecoveredTv.setTypeface(fontB);
+
+
 
                 infoBox.show();
 
