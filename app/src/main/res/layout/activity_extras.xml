@@ -179,6 +179,7 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mCVsympsandprecs_id"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_marginLeft="5dp"
@@ -201,7 +202,7 @@
                             android:scaleType="centerInside"/>
 
                         <TextView
-                            android:padding="2dp"
+                            android:padding="15dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/symptoms_and_precautions"
