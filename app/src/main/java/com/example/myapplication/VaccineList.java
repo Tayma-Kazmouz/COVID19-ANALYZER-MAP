@@ -25,6 +25,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.facebook.shimmer.ShimmerFrameLayout;
+import com.google.android.material.card.MaterialCardView;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.squareup.picasso.Picasso;
@@ -86,6 +87,161 @@ public class VaccineList extends AppCompatActivity {
                     analyzedListSV.setVisibility(View.VISIBLE);
 
 
+                    MaterialCardView mCVAncestral = findViewById(R.id.ancestral_id);
+                    mCVAncestral.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent nAncestral = new Intent(VaccineList.this,AnalyzedVariant.class);
+
+                            nAncestral.putExtra("variantName","Ancestral");
+                            nAncestral.putExtra("FD","Wuhan, China");
+                            nAncestral.putExtra("DR","December 2019");
+                            nAncestral.putExtra("SDJJ",0.86f);
+                            nAncestral.putExtra("SDModerna",0.97f);
+                            nAncestral.putExtra("SDNovavax",0.89f);
+                            nAncestral.putExtra("SDOxford",0.94f);
+                            nAncestral.putExtra("SDPfizer",0.95f);
+                            nAncestral.putExtra("InfJJ",0.72f);
+                            nAncestral.putExtra("InfModerna",0.92f);
+                            nAncestral.putExtra("InfNovavax",0.83f);
+                            nAncestral.putExtra("InfOxford",0.63f);
+                            nAncestral.putExtra("InfPfizer",0.86f);
+
+                            startActivity(nAncestral);
+
+                        }
+                    });
+
+
+                    MaterialCardView mCVAlpha = findViewById(R.id.alpha_id);
+                    mCVAlpha.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent nAlpha = new Intent(VaccineList.this,AnalyzedVariant.class);
+
+                            nAlpha.putExtra("variantName","Alpha");
+                            nAlpha.putExtra("FD","United Kingdom");
+                            nAlpha.putExtra("DR","November 2020");
+                            nAlpha.putExtra("SDJJ",0.86f);
+                            nAlpha.putExtra("SDModerna",0.97f);
+                            nAlpha.putExtra("SDNovavax",0.89f);
+                            nAlpha.putExtra("SDOxford",0.94f);
+                            nAlpha.putExtra("SDPfizer",0.95f);
+                            nAlpha.putExtra("InfJJ",0.72f);
+                            nAlpha.putExtra("InfModerna",0.92f);
+                            nAlpha.putExtra("InfNovavax",0.83f);
+                            nAlpha.putExtra("InfOxford",0.63f);
+                            nAlpha.putExtra("InfPfizer",0.86f);
+
+                            startActivity(nAlpha);
+                        }
+                    });
+
+
+                    MaterialCardView mCVBeta = findViewById(R.id.beta_id);
+                    mCVBeta.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent nBeta = new Intent(VaccineList.this,AnalyzedVariant.class);
+
+                            nBeta.putExtra("variantName","Beta");
+                            nBeta.putExtra("FD","Nelson Mandela Bay, South Africa");
+                            nBeta.putExtra("DR","July/August 2020");
+                            nBeta.putExtra("SDJJ",0.76f);
+                            nBeta.putExtra("SDModerna",0.97f);
+                            nBeta.putExtra("SDNovavax",0.86f);
+                            nBeta.putExtra("SDOxford",0.94f);
+                            nBeta.putExtra("SDPfizer",0.95f);
+                            nBeta.putExtra("InfJJ",0.64f);
+                            nBeta.putExtra("InfModerna",0.91f);
+                            nBeta.putExtra("InfNovavax",0.82f);
+                            nBeta.putExtra("InfOxford",0.69f);
+                            nBeta.putExtra("InfPfizer",0.84f);
+
+                            startActivity(nBeta);
+                        }
+                    });
+
+
+                    MaterialCardView mCVGamma = findViewById(R.id.gamma_id);
+                    mCVGamma.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent nGamma = new Intent(VaccineList.this,AnalyzedVariant.class);
+
+                            nGamma.putExtra("variantName","Gamma");
+                            nGamma.putExtra("FD","Tokyo, Japan");
+                            nGamma.putExtra("DR","6 January 2021");
+                            nGamma.putExtra("SDJJ",0.76f);
+                            nGamma.putExtra("SDModerna",0.97f);
+                            nGamma.putExtra("SDNovavax",0.86f);
+                            nGamma.putExtra("SDOxford",0.94f);
+                            nGamma.putExtra("SDPfizer",0.95f);
+                            nGamma.putExtra("InfJJ",0.64f);
+                            nGamma.putExtra("InfModerna",0.91f);
+                            nGamma.putExtra("InfNovavax",0.82f);
+                            nGamma.putExtra("InfOxford",0.69f);
+                            nGamma.putExtra("InfPfizer",0.84f);
+
+                            startActivity(nGamma);
+                        }
+                    });
+
+                    MaterialCardView mCVDelta = findViewById(R.id.delta_id);
+                    mCVDelta.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent nDelta = new Intent(VaccineList.this,AnalyzedVariant.class);
+
+                            nDelta.putExtra("variantName","Delta");
+                            nDelta.putExtra("FD","India");
+                            nDelta.putExtra("DR","Late 2020");
+                            nDelta.putExtra("SDJJ",0.76f);
+                            nDelta.putExtra("SDModerna",0.97f);
+                            nDelta.putExtra("SDNovavax",0.86f);
+                            nDelta.putExtra("SDOxford",0.94f);
+                            nDelta.putExtra("SDPfizer",0.95f);
+                            nDelta.putExtra("InfJJ",0.64f);
+                            nDelta.putExtra("InfModerna",0.91f);
+                            nDelta.putExtra("InfNovavax",0.82f);
+                            nDelta.putExtra("InfOxford",0.69f);
+                            nDelta.putExtra("InfPfizer",0.84f);
+
+                            startActivity(nDelta);
+                        }
+                    });
+
+                    MaterialCardView mCVOmicron = findViewById(R.id.omicron_id);
+                    mCVOmicron.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent nOmicron = new Intent(VaccineList.this,AnalyzedVariant.class);
+
+                            nOmicron.putExtra("variantName","Omicron");
+                            nOmicron.putExtra("FD","South Africa");
+                            nOmicron.putExtra("DR","24 November 2021");
+                            nOmicron.putExtra("SDJJ",0.57f);
+                            nOmicron.putExtra("SDModerna",0.73f);
+                            nOmicron.putExtra("SDNovavax",0.65f);
+                            nOmicron.putExtra("SDOxford",0.71f);
+                            nOmicron.putExtra("SDPfizer",0.72f);
+                            nOmicron.putExtra("InfJJ",0.33f);
+                            nOmicron.putExtra("InfModerna",0.48f);
+                            nOmicron.putExtra("InfNovavax",0.43f);
+                            nOmicron.putExtra("InfOxford",0.36f);
+                            nOmicron.putExtra("InfPfizer",0.44f);
+
+                            startActivity(nOmicron);
+                        }
+                    });
+
+                    MaterialCardView mCVSampledCountries = findViewById(R.id.sampledCountries_id);
+                    mCVSampledCountries.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                           startActivity(new Intent(VaccineList.this,SampledAnalyzedCountries.class));
+                        }
+                    });
 
                 }else{
 

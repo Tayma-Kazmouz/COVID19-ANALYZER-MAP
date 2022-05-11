@@ -13,6 +13,12 @@
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".SampledAnalyzedCountries"
+            android:exported="false" />
+        <activity
+            android:name=".AnalyzedVariant"
+            android:exported="false" />
+        <activity
             android:name=".Extras"
             android:exported="false" />
 
@@ -32,10 +38,12 @@
             android:exported="false" />
         <activity
             android:name=".VaccineList"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".CoronaCasesList"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".UserInput"
             android:exported="false" />

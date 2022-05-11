@@ -94,6 +94,10 @@ Most people infected with the virus will experience mild to moderate respiratory
     <string name="female">Female</string>
     <string name="country">Country:</string>
     <string name="symptoms_and_precautions">Symptoms &amp; Precautions</string>
+    <string name="johnsonjohnsonFR">Johnson &amp; Johnson: 0.77%</string>
+    <string name="johnsonjohnsonGE">Johnson &amp; Johnson: 2.12%</string>
+    <string name="johnsonjohnsonUSA">Johnson &amp; Johnson: 3.33%</string>
+    <string name="johnsonjohnsonUA">Johnson &amp; Johnson: 0.07%</string>
 
 
 </resources>

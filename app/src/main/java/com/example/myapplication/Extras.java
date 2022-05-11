@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.google.android.material.card.MaterialCardView;
+
 public class Extras extends AppCompatActivity {
 
     //Declare
@@ -23,6 +25,14 @@ public class Extras extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Extras.this,DashBoard.class));
+            }
+        });
+
+        MaterialCardView mCVSymptoms = findViewById(R.id.mCVsympsandprecs_id);
+        mCVSymptoms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Extras.this,NewLottie.class));
             }
         });
 
