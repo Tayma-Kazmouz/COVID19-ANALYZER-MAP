@@ -60,7 +60,7 @@
                             android:adjustViewBounds="true"
                             android:elevation="2dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/zzzzzzw"
+                            android:src="@drawable/fr"
                             app:shapeAppearanceOverlay="@style/roundedflagimage" />
 
                         <TextView
@@ -235,7 +235,7 @@
                             android:adjustViewBounds="true"
                             android:elevation="2dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/zzzd"
+                            android:src="@drawable/de"
                             app:shapeAppearanceOverlay="@style/roundedflagimage" />
 
                         <TextView
@@ -428,7 +428,7 @@
                             android:adjustViewBounds="true"
                             android:elevation="2dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/zzzzzzzzx"
+                            android:src="@drawable/us"
                             app:shapeAppearanceOverlay="@style/roundedflagimage" />
 
                         <TextView
@@ -578,7 +578,7 @@
                             android:adjustViewBounds="true"
                             android:elevation="2dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/zzzzzzzzu"
+                            android:src="@drawable/ua"
                             app:shapeAppearanceOverlay="@style/roundedflagimage" />
 
                         <TextView

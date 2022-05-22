@@ -44,7 +44,7 @@ public class SignInPage extends AppCompatActivity {
         gotoregisterpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SignInPage.this,MainActivity.class));
+                startActivity(new Intent(SignInPage.this, RegisterPage.class));
             }
         });
 

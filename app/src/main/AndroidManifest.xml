@@ -26,6 +26,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="${MAPS_API_KEY}" />
 
+
         <activity
             android:name=".MapsActivity"
             android:exported="false"
@@ -63,9 +64,6 @@
             android:name=".NewLottie"
             android:exported="false" />
         <activity
-            android:name=".Lottie"
-            android:exported="false" />
-        <activity
             android:name=".ReportStatus2"
             android:exported="false" />
         <activity
@@ -81,7 +79,7 @@
             android:name=".DashBoard"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".RegisterPage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -93,6 +91,9 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+
+
     </application>
 
 </manifest>

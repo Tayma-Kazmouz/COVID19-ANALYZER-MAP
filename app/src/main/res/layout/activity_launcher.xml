@@ -39,8 +39,7 @@
         android:typeface="normal"
         app:layout_constraintTop_toBottomOf="@id/launchlottie_id"
         app:layout_constraintStart_toStartOf="@id/lotstart"
-        app:layout_constraintEnd_toEndOf="@id/lotend"
-        ></TextView>
+        app:layout_constraintEnd_toEndOf="@id/lotend" />
 
 
     <TextView

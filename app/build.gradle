@@ -5,6 +5,7 @@ plugins {
 
     id 'com.google.gms.google-services'
 
+
 }
 
 android {
@@ -72,12 +73,12 @@ dependencies {
     implementation 'com.airbnb.android:lottie:5.0.3'
 
 
-    //CountryPicker
-    implementation 'com.github.yesterselga:country-picker-android:2.0'
-
-
     //dialog trial
     implementation 'com.google.android.material:material:1.7.0-alpha01'
+
+    // added countries library
+    implementation 'com.github.blongho:worldCountryData:1.5.3'
+
 
 
 
