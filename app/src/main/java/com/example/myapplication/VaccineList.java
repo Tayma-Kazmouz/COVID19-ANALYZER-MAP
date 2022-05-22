@@ -393,8 +393,8 @@ public class VaccineList extends AppCompatActivity {
 
                             Picasso.get().load(strCountryFlagURL).into(flag);
                             countryName.setText(strCountryName);
-                            countryDoses.setText(strCountryDoses);
-                            countryCoverage.setText(strCountryCoverage);
+                            countryDoses.setText(String.format("%,d",Long.parseLong(strCountryDoses)));
+                            countryCoverage.setText(String.format("%,d",Long.parseLong(strCountryCoverage)));
 
                         } catch (JSONException e) {
                             e.printStackTrace();

@@ -71,34 +71,33 @@
                         android:id="@+id/ivVariant_id"
                         android:layout_width="90dp"
                         android:layout_height="58dp"
-                        android:layout_marginBottom="9dp"
                         android:adjustViewBounds="true"
                         android:scaleType="centerInside"
                         android:src="@drawable/ic_ancestrialvector"
-                        app:layout_constraintBottom_toTopOf="@+id/view3"
-                        app:layout_constraintEnd_toStartOf="@+id/guide5"
-                        app:layout_constraintHorizontal_bias="0.268"
+                        app:layout_constraintBottom_toTopOf="@+id/guide2"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                        app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="@+id/guideline8"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="1.0" />
+                        app:layout_constraintVertical_bias="0.375" />
 
                     <TextView
                         android:id="@+id/vairiantNameAV_id"
                         android:layout_width="146dp"
                         android:layout_height="58dp"
                         android:layout_marginTop="1dp"
-                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="5dp"
                         android:fontFamily="@font/poppins"
                         android:gravity="center_vertical"
                         android:text="Variant"
                         android:textColor="@color/black"
                         android:textSize="14sp"
-                        app:layout_constraintBottom_toTopOf="@+id/view3"
+                        app:layout_constraintBottom_toTopOf="@+id/guide2"
                         app:layout_constraintEnd_toStartOf="@+id/guide5"
                         app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toEndOf="@+id/ivVariant_id"
+                        app:layout_constraintStart_toStartOf="@+id/guideline9"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.933" />
+                        app:layout_constraintVertical_bias="0.358" />
 
                     <TextView
                         android:id="@+id/FirstDetectedAV_id"
@@ -182,7 +181,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        app:layout_constraintGuide_percent="0.1"/>
+                        app:layout_constraintGuide_percent="0.1" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>

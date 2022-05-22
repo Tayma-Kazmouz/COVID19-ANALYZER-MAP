@@ -252,10 +252,18 @@
                         android:layout_marginTop="20dp"
                         android:orientation="horizontal">
 
+                        <View
+                            android:layout_gravity="center"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/indicatordetailscases" />
+
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginLeft="5dp"
                             android:layout_weight="1"
                             android:fontFamily="@font/poppins_medium"
                             android:text="Cases"
@@ -293,10 +301,18 @@
                         android:layout_marginTop="20dp"
                         android:orientation="horizontal">
 
+                        <View
+                            android:layout_gravity="center"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/indicatordetailsrecovered" />
+
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginLeft="5dp"
                             android:layout_weight="1"
                             android:fontFamily="@font/poppins_medium"
                             android:text="Recovered"
@@ -334,10 +350,18 @@
                         android:layout_marginTop="20dp"
                         android:orientation="horizontal">
 
+                        <View
+                            android:layout_gravity="center"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/indicatordetailsdeaths" />
+
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginLeft="5dp"
                             android:layout_weight="1"
                             android:fontFamily="@font/poppins_medium"
                             android:text="Deaths"

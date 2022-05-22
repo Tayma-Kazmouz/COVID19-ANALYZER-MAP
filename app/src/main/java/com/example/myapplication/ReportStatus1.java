@@ -7,7 +7,11 @@ import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+
 
 public class ReportStatus1 extends AppCompatActivity {
 
@@ -39,8 +43,6 @@ public class ReportStatus1 extends AppCompatActivity {
                 startActivity(new Intent(ReportStatus1.this,ReportStatus2.class));
             }
         });
-
-
 
 
 

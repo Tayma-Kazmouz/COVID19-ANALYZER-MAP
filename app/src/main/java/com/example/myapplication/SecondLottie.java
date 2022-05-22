@@ -15,7 +15,7 @@ public class SecondLottie extends AppCompatActivity {
 
     ViewPager mSLideViewPager;
     LinearLayout mDotLayout;
-    Button backbtn, nextbtn, skipbtn;
+    Button  skipbtn;
 
     TextView[] dots;
     ViewPagerAdapter2 viewPagerAdapter;
@@ -26,46 +26,16 @@ public class SecondLottie extends AppCompatActivity {
         setContentView(R.layout.activity_second_lottie);
 
 
-//        backbtn = findViewById(R.id.backbtn);
-//        nextbtn = findViewById(R.id.nextbtn);
         skipbtn = findViewById(R.id.skipButton);
 
-//        backbtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                if (getitem(0) > 0){
-//
-//                    mSLideViewPager.setCurrentItem(getitem(-1),true);
-//
-//                }
-//
-//            }
-//        });
 
-//        nextbtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                if (getitem(0) < 3)
-//                    mSLideViewPager.setCurrentItem(getitem(1),true);
-//                else {
-//
-//                    Intent i = new Intent(NewLottie.this,DashBoard.class);
-//                    startActivity(i);
-//                    finish();
-//
-//                }
-//
-//            }
-//        });
 
         skipbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
 
-                Intent i = new Intent(SecondLottie.this,MainActivity.class);
+                Intent i = new Intent(SecondLottie.this, RegisterPage.class);
                 startActivity(i);
                 finish();
 
@@ -114,15 +84,6 @@ public class SecondLottie extends AppCompatActivity {
 
             setUpindicator(position);
 
-//            if (position > 0){
-//
-//                backbtn.setVisibility(View.VISIBLE);
-//
-//            }else {
-//
-//                backbtn.setVisibility(View.INVISIBLE);
-//
-//            }
 
         }
 
