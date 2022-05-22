@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -24,7 +25,6 @@ import java.util.ArrayList;
 
 public class CovidDetails extends AppCompatActivity {
 
-
     //Declare
 
     TextView tvCountryFullName, tvCountryPopulation, tvCountryContinent;
@@ -32,6 +32,8 @@ public class CovidDetails extends AppCompatActivity {
     ShapeableImageView ivFlag, ivMap;
     PieChart myPieChart;
     SeekBar sbCases, sbRecovered,sbDeaths;
+
+    private String STATIC_MAPS_KEY;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +68,13 @@ public class CovidDetails extends AppCompatActivity {
         Corona coronaData = intent.getParcelableExtra("getCoronaParcelable");
 
 
+        //here we use a free static map api from Jawg.io ...access token is created from a throwaway account
+        // for more info : https://www.jawg.io/docs/apidocs/maps/static-maps/#access-token
+
+        STATIC_MAPS_KEY = BuildConfig.STATIC_API_KEY;
+
+
+
         TextView tvTitle = findViewById(R.id.detailedTitle_id);
         tvTitle.setText(coronaData.getCountry()+" Details");
 
@@ -74,7 +83,7 @@ public class CovidDetails extends AppCompatActivity {
 
 
         tvCountryFullName.setText(coronaData.getCountry());
-        tvCountryPopulation.setText("Population\n" + coronaData.getPopulation());
+        tvCountryPopulation.setText("Population\n" + String.format("%,d",coronaData.getPopulation()));
         tvCountryContinent.setText("Continent\n" + coronaData.getContinent());
         Picasso.get().load(coronaData.getCountryInfo().getFlag()).into(ivFlag);
 
@@ -83,21 +92,28 @@ public class CovidDetails extends AppCompatActivity {
 
 
 
-        //here we use a free static map api from Jawg.io ...access token is created from a throwaway account ... use another access token in case of request failure
-        String mapURL = "https://api.jawg.io/static?zoom=6&center=" + coronaData.getCountryInfo().getLat() + "," + coronaData.getCountryInfo().getLong() + "&size=1500x1500&layer=jawg-terrain&format=png&access-token=***REMOVED***";
+        //here we use a free static map api from Jawg.io ...access token is created from a throwaway account
+        String mapURL = "https://api.jawg.io/static?zoom=6&center=" + coronaData.getCountryInfo().getLat() + "," + coronaData.getCountryInfo().getLong() + "&size=1500x1500&layer=jawg-terrain&format=png&access-token="+STATIC_MAPS_KEY;
 
 
         // if its one of the big countries then fetch a zoomed out static map from the API
         if (coronaData.getCountry().matches("USA|Canada|Russia|China|Brazil|Kazakhstan|Greenland"))
         {
-            String mapBigURL = "https://api.jawg.io/static?zoom=4&center=" + coronaData.getCountryInfo().getLat() + "," + coronaData.getCountryInfo().getLong() + "&size=1500x1500&layer=jawg-terrain&format=png&access-token=***REMOVED***";
+            String mapBigURL = "https://api.jawg.io/static?zoom=4&center=" + coronaData.getCountryInfo().getLat() + "," + coronaData.getCountryInfo().getLong() + "&size=1500x1500&layer=jawg-terrain&format=png&access-token="+STATIC_MAPS_KEY;
 
             Picasso.get().load(mapBigURL).placeholder(R.drawable.defaultmap).into(ivMap);
         }else if (coronaData.getCountry().equals("Australia")){
-            String mapAusURL = "https://api.jawg.io/static?zoom=5&center=" + coronaData.getCountryInfo().getLat() + "," + coronaData.getCountryInfo().getLong() + "&size=1500x1500&layer=jawg-terrain&format=png&access-token=***REMOVED***";
+            String mapAusURL = "https://api.jawg.io/static?zoom=5&center=" + coronaData.getCountryInfo().getLat() + "," + coronaData.getCountryInfo().getLong() + "&size=1500x1500&layer=jawg-terrain&format=png&access-token="+STATIC_MAPS_KEY;
 
             Picasso.get().load(mapAusURL).placeholder(R.drawable.defaultmap).into(ivMap);
-        }else{
+
+        }
+        else if (coronaData.getCountry().equals("New Zealand")){
+            String mapNZURL  = "https://api.jawg.io/static?zoom=8&center=" + coronaData.getCountryInfo().getLat() + "," + coronaData.getCountryInfo().getLong() + "&size=1500x1500&layer=jawg-terrain&format=png&access-token="+STATIC_MAPS_KEY;
+            Picasso.get().load(mapNZURL).placeholder(R.drawable.defaultmap).into(ivMap);
+        }
+
+        else{
             Picasso.get().load(mapURL).placeholder(R.drawable.defaultmap).into(ivMap);
         }
 
@@ -124,7 +140,7 @@ public class CovidDetails extends AppCompatActivity {
         dataSet.setColors(
                  Color.parseColor("#FF3AC4FF") // Cases  = Blue
                 ,Color.parseColor("#FF00BFA6") // Recovered = Green
-                ,Color.parseColor("#FFFF647C") // Deaths = Deaths
+                ,Color.parseColor("#FFFF647C") // Deaths = Red
         );
 
 
@@ -177,24 +193,39 @@ public class CovidDetails extends AppCompatActivity {
         TextView tvPieRecovered = findViewById(R.id.tvRecoveredPie_id);
         TextView tvPieDeaths = findViewById(R.id.tvDeathsPie_id);
 
-        tvPieCases.setText(coronaData.getCases()+" ("+String.format("%.2f",pCases)+"%)");
-        tvPieRecovered.setText(coronaData.getRecovered()+" ("+String.format("%.2f",pRecovered)+"%)");
-        tvPieDeaths.setText(coronaData.getDeaths()+" ("+String.format("%.2f",pDeaths)+"%)");
+        tvPieCases.setText(String.format("%,d",coronaData.getCases())+" ("+String.format("%.2f",pCases)+"%)");
+        tvPieRecovered.setText(String.format("%,d",coronaData.getRecovered())+" ("+String.format("%.2f",pRecovered)+"%)");
+        tvPieDeaths.setText(String.format("%,d",coronaData.getDeaths())+" ("+String.format("%.2f",pDeaths)+"%)");
 
 
 
-        tvTodayCases.setText("+"+coronaData.getTodayCases());
-        tvTodayRecovery.setText("+"+coronaData.getTodayRecovered());
-        tvTodayDeaths.setText("+"+coronaData.getTodayDeaths());
+        tvTodayCases.setText("+"+String.format("%,d",coronaData.getTodayCases()));
+        tvTodayRecovery.setText("+"+String.format("%,d",coronaData.getTodayRecovered()));
+        tvTodayDeaths.setText("+"+String.format("%,d",coronaData.getTodayDeaths()));
 
-        tvMoreTests.setText(""+coronaData.getTests());
-        tvMoreCritical.setText(""+coronaData.getCritical());
-        tvMoreActive.setText(""+coronaData.getActive());
+        tvMoreTests.setText(""+String.format("%,d",coronaData.getTests()));
+        tvMoreCritical.setText(""+String.format("%,d",coronaData.getCritical()));
+        tvMoreActive.setText(""+String.format("%,d",coronaData.getActive()));
 
+        //fonts
+        Typeface fontPoppinsBlack = Typeface.createFromAsset(getAssets(),"fonts/poppins_black.ttf");
+        Typeface fontPoppins = Typeface.createFromAsset(getAssets(),"fonts/poppins.ttf");
 
+        tvCountryFullName.setTypeface(fontPoppins);
+        tvCountryPopulation.setTypeface(fontPoppins);
+        tvCountryContinent.setTypeface(fontPoppins);
 
+        tvPieCases.setTypeface(fontPoppins);
+        tvPieRecovered.setTypeface(fontPoppins);
+        tvPieDeaths.setTypeface(fontPoppins);
 
+        tvTodayCases.setTypeface(fontPoppinsBlack);
+        tvTodayRecovery.setTypeface(fontPoppinsBlack);
+        tvTodayDeaths.setTypeface(fontPoppinsBlack);
 
+        tvMoreTests.setTypeface(fontPoppinsBlack);
+        tvMoreCritical.setTypeface(fontPoppinsBlack);
+        tvMoreActive.setTypeface(fontPoppinsBlack);
 
 
     }//end of onCreate

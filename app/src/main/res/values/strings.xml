@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">COVID ANALYZER MAP</string>
     <string name="covid_analyzer_map">COVID ANALYZER MAP</string>
     <string name="register">Register</string>
 

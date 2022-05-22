@@ -19,6 +19,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.blongho.country_data.World;
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.XAxis;
@@ -144,6 +145,7 @@ public class DashBoard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board);
 
+        World.init(getApplicationContext()); // Initializes the countries library and loads all data
 
         coronaCasesCv = findViewById(R.id.coronaCasesCV_id);
         coronaCasesCv.setOnClickListener(new View.OnClickListener() {

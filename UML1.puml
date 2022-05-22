@@ -46,7 +46,7 @@ class com.example.myapplication.VolleySingleton {
 + RequestQueue getRequestQueue()
 + void addToRequestQueue(Request<T>)
 }
-class com.example.myapplication.MainActivity {
+class com.example.myapplication.RegisterPage {
 ~ EditText email
 ~ boolean passwordVisible
 ~ TextView gotosigninpage
@@ -56,15 +56,12 @@ class com.example.myapplication.MainActivity {
 ~ TextView teststatus
 # void onCreate(Bundle)
 }
-class com.example.myapplication.customadapter {
+class com.example.myapplication.CountryPickerAdapter {
 ~ Context c
 ~ String[] names
 ~ int[] images
 + View getDropDownView(int,View,ViewGroup)
 + View getView(int,View,ViewGroup)
-}
-class com.example.myapplication.Lottie {
-# void onCreate(Bundle)
 }
 class com.example.myapplication.NewLottie {
 ~ ViewPager mSLideViewPager
@@ -393,9 +390,8 @@ class com.example.myapplication.Corona {
 android.os.Parcelable <|.. com.example.myapplication.CountryInfo
 androidx.appcompat.app.AppCompatActivity <|-- com.example.myapplication.CoronaCasesList
 com.example.myapplication.CoronaCasesList +.. com.example.myapplication.CoronaCasesList.VolleyResponseListener
-androidx.appcompat.app.AppCompatActivity <|-- com.example.myapplication.MainActivity
-android.widget.ArrayAdapter <|-- com.example.myapplication.customadapter
-androidx.appcompat.app.AppCompatActivity <|-- com.example.myapplication.Lottie
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myapplication.RegisterPage
+android.widget.ArrayAdapter <|-- com.example.myapplication.CountryPickerAdapter
 androidx.appcompat.app.AppCompatActivity <|-- com.example.myapplication.NewLottie
 androidx.appcompat.app.AppCompatActivity <|-- com.example.myapplication.UserInput
 androidx.appcompat.app.AppCompatActivity <|-- com.example.myapplication.ReportStatus1

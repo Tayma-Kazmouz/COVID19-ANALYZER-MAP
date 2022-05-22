@@ -16,7 +16,7 @@ public class NewLottie extends AppCompatActivity {
 
     ViewPager mSLideViewPager;
     LinearLayout mDotLayout;
-    Button backbtn, nextbtn, skipbtn;
+    Button  skipbtn;
 
     TextView[] dots;
     ViewPagerAdapter viewPagerAdapter;
@@ -28,39 +28,9 @@ public class NewLottie extends AppCompatActivity {
 
 
 
-//        backbtn = findViewById(R.id.backbtn);
-//        nextbtn = findViewById(R.id.nextbtn);
         skipbtn = findViewById(R.id.skipButton);
 
-//        backbtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                if (getitem(0) > 0){
-//
-//                    mSLideViewPager.setCurrentItem(getitem(-1),true);
-//
-//                }
-//
-//            }
-//        });
 
-//        nextbtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                if (getitem(0) < 3)
-//                    mSLideViewPager.setCurrentItem(getitem(1),true);
-//                else {
-//
-//                    Intent i = new Intent(NewLottie.this,DashBoard.class);
-//                    startActivity(i);
-//                    finish();
-//
-//                }
-//
-//            }
-//        });
 
         skipbtn.setOnClickListener(new View.OnClickListener() {
             @Override
