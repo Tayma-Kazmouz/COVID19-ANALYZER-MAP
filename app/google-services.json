@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "610642201234",
-    "project_id": "capstonetest-613ed",
-    "storage_bucket": "capstonetest-613ed.appspot.com"
+    "project_number": "937295510277",
+    "project_id": "covid19-map-b829b",
+    "storage_bucket": "covid19-map-b829b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:610642201234:android:23f994665f3b87b083344b",
+        "mobilesdk_app_id": "1:937295510277:android:996d1f05e1bd6ca52a956c",
         "android_client_info": {
           "package_name": "com.example.myapplication"
         }
       },
       "oauth_client": [
         {
-          "client_id": "610642201234-v2plhoovrpdst5bk38iu0m4j96j53p6h.apps.googleusercontent.com",
+          "client_id": "937295510277-k6fkk8nppt5hs9kclv2krlpbfdcbibmb.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCfLsIRPm1EUaW-5d063bsPZjPTi8MI39M"
+          "current_key": "AIzaSyAjRwDW3ZL_5IJ-aCWgu-QQIHSy7hrdAvM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "610642201234-v2plhoovrpdst5bk38iu0m4j96j53p6h.apps.googleusercontent.com",
+              "client_id": "937295510277-k6fkk8nppt5hs9kclv2krlpbfdcbibmb.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -42,6 +42,8 @@ public class UserInput extends AppCompatActivity {
         setContentView(R.layout.activity_user_input);
 
 
+
+
         gotoreport= findViewById(R.id.submitpersonalinfo_id);
 
 

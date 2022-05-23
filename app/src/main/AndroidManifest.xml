@@ -80,13 +80,8 @@
             android:exported="false" />
         <activity
             android:name=".RegisterPage"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="true"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
 
         <meta-data
             android:name="preloaded_fonts"

@@ -32,7 +32,9 @@ public class Extras extends AppCompatActivity {
         mCVSymptoms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Extras.this,NewLottie.class));
+                Intent x = new Intent(Extras.this,NewLottie.class);
+                x.putExtra("src","extra");
+                startActivity(x);
             }
         });
 
