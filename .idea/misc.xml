@@ -3,7 +3,51 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-<<<<<<< HEAD
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/drawable/dob2.xml" value="0.1" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/drawable/ic_checkmark.xml" value="0.1995" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/drawable/ic_sampledcountries.xml" value="0.1995" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/drawable/ic_sampledcountriess.xml" value="0.1995" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/drawable/ic_search.xml" value="0.1995" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/drawable/ic_search_white.xml" value="0.1995" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/drawable/indicatesinfections.xml" value="0.2535" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/drawable/indicatesjj.xml" value="0.1145" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/drawable/indicatesmoderna.xml" value="0.1" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/drawable/indicatesnovavax.xml" value="0.1145" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/drawable/indicatesoxford.xml" value="0.1" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/drawable/indicatespfizer.xml" value="0.1145" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/drawable/indicatessinovac.xml" value="0.1145" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/drawable/indicatorInf.xml" value="0.2535" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/drawable/indicatorcases.xml" value="0.266" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/drawable/indicatordetailscases.xml" value="0.214" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/drawable/indicatordetailsdeaths.xml" value="0.214" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/drawable/indicatordetailsrecovered.xml" value="0.214" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/drawable/indicatorinf.xml" value="0.104" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/drawable/indicatorsd.xml" value="0.2535" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/drawable/passwordiconpressselector.xml" value="0.1995" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/font/poppins.xml" value="0.20104166666666667" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/font/poppins_bold.xml" value="0.1" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_analyzed_variant.xml" value="0.33638743455497383" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_corona_cases_list.xml" value="0.1859375" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_covid_details.xml" value="0.1" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_dash_board.xml" value="0.22" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_extras.xml" value="0.2" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_launcher.xml" value="0.1859375" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_lottie.xml" value="0.371875" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_main.xml" value="0.33425925925925926" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_maps.xml" value="0.33425925925925926" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_new_lottie.xml" value="0.371875" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_report_status1.xml" value="0.5" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_report_status2.xml" value="0.1859375" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_sampled_analyzed_countries.xml" value="0.14" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_sign_in_page.xml" value="0.25" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_user_input.xml" value="0.371875" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_vaccine_details.xml" value="0.1859375" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_vaccine_list.xml" value="0.22" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_verification_page.xml" value="0.25" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/item.xml" value="0.1859375" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/mapinfobox.xml" value="0.1859375" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/slider_layout2.xml" value="0.1" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/spinner_item.xml" value="0.25" />
         <entry key="..\:/FYP/CapstoneCovidAnalyzerMap/app/src/main/res/drawable-v24/infoboxbackground.xml" value="0.1695" />
         <entry key="..\:/FYP/CapstoneCovidAnalyzerMap/app/src/main/res/drawable/capbuttonpressselector.xml" value="0.266" />
         <entry key="..\:/FYP/CapstoneCovidAnalyzerMap/app/src/main/res/drawable/capstonebutton.xml" value="0.1695" />
@@ -22,8 +66,6 @@
         <entry key="..\:/FYP/CapstoneCovidAnalyzerMap/app/src/main/res/layout/item_shimmer.xml" value="0.2953703703703704" />
         <entry key="..\:/FYP/CapstoneCovidAnalyzerMap/app/src/main/res/layout/itemshimmereffect.xml" value="0.33" />
         <entry key="..\:/FYP/CapstoneCovidAnalyzerMap/app/src/main/res/layout/mapinfobox.xml" value="0.371875" />
-=======
->>>>>>> 047f82c5de7d36720dfa8b1336eaf463e1afa6f8
         <entry key="..\:/MyApplication/app/src/main/res/drawable/capbuttonpressed.xml" value="0.186" />
         <entry key="..\:/MyApplication/app/src/main/res/drawable/capstonebutton.xml" value="0.105" />
         <entry key="..\:/MyApplication/app/src/main/res/drawable/capstonebuttonpressed.xml" value="0.186" />
@@ -33,21 +75,11 @@
         <entry key="..\:/MyApplication/app/src/main/res/drawable/passwordiconpressselector.xml" value="0.186" />
         <entry key="..\:/MyApplication/app/src/main/res/drawable/showpasswordicon.xml" value="0.186" />
         <entry key="..\:/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.26912181303116145" />
-<<<<<<< HEAD
         <entry key="..\:/Users/***REMOVED***/Desktop/CapstoneCovidAnalyzerMap/app/src/main/res/drawable/edittext_newlook.xml" value="0.155" />
         <entry key="..\:/Users/***REMOVED***/Desktop/CapstoneCovidAnalyzerMap/app/src/main/res/layout/activity_main.xml" value="0.6" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/activity_dash_board.xml" value="0.32432432432432434" />
-=======
-        <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/drawable/capstonebuttonpressed.xml" value="0.3675" />
->>>>>>> 3f78e3ea6dd72cae55cd050d492a13df38aac871
-        <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
->>>>>>> main
-=======
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/drawable/capbuttonpressselector.xml" value="0.1" />
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/drawable/capstonebutton.xml" value="0.1" />
+        <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/drawable/capstonebuttonpressed.xml" value="0.3675" />
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/drawable/dob.xml" value="0.1" />
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/drawable/dob2.xml" value="0.1" />
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/drawable/ic_dropdownicon.xml" value="0.1" />
@@ -55,19 +87,22 @@
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/drawable/oval1.xml" value="0.343" />
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/drawable/spinner_item.xml" value="0.1" />
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/font/poppins.xml" value="0.396875" />
+        <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/font/poppins_black.xml" value="0.13697916666666668" />
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/font/poppins_bold.xml" value="0.396875" />
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/font/poppins_light.xml" value="0.396875" />
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/font/poppins_medium.xml" value="0.396875" />
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/activity_country_picker.xml" value="0.213768115942029" />
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/activity_dash_board.xml" value="0.1" />
+        <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/activity_launcher.xml" value="0.33" />
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/activity_lottie.xml" value="0.25" />
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/activity_new_lottie.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/activity_main2.xml" value="0.3663949275362319" />
+        <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/activity_new_lottie.xml" value="0.22" />
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/activity_report_status1.xml" value="0.33" />
-        <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/activity_report_status2.xml" value="0.5474339035769828" />
+        <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/activity_report_status2.xml" value="0.33" />
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/activity_second_lottie.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/activity_sign_in_page.xml" value="0.25" />
-        <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/activity_user_input.xml" value="0.24561403508771928" />
+        <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/activity_user_input.xml" value="0.5" />
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/activity_verification_page.xml" value="0.25" />
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/activity_view_pager_adapter.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/country_picker.xml" value="0.36666666666666664" />
@@ -77,7 +112,6 @@
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/slider_layout.xml" value="0.18434343434343434" />
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/slider_layout2.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/WIN/Desktop/Uni 4th year/2nd SEMESTER/androidcap/app/src/main/res/layout/spinner_item.xml" value="0.1" />
->>>>>>> 047f82c5de7d36720dfa8b1336eaf463e1afa6f8
       </map>
     </option>
   </component>

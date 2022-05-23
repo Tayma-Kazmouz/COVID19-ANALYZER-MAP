@@ -7,30 +7,28 @@
     tools:context=".VerificationPage">
 
 
-
     <TextView
         android:id="@+id/title_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="85dp"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/covid_analyzer_map"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="20sp"
         android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.876"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052" />
 
     <TextView
         android:id="@+id/sign_in_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="174dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="174dp"
         android:fontFamily="@font/roboto_medium"
         android:letterSpacing="0.01"
@@ -40,7 +38,7 @@
         android:textSize="20sp"
         android:typeface="normal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_id" />
 
@@ -48,11 +46,9 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="135dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="135dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/verify_id"
         app:srcCompat="@drawable/robotimage" />
@@ -78,19 +74,18 @@
         android:id="@+id/verifytext_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="67dp"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="64dp"
         android:fontFamily="@font/roboto_light"
         android:text="@string/a_verification_link_has_been_sent_to_your_email"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="14sp"
         android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.075" />
 
     <Button
         android:id="@+id/bt_continue_id"
@@ -105,9 +100,10 @@
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/verifytext_id" />
+        app:layout_constraintTop_toBottomOf="@+id/verifytext_id"
+        app:layout_constraintVertical_bias="0.151" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

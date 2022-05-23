@@ -15,7 +15,7 @@ public class SecondLottie extends AppCompatActivity {
 
     ViewPager mSLideViewPager;
     LinearLayout mDotLayout;
-    Button backbtn, nextbtn, skipbtn;
+    Button  skipbtn;
 
     TextView[] dots;
     ViewPagerAdapter2 viewPagerAdapter;
@@ -26,48 +26,27 @@ public class SecondLottie extends AppCompatActivity {
         setContentView(R.layout.activity_second_lottie);
 
 
-//        backbtn = findViewById(R.id.backbtn);
-//        nextbtn = findViewById(R.id.nextbtn);
+        Intent c = getIntent();
+        String src = c.getStringExtra("src");
+
+
+
         skipbtn = findViewById(R.id.skipButton);
 
-//        backbtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                if (getitem(0) > 0){
-//
-//                    mSLideViewPager.setCurrentItem(getitem(-1),true);
-//
-//                }
-//
-//            }
-//        });
 
-//        nextbtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                if (getitem(0) < 3)
-//                    mSLideViewPager.setCurrentItem(getitem(1),true);
-//                else {
-//
-//                    Intent i = new Intent(NewLottie.this,DashBoard.class);
-//                    startActivity(i);
-//                    finish();
-//
-//                }
-//
-//            }
-//        });
 
         skipbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                if (src.equals("extra")){
+                    startActivity(new Intent(SecondLottie.this,Extras.class));
+                    finish();
 
-                Intent i = new Intent(SecondLottie.this,UserInput.class);
+                }else{
+                Intent i = new Intent(SecondLottie.this, RegisterPage.class);
                 startActivity(i);
-                finish();
+                finish();}
 
             }
         });
@@ -114,15 +93,6 @@ public class SecondLottie extends AppCompatActivity {
 
             setUpindicator(position);
 
-//            if (position > 0){
-//
-//                backbtn.setVisibility(View.VISIBLE);
-//
-//            }else {
-//
-//                backbtn.setVisibility(View.INVISIBLE);
-//
-//            }
 
         }
 

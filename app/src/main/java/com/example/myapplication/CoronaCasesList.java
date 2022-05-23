@@ -114,16 +114,16 @@ public class CoronaCasesList extends AppCompatActivity {
 
                         String flagUrl = dS[i].getCountryInfo().getFlag();
                         String countryNameVal = dS[i].getCountryInfo().getIso2();
-                        String countryTotalCasesVal = dS[i].getCases().toString();
-                        String countryTotalDeathsVal = dS[i].getDeaths().toString();
+                        Long countryTotalCasesVal = dS[i].getCases();
+                        Long countryTotalDeathsVal = dS[i].getDeaths();
                         String countryFullName = dS[i].getCountry().toString();
 
 
                         Picasso.get().load(flagUrl).into(flag);
                         countryName.setText(countryNameVal);
                         countryName.setTextSize(14);
-                        countryCases.setText(countryTotalCasesVal);
-                        countryDeaths.setText(countryTotalDeathsVal);
+                        countryCases.setText(String.format("%,d",countryTotalCasesVal));
+                        countryDeaths.setText(String.format("%,d",countryTotalDeathsVal));
 
                         // The Following are Cruise Ships which only have a full name attribute and no Iso names
 
