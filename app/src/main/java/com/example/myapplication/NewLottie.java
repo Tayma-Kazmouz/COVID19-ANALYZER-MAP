@@ -28,6 +28,10 @@ public class NewLottie extends AppCompatActivity {
 
 
 
+        Intent c = getIntent();
+        String src = c.getStringExtra("src");
+
+
         skipbtn = findViewById(R.id.skipButton);
 
 
@@ -38,6 +42,7 @@ public class NewLottie extends AppCompatActivity {
 
 
                 Intent i = new Intent(NewLottie.this,SecondLottie.class);
+                i.putExtra("src",src);
                 startActivity(i);
                 finish();
 

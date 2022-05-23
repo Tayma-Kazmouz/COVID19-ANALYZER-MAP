@@ -26,6 +26,11 @@ public class SecondLottie extends AppCompatActivity {
         setContentView(R.layout.activity_second_lottie);
 
 
+        Intent c = getIntent();
+        String src = c.getStringExtra("src");
+
+
+
         skipbtn = findViewById(R.id.skipButton);
 
 
@@ -34,10 +39,14 @@ public class SecondLottie extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if (src.equals("extra")){
+                    startActivity(new Intent(SecondLottie.this,Extras.class));
+                    finish();
 
+                }else{
                 Intent i = new Intent(SecondLottie.this, RegisterPage.class);
                 startActivity(i);
-                finish();
+                finish();}
 
             }
         });

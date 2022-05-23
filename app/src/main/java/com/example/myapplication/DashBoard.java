@@ -145,7 +145,6 @@ public class DashBoard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board);
 
-        World.init(getApplicationContext()); // Initializes the countries library and loads all data
 
         coronaCasesCv = findViewById(R.id.coronaCasesCV_id);
         coronaCasesCv.setOnClickListener(new View.OnClickListener() {
