@@ -1,0 +1,417 @@
+@startuml
+class com.example.myapplication.CountryInfo {
+- Long id
+- String iso2
+- String iso3
+- Double lat
+- Double _long
+- String flag
++ {static} Creator<CountryInfo> CREATOR
++ Long getId()
++ void setId(Long)
++ String getIso2()
++ void setIso2(String)
++ String getIso3()
++ void setIso3(String)
++ Double getLat()
++ void setLat(Double)
++ Double getLong()
++ void setLong(Double)
++ String getFlag()
++ void setFlag(String)
++ void writeToParcel(android.os.Parcel,int)
++ int describeContents()
+}
+class com.example.myapplication.CoronaCasesList {
+~ ShimmerFrameLayout shimmer
+~ RequestQueue rq
+~ ListView lv
+~ BaseAdapter ba
+~ Corona[] dS
+~ Gson gson
+# void onCreate(Bundle)
+- void enableShimmer()
++ void disableShimmer()
+- void getJsonData(VolleyResponseListener)
+}
+interface com.example.myapplication.CoronaCasesList.VolleyResponseListener {
+~ void onError(String)
+~ void onResponse(Corona[])
+}
+class com.example.myapplication.VolleySingleton {
+- {static} VolleySingleton mInstance
+- RequestQueue mRequestQueue
+- {static} Context ctx
++ {static} VolleySingleton getInstance(Context)
++ RequestQueue getRequestQueue()
++ void addToRequestQueue(Request<T>)
+}
+class com.example.myapplication.RegisterPage {
+~ EditText email
+~ boolean passwordVisible
+~ TextView gotosigninpage
+~ TextView gotoverification
+~ FirebaseAuth firebaseAuth
+~ Button register
+~ TextView teststatus
+# void onCreate(Bundle)
+}
+class com.example.myapplication.CountryPickerAdapter {
+~ Context c
+~ String[] names
+~ int[] images
++ View getDropDownView(int,View,ViewGroup)
++ View getView(int,View,ViewGroup)
+}
+class com.example.myapplication.NewLottie {
+~ ViewPager mSLideViewPager
+~ LinearLayout mDotLayout
+~ Button backbtn
+~ TextView[] dots
+~ ViewPagerAdapter viewPagerAdapter
+~ ViewPager.OnPageChangeListener viewListener
+# void onCreate(Bundle)
++ void setUpindicator(int)
+- int getitem(int)
+}
+class com.example.myapplication.UserInput {
+- DatePickerDialog datePickerDialog
+- Button dateButton
+~ Button gotoreport
+- Spinner spinner
+~ customadapter adapter
+~ String[] names
+~ int[] images
+# void onCreate(Bundle)
+- String getTodaysDate()
+- void initDatePicker()
+- String makeDateString(int,int,int)
+- String getMonthFormat(int)
++ void openDatePicker(View)
+}
+class com.example.myapplication.ReportStatus1 {
+~ Button gotoreporttwo
+~ ImageView backarrow
+# void onCreate(Bundle)
+}
+class com.example.myapplication.ViewPagerAdapter {
+~ Context context
+~ int[] images
+~ int[] headings
+~ int[] description
++ int getCount()
++ boolean isViewFromObject(View,Object)
++ Object instantiateItem(ViewGroup,int)
++ void destroyItem(ViewGroup,int,Object)
+}
+class com.example.myapplication.VerificationPage {
+# void onCreate(Bundle)
++ void gotosigninpage(View)
+}
+class com.example.myapplication.SimpleCountry {
+- Long updated
+- String country
+- CountryInfo countryInfo
+- Long population
+- String continent
++ {static} Creator<SimpleCountry> CREATOR
++ Long getUpdated()
++ void setUpdated(Long)
++ String getCountry()
++ void setCountry(String)
++ CountryInfo getCountryInfo()
++ void setCountryInfo(CountryInfo)
++ Long getPopulation()
++ void setPopulation(Long)
++ String getContinent()
++ void setContinent(String)
++ void writeToParcel(android.os.Parcel,int)
++ int describeContents()
+}
+class com.example.myapplication.VaccineDetails {
+~ String COUNTRY_NAME
++ String jsonFetchM
++ String jsonFetchM1
++ String jsonFetchM2
++ String jsonFetchM3
++ String jsonFetchM4
++ String jsonFetchM5
+~ String nameM
+~ String nameM1
+~ String nameM2
+~ String nameM3
+~ String nameM4
+~ String nameM5
+~ LineChart myLineChart
+~ RequestQueue rq
+~ TextView tvCountryFullName
+~ ShapeableImageView ivFlag
+# void onCreate(Bundle)
+- void getVaccineTimeline(VaccineDetails.TimelineVolleyResponseListener)
+}
+interface com.example.myapplication.VaccineDetails.TimelineVolleyResponseListener {
+~ void onError(String)
+~ void onResponse(JSONObject)
+}
+class com.example.myapplication.SecondLottie {
+~ ViewPager mSLideViewPager
+~ LinearLayout mDotLayout
+~ Button backbtn
+~ TextView[] dots
+~ ViewPagerAdapter2 viewPagerAdapter
+~ ViewPager.OnPageChangeListener viewListener
+# void onCreate(Bundle)
++ void setUpindicator(int)
+- int getitem(int)
+}
+class com.example.myapplication.Launcher {
+~ TextView gotosigninpage
+~ TextView gotoregisterpage
+# void onCreate(Bundle)
+}
+class com.example.myapplication.MapsActivity {
+- GoogleMap mMap
+- ActivityMapsBinding binding
+~ RequestQueue rq
+~ Corona[] dS
+~ Gson gson
+~ Map<Circle,Corona> dataCircleMap
+~ Map<Circle,Double> mapCircleRadius
+~ double maxCases
+~ double factor
+~ Dialog infoBox
+- float previousZoomLevel
+# void onCreate(Bundle)
++ void onMapReady(GoogleMap)
+- double getFactor(Corona)
+- double getMax(Corona[])
+- void getJsonData(MapsActivity.VolleyResponseListener)
+}
+interface com.example.myapplication.MapsActivity.VolleyResponseListener {
+~ void onError(String)
+~ void onResponse(Corona[])
+}
+class com.example.myapplication.ViewPagerAdapter2 {
+~ Context context
+~ int[] images
+~ int[] headings
+~ int[] description
++ int getCount()
++ boolean isViewFromObject(View,Object)
++ Object instantiateItem(ViewGroup,int)
++ void destroyItem(ViewGroup,int,Object)
+}
+class com.example.myapplication.DashBoard {
+~ LineChart myLineChart
+- {static} String SP_CASES
+- {static} String SP_VALUE_M
+- {static} String SP_VALUE_M1
+- {static} String SP_VALUE_M2
+- {static} String SP_VALUE_M3
+- {static} String SP_VALUE_M4
+- {static} String SP_VALUE_M5
+- {static} String SP_Deaths
+- {static} String SP_VALUE_D
+- {static} String SP_VALUE_D1
+- {static} String SP_VALUE_D2
+- {static} String SP_VALUE_D3
+- {static} String SP_VALUE_D4
+- {static} String SP_VALUE_D5
+~ RequestQueue rq
+~ JSONObject dSCases
+~ JSONObject dSDeaths
++ String jsonFetchM
++ String jsonFetchM1
++ String jsonFetchM2
++ String jsonFetchM3
++ String jsonFetchM4
++ String jsonFetchM5
+~ String nameM
+~ String nameM1
+~ String nameM2
+~ String nameM3
+~ String nameM4
+~ String nameM5
+~ String valMx
+~ String valMx1
+~ String valMx2
+~ String valMx3
+~ String valMx4
+~ String valMx5
+~ long valM
+~ long valM1
+~ long valM2
+~ long valM3
+~ long valM4
+~ long valM5
+~ String valDx
+~ String valDx1
+~ String valDx2
+~ String valDx3
+~ String valDx4
+~ String valDx5
+~ long valD
+~ long valD1
+~ long valD2
+~ long valD3
+~ long valD4
+~ long valD5
+~ MaterialCardView coronaCasesCv
+~ MaterialCardView vaccineCV
+~ MaterialCardView mapsCV
+# void onCreate(Bundle)
+# void onStart()
+~ void plotData()
+- void getCasesDeathsData()
+- void parseJsonObjs(JSONObject,JSONObject)
+}
+class com.example.myapplication.VaccineList {
+~ ShimmerFrameLayout shimmer
+~ RequestQueue rq
+~ ListView lv
+~ BaseAdapter ba
+~ SimpleCountry[] countryDS
+~ Map<String,SimpleCountry> mapNameSimpleCountry
+~ Gson gson
+~ Switch sw
+# void onCreate(Bundle)
+- void enableShimmer()
++ void disableShimmer()
++ void getJsonData(VaccineList.CountryVolleyResponseListener,VaccineList.VaccineVolleyResponseListener)
+}
+interface com.example.myapplication.VaccineList.VaccineVolleyResponseListener {
+~ void onError(String)
+~ void onResponse(JSONArray)
+}
+interface com.example.myapplication.VaccineList.CountryVolleyResponseListener {
+~ void onError(String)
+~ void onResponse(SimpleCountry[])
+}
+class com.example.myapplication.ReportStatus2 {
+~ Button gotodashboard
+~ ImageView backarrow
+# void onCreate(Bundle)
+}
+class com.example.myapplication.SignInPage {
+~ TextView goToDashBoard
+~ EditText email
+~ Button signin
+~ FirebaseAuth firebaseAuth
+~ boolean passwordVisible
+~ TextView gotoregisterpage
+~ TextView gotolottie
+# void onCreate(Bundle)
+}
+class com.example.myapplication.CovidDetails {
+~ TextView tvCountryFullName
+~ TextView tvTodayCases
+~ ShapeableImageView ivFlag
+~ PieChart myPieChart
+~ SeekBar sbCases
+# void onCreate(Bundle)
+~ double getPercentage(Long,Long,Long)
+}
+class com.example.myapplication.Corona {
+- Long updated
+- String country
+- CountryInfo countryInfo
+- Long cases
+- Long todayCases
+- Long deaths
+- Long todayDeaths
+- Long recovered
+- Long todayRecovered
+- Long active
+- Long critical
+- Long casesPerOneMillion
+- Long deathsPerOneMillion
+- Long tests
+- Long testsPerOneMillion
+- Long population
+- String continent
+- Long oneCasePerPeople
+- Long oneDeathPerPeople
+- Long oneTestPerPeople
+- Double activePerOneMillion
+- Double recoveredPerOneMillion
+- Double criticalPerOneMillion
++ {static} Creator<Corona> CREATOR
++ Long getUpdated()
++ void setUpdated(Long)
++ String getCountry()
++ void setCountry(String)
++ CountryInfo getCountryInfo()
++ void setCountryInfo(CountryInfo)
++ Long getCases()
++ void setCases(Long)
++ Long getTodayCases()
++ void setTodayCases(Long)
++ Long getDeaths()
++ void setDeaths(Long)
++ Long getTodayDeaths()
++ void setTodayDeaths(Long)
++ Long getRecovered()
++ void setRecovered(Long)
++ Long getTodayRecovered()
++ void setTodayRecovered(Long)
++ Long getActive()
++ void setActive(Long)
++ Long getCritical()
++ void setCritical(Long)
++ Long getCasesPerOneMillion()
++ void setCasesPerOneMillion(Long)
++ Long getDeathsPerOneMillion()
++ void setDeathsPerOneMillion(Long)
++ Long getTests()
++ void setTests(Long)
++ Long getTestsPerOneMillion()
++ void setTestsPerOneMillion(Long)
++ Long getPopulation()
++ void setPopulation(Long)
++ String getContinent()
++ void setContinent(String)
++ Long getOneCasePerPeople()
++ void setOneCasePerPeople(Long)
++ Long getOneDeathPerPeople()
++ void setOneDeathPerPeople(Long)
++ Long getOneTestPerPeople()
++ void setOneTestPerPeople(Long)
++ Double getActivePerOneMillion()
++ void setActivePerOneMillion(Double)
++ Double getRecoveredPerOneMillion()
++ void setRecoveredPerOneMillion(Double)
++ Double getCriticalPerOneMillion()
++ void setCriticalPerOneMillion(Double)
++ void writeToParcel(android.os.Parcel,int)
++ int describeContents()
+}
+
+
+android.os.Parcelable <|.. com.example.myapplication.CountryInfo
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myapplication.CoronaCasesList
+com.example.myapplication.CoronaCasesList +.. com.example.myapplication.CoronaCasesList.VolleyResponseListener
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myapplication.RegisterPage
+android.widget.ArrayAdapter <|-- com.example.myapplication.CountryPickerAdapter
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myapplication.NewLottie
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myapplication.UserInput
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myapplication.ReportStatus1
+androidx.viewpager.widget.PagerAdapter <|-- com.example.myapplication.ViewPagerAdapter
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myapplication.VerificationPage
+android.os.Parcelable <|.. com.example.myapplication.SimpleCountry
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myapplication.VaccineDetails
+com.example.myapplication.VaccineDetails +.. com.example.myapplication.VaccineDetails.TimelineVolleyResponseListener
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myapplication.SecondLottie
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myapplication.Launcher
+com.google.android.gms.maps.OnMapReadyCallback <|.. com.example.myapplication.MapsActivity
+androidx.fragment.app.FragmentActivity <|-- com.example.myapplication.MapsActivity
+com.example.myapplication.MapsActivity +.. com.example.myapplication.MapsActivity.VolleyResponseListener
+androidx.viewpager.widget.PagerAdapter <|-- com.example.myapplication.ViewPagerAdapter2
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myapplication.DashBoard
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myapplication.VaccineList
+com.example.myapplication.VaccineList +.. com.example.myapplication.VaccineList.VaccineVolleyResponseListener
+com.example.myapplication.VaccineList +.. com.example.myapplication.VaccineList.CountryVolleyResponseListener
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myapplication.ReportStatus2
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myapplication.SignInPage
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myapplication.CovidDetails
+android.os.Parcelable <|.. com.example.myapplication.Corona
+@enduml

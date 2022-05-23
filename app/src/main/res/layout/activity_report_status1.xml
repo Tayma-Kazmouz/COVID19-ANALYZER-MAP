@@ -6,297 +6,319 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="none"
     android:fillViewport="true">
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ReportStatus1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ReportStatus1">
 
 
-    <TextView
-        android:id="@+id/tv_reportofstatus_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/roboto_medium"
-        android:text="@string/report_of_status"
-        android:textColor="#000000"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toTopOf="@+id/reportstatus1img_id"
-        app:layout_constraintEnd_toEndOf="@+id/endguidline"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/startguidline"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/tv_reportofstatus_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/report_of_status"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toTopOf="@+id/reportstatus1img_id"
+                app:layout_constraintEnd_toEndOf="@+id/endguidline"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@id/startguidline"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/startguidline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.35" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/startguidline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.35" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/endguidline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.65" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/endguidline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.65" />
 
-    <ImageView
-        android:id="@+id/backarrow_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toStartOf="@id/containerstart_id"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_backarrow" />
+            <ImageView
+                android:id="@+id/backarrow_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintEnd_toStartOf="@id/containerstart_id"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_backarrow" />
 
-    <ImageView
-        android:id="@+id/reportstatus1img_id"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_specify_vac_id"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toEndOf="@+id/imgendguide_id"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/imgstartguide_id"
-        app:layout_constraintTop_toBottomOf="@+id/tv_reportofstatus_id"
-        app:srcCompat="@drawable/ic_reportstatus1" />
+            <ImageView
+                android:id="@+id/reportstatus1img_id"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_specify_vac_id"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="@+id/imgendguide_id"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@id/imgstartguide_id"
+                app:layout_constraintTop_toBottomOf="@+id/tv_reportofstatus_id"
+                app:srcCompat="@drawable/ic_reportstatus1" />
 
-    <TextView
-        android:id="@+id/tv_specify_vac_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/roboto_light"
-        android:text="@string/specify_the_vaccine_s_you_took"
-        android:textColor="#000000"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/horizontalline1_id"
-        app:layout_constraintEnd_toStartOf="@id/containerend_id"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/containerstart_id"
-        app:layout_constraintTop_toBottomOf="@+id/reportstatus1img_id" />
+            <TextView
+                android:id="@+id/tv_specify_vac_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/specify_the_vaccine_s_you_took"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@id/containerend_id"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@id/containerstart_id"
+                app:layout_constraintTop_toBottomOf="@+id/reportstatus1img_id" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/containerstart_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/containerstart_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/containerend_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/containerend_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgstartguide_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.25" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/imgstartguide_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.25" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/imgendguide_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.75" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/imgendguide_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.75" />
 
-    <View
-        android:id="@+id/horizontalline1_id"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
-        android:background="@android:color/darker_gray"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox1"
-        app:layout_constraintEnd_toStartOf="@id/containerend_id"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/containerstart_id"
-        app:layout_constraintTop_toBottomOf="@+id/tv_specify_vac_id"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <CheckBox
-        android:id="@+id/checkBox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="@string/biontech"
-        android:textSize="12sp"
-        android:fontFamily="@font/roboto_light"
-        app:layout_constraintBottom_toTopOf="@+id/horizontalline2_id"
-        app:layout_constraintEnd_toStartOf="@id/startguidline"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/containerstart_id"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalline1_id" />
 
-    <View
-        android:id="@+id/horizontalline2_id"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="1dp"
-        android:background="@android:color/darker_gray"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox2"
-        app:layout_constraintEnd_toStartOf="@id/containerend_id"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/containerstart_id"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox1" />
+        <LinearLayout
+            android:id="@+id/ll_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp">
 
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="@string/moderna"
-        android:textSize="12sp"
-        android:fontFamily="@font/roboto_light"
-        app:layout_constraintBottom_toTopOf="@+id/horizontalline3_id"
-        app:layout_constraintEnd_toStartOf="@id/startguidline"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/containerstart_id"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalline2_id" />
+            <View
+                android:id="@+id/horizontalline1_id"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_margin="10dp"
+                android:background="#66E4E4E4" />
 
-    <View
-        android:id="@+id/horizontalline3_id"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="1dp"
-        android:background="@android:color/darker_gray"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox3"
-        app:layout_constraintEnd_toStartOf="@id/containerend_id"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/containerstart_id"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="70dp"
-        android:text="@string/johnson_johnson"
-        android:textSize="12sp"
-        android:fontFamily="@font/roboto_light"
-        app:layout_constraintBottom_toTopOf="@+id/horizontalline4_id"
-        app:layout_constraintEnd_toStartOf="@id/startguidline"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/containerstart_id"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalline3_id" />
+                <CheckBox
+                    android:id="@+id/checkBox1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/biontech"
+                    android:textSize="14sp" />
 
-    <View
-        android:id="@+id/horizontalline4_id"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="1dp"
-        android:background="@android:color/darker_gray"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox4"
-        app:layout_constraintEnd_toStartOf="@id/containerend_id"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/containerstart_id"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+                <com.mcdev.quantitizerlibrary.HorizontalQuantitizer
+                    android:id="@+id/biontechVal_id"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:layout_height="40dp"/>
 
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:text="@string/sinovac"
-        android:textSize="12sp"
-        android:fontFamily="@font/roboto_light"
-        app:layout_constraintBottom_toTopOf="@+id/horizontalline5_id"
-        app:layout_constraintEnd_toStartOf="@id/startguidline"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/containerstart_id"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalline4_id" />
+            </LinearLayout>
 
-    <View
-        android:id="@+id/horizontalline5_id"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="1dp"
-        android:background="@android:color/darker_gray"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox5"
-        app:layout_constraintEnd_toStartOf="@id/containerend_id"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/containerstart_id"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+            <View
+                android:id="@+id/horizontalline2_id"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:background="#66E4E4E4" />
 
-    <CheckBox
-        android:id="@+id/checkBox5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:text="@string/astrazeneca"
-        android:textSize="12sp"
-        android:fontFamily="@font/roboto_light"
-        app:layout_constraintBottom_toTopOf="@+id/horizontalline6_id"
-        app:layout_constraintEnd_toStartOf="@id/startguidline"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/containerstart_id"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalline5_id" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-    <View
-        android:id="@+id/horizontalline6_id"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="1dp"
-        android:background="@android:color/darker_gray"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox6"
-        app:layout_constraintEnd_toStartOf="@id/containerend_id"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/containerstart_id"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+                <CheckBox
+                    android:id="@+id/checkBox2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/moderna"
+                    android:textSize="14sp" />
 
-    <CheckBox
-        android:id="@+id/checkBox6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/none"
-        android:textSize="12sp"
-        android:fontFamily="@font/roboto_light"
-        app:layout_constraintBottom_toTopOf="@+id/horizontalline7_id"
-        app:layout_constraintEnd_toStartOf="@id/startguidline"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/containerstart_id"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalline6_id" />
+                <com.mcdev.quantitizerlibrary.HorizontalQuantitizer
+                    android:id="@+id/modernaVal_id"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:layout_height="40dp"/>
 
-    <View
-        android:id="@+id/horizontalline7_id"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="1dp"
-        android:background="@android:color/darker_gray"
-        app:layout_constraintEnd_toStartOf="@id/containerend_id"
-        app:layout_constraintStart_toStartOf="@id/containerstart_id"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox6" />
+            </LinearLayout>
 
-    <Button
-        android:id="@+id/bt_continue_id"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/capbuttonpressselector"
-        android:enabled="true"
-        android:letterSpacing="0.02"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
-        android:text="@string/submit"
-        android:textColor="@color/white"
-        android:onClick="gotoreporttwo"
-        android:textAllCaps="false"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/imgendguide_id"
-        app:layout_constraintStart_toStartOf="@id/imgstartguide_id"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalline7_id" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:id="@+id/horizontalline3_id"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:background="#66E4E4E4" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox3"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/johnson_johnson"
+                    android:textSize="14sp" />
+
+                <com.mcdev.quantitizerlibrary.HorizontalQuantitizer
+                    android:id="@+id/jjVal_id"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:layout_height="40dp"/>
+
+            </LinearLayout>
+
+
+
+            <View
+                android:id="@+id/horizontalline4_id"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:background="#66E4E4E4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox4"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/sinovac"
+                    android:textSize="14sp" />
+
+                <com.mcdev.quantitizerlibrary.HorizontalQuantitizer
+                    android:id="@+id/sinovacVal_id"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:layout_height="40dp"/>
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/horizontalline5_id"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:background="#66E4E4E4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox5"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/astrazeneca"
+                    android:textSize="14sp" />
+
+                <com.mcdev.quantitizerlibrary.HorizontalQuantitizer
+                    android:id="@+id/astraVal_id"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:layout_height="40dp"/>
+
+            </LinearLayout>
+
+
+
+            <View
+                android:id="@+id/horizontalline6_id"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:background="#66E4E4E4" />
+
+                <CheckBox
+                    android:id="@+id/checkBox6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/none"
+                    android:textSize="14sp" />
+
+            <View
+                android:id="@+id/horizontalline7_id"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:background="#66E4E4E4" />
+
+            <Button
+                android:id="@+id/bt_submit_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/capbuttonpressselector"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:enabled="true"
+                android:letterSpacing="0.02"
+                android:onClick="gotoreporttwo"
+                android:text="@string/submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
 </ScrollView>

@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.blongho.country_data.World;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -34,6 +35,7 @@ public class SignInPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in_page);
 
+
         email = findViewById(R.id.et_email_id);
         password = findViewById(R.id.et_password_id);
         firebaseAuth = FirebaseAuth.getInstance();
@@ -44,7 +46,7 @@ public class SignInPage extends AppCompatActivity {
         gotoregisterpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SignInPage.this,MainActivity.class));
+                startActivity(new Intent(SignInPage.this, RegisterPage.class));
             }
         });
 
@@ -57,7 +59,8 @@ public class SignInPage extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             if (firebaseAuth.getCurrentUser().isEmailVerified()){
-                                Intent i= new Intent(SignInPage.this, NewLottie.class);
+                                World.init(getApplicationContext()); // Initializes the countries library and loads all data
+                                Intent i= new Intent(SignInPage.this, UserInput.class);
                                 startActivity(i);
                             }else{
                                 Toast.makeText(SignInPage.this,"Please verify your email!", Toast.LENGTH_LONG).show();

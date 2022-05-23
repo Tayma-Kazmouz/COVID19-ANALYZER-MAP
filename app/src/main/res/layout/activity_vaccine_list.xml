@@ -56,6 +56,8 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/headingsTVsLL_id"
+                android:visibility="visible"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -97,11 +99,281 @@
 
 
             <ListView
+                android:visibility="visible"
                 android:id="@+id/lvVaccines_id"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scrollbarSize="0dp"
                 tools:listitem="@layout/item" />
+
+            <ScrollView
+                android:id="@+id/analyzedListSV_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/sampledCountries_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:strokeColor="#22000000"
+                        app:strokeWidth="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:padding="20dp"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/ic_sampledcountriesss"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:padding="5dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="Sampled Countries"
+                                android:textColor="@color/black"
+                                android:textSize="17sp" />
+
+
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/ancestral_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:strokeColor="#22000000"
+                        app:strokeWidth="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:padding="20dp"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/ic_ancestrialvector"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:padding="5dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="Ancestral Variant"
+                                android:textColor="@color/black"
+                                android:textSize="17sp" />
+
+
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/alpha_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:strokeColor="#22000000"
+                        app:strokeWidth="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:padding="20dp"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/ic_alphavector"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:padding="5dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="Alpha Variant"
+                                android:textColor="@color/black"
+                                android:textSize="17sp" />
+
+
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/beta_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:strokeColor="#22000000"
+                        app:strokeWidth="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:padding="20dp"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/ic_betavector"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:padding="5dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="Beta Variant"
+                                android:textColor="@color/black"
+                                android:textSize="17sp" />
+
+
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/gamma_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:strokeColor="#22000000"
+                        app:strokeWidth="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:padding="20dp"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/ic_gammavector"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:padding="5dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="Gamma Variant"
+                                android:textColor="@color/black"
+                                android:textSize="17sp" />
+
+
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/delta_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:strokeColor="#22000000"
+                        app:strokeWidth="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:padding="20dp"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/ic_deltavector"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:padding="5dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="Delta Variant"
+                                android:textColor="@color/black"
+                                android:textSize="17sp" />
+
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/omicron_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:cardCornerRadius="10dp"
+                        app:strokeColor="#22000000"
+                        app:strokeWidth="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:padding="20dp"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/ic_omicronvector"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:padding="5dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="Omicron Variant"
+                                android:textColor="@color/black"
+                                android:textSize="17sp" />
+
+
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+            </ScrollView>
 
         </LinearLayout>
 

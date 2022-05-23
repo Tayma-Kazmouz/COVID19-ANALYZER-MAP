@@ -12,11 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true">
-
+        <activity
+            android:name=".SampledAnalyzedCountries"
+            android:exported="false" />
+        <activity
+            android:name=".AnalyzedVariant"
+            android:exported="false" />
+        <activity
+            android:name=".Extras"
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="${MAPS_API_KEY}" />
+
 
         <activity
             android:name=".MapsActivity"
@@ -30,10 +39,21 @@
             android:exported="false" />
         <activity
             android:name=".VaccineList"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".CoronaCasesList"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Launcher"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".UserInput"
             android:exported="false" />
@@ -42,9 +62,6 @@
             android:exported="false" />
         <activity
             android:name=".NewLottie"
-            android:exported="false" />
-        <activity
-            android:name=".Lottie"
             android:exported="false" />
         <activity
             android:name=".ReportStatus2"
@@ -62,18 +79,16 @@
             android:name=".DashBoard"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:name=".RegisterPage"
+            android:exported="true"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+
+
     </application>
 
 </manifest>

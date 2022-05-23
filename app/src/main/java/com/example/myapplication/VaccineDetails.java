@@ -3,11 +3,16 @@ package com.example.myapplication;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
@@ -26,6 +31,7 @@ import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.github.mikephil.charting.formatter.LargeValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.google.android.material.imageview.ShapeableImageView;
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -41,19 +47,11 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 public class VaccineDetails extends AppCompatActivity {
 
     String COUNTRY_NAME;
-
-    // To get the dates for the json request exactly like formatted in the API
-    public String jsonFetchM;
-    public String jsonFetchM1;
-    public String jsonFetchM2;
-    public String jsonFetchM3;
-    public String jsonFetchM4;
-    public String jsonFetchM5;
-
 
     String nameM;
     String nameM1;
@@ -69,6 +67,9 @@ public class VaccineDetails extends AppCompatActivity {
     TextView tvCountryFullName, tvCountryPopulation, tvCountryContinent;
     ShapeableImageView ivFlag, ivMap;
 
+    SimpleCountry countryData;
+
+    private String STATIC_MAPS_KEY;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,29 +86,32 @@ public class VaccineDetails extends AppCompatActivity {
         ivFlag = findViewById(R.id.ivFlagVaccine_id);
         ivMap = findViewById(R.id.ivMapVaccine_id);
 
-
         Intent intent = getIntent();
 
         // getting the country name which is clicked from the vaccine list
         COUNTRY_NAME = intent.getStringExtra("getVaccineCountry");
 
         // getting the parcelable class object from the previous activity to access it data
-        SimpleCountry countryData = intent.getParcelableExtra("getSimpleCountryInfo");
+        countryData = intent.getParcelableExtra("getSimpleCountryInfo");
 
         TextView tvTitle = findViewById(R.id.detailedTitleVaccine_id);
         tvTitle.setText(COUNTRY_NAME + " Details");
 
+        //here we use a free static map api from Jawg.io ...access token is created from a throwaway account
+        // for more info : https://www.jawg.io/docs/apidocs/maps/static-maps/#access-token
+
+        STATIC_MAPS_KEY = BuildConfig.STATIC_API_KEY;
 
         tvCountryFullName.setText(COUNTRY_NAME);
 
         switch (COUNTRY_NAME) {
 
             case "Guernsey":
-                tvCountryPopulation.setText("Population\n" + 62792);
+                tvCountryPopulation.setText("Population\n" + String.format("%,d",62792));
                 tvCountryContinent.setText("Continent\n" +"Europe" );
                 Picasso.get().load("https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_Guernsey.svg/200px-Flag_of_Guernsey.svg.png").into(ivFlag);
 
-                String mapURLGG = "https://api.jawg.io/static?zoom=12&center=" + "49.448196" + "," + "-2.589490" + "&size=1500x1500&layer=jawg-terrain&format=png&access-token=***REMOVED***";
+                String mapURLGG = "https://api.jawg.io/static?zoom=12&center=" + "49.448196" + "," + "-2.589490" + "&size=1500x1500&layer=jawg-terrain&format=png&access-token="+STATIC_MAPS_KEY;
                 Picasso.get().load(mapURLGG).placeholder(R.drawable.defaultmap).into(ivMap);
 
                 break;
@@ -116,7 +120,7 @@ public class VaccineDetails extends AppCompatActivity {
                 tvCountryContinent.setText("Continent\n" +"Oceania" );
                 Picasso.get().load("https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_the_Pitcairn_Islands.svg/200px-Flag_of_the_Pitcairn_Islands.svg.png").into(ivFlag);
 
-                String mapURLPN = "https://api.jawg.io/static?zoom=15&center=-25.066668,-130.100006&size=1500x1500&layer=jawg-terrain&format=png&access-token=***REMOVED***";
+                String mapURLPN = "https://api.jawg.io/static?zoom=15&center=-25.066668,-130.100006&size=1500x1500&layer=jawg-terrain&format=png&access-token="+STATIC_MAPS_KEY;
                 Picasso.get().load(mapURLPN).placeholder(R.drawable.defaultmap).into(ivMap);
 
                 break;
@@ -125,58 +129,62 @@ public class VaccineDetails extends AppCompatActivity {
                 tvCountryContinent.setText("Continent\n" +"Oceania" );
                 Picasso.get().load("https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Flag_of_Tokelau.svg/200px-Flag_of_Tokelau.svg.png").into(ivFlag);
 
-                String mapURLTK = "https://api.jawg.io/static?zoom=13&center=-9.1668337,-171.8182111&size=1500x1500&layer=jawg-terrain&format=png&access-token=***REMOVED***";
+                String mapURLTK = "https://api.jawg.io/static?zoom=13&center=-9.1668337,-171.8182111&size=1500x1500&layer=jawg-terrain&format=png&access-token="+STATIC_MAPS_KEY;
                 Picasso.get().load(mapURLTK).placeholder(R.drawable.defaultmap).into(ivMap);
 
                 break;
             case "Turkmenistan":
-                tvCountryPopulation.setText("Population\n" + 6193576);
+                tvCountryPopulation.setText("Population\n" + String.format("%,d",6193576));
                 tvCountryContinent.setText("Continent\n" +"Asia" );
                 Picasso.get().load("https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Turkmenistan.svg/200px-Flag_of_Turkmenistan.svg.png").into(ivFlag);
 
-                String mapURLTM = "https://api.jawg.io/static?zoom=6&center=" + "39" + "," + "59" + "&size=1500x1500&layer=jawg-terrain&format=png&access-token=***REMOVED***";
+                String mapURLTM = "https://api.jawg.io/static?zoom=6&center=" + "39" + "," + "59" + "&size=1500x1500&layer=jawg-terrain&format=png&access-token="+STATIC_MAPS_KEY;
                 Picasso.get().load(mapURLTM).placeholder(R.drawable.defaultmap).into(ivMap);
 
 
                 break;
             case "Tuvalu":
-                tvCountryPopulation.setText("Population\n" + 12057);
+                tvCountryPopulation.setText("Population\n" + String.format("%,d",12057));
                 tvCountryContinent.setText("Continent\n" +"Oceania" );
                 Picasso.get().load("https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Tuvalu.svg/200px-Flag_of_Tuvalu.svg.png").into(ivFlag);
 
-                String mapURLTV = "https://api.jawg.io/static?zoom=14&center=-8.521147,179.196198&size=1500x1500&layer=jawg-terrain&format=png&access-token=***REMOVED***";
+                String mapURLTV = "https://api.jawg.io/static?zoom=14&center=-8.521147,179.196198&size=1500x1500&layer=jawg-terrain&format=png&access-token="+STATIC_MAPS_KEY;
                 Picasso.get().load(mapURLTV).placeholder(R.drawable.defaultmap).into(ivMap);
 
                 break;
 
             default:
 
-        tvCountryPopulation.setText("Population\n" + countryData.getPopulation());
+        tvCountryPopulation.setText("Population\n" + String.format("%,d",countryData.getPopulation()));
         tvCountryContinent.setText("Continent\n" + countryData.getContinent());
         Picasso.get().load(countryData.getCountryInfo().getFlag()).into(ivFlag);
 
 
-        //here we use a free static map api from Jawg.io ...access token is created from a throwaway account ... use another access token in case of request failure
-        String mapURL = "https://api.jawg.io/static?zoom=6&center=" + countryData.getCountryInfo().getLat() + "," + countryData.getCountryInfo().getLong() + "&size=1500x1500&layer=jawg-terrain&format=png&access-token=***REMOVED***";
+
+        String mapURL = "https://api.jawg.io/static?zoom=6&center=" + countryData.getCountryInfo().getLat() + "," + countryData.getCountryInfo().getLong() + "&size=1500x1500&layer=jawg-terrain&format=png&access-token="+STATIC_MAPS_KEY;
 
 
         // if its one of the big countries then fetch a zoomed out static map from the API
         if (countryData.getCountry().matches("USA|Canada|Russia|China|Brazil|Kazakhstan|Greenland"))
         {
-            String mapBigURL = "https://api.jawg.io/static?zoom=4&center=" + countryData.getCountryInfo().getLat() + "," + countryData.getCountryInfo().getLong() + "&size=1500x1500&layer=jawg-terrain&format=png&access-token=***REMOVED***";
+            String mapBigURL = "https://api.jawg.io/static?zoom=4&center=" + countryData.getCountryInfo().getLat() + "," + countryData.getCountryInfo().getLong() + "&size=1500x1500&layer=jawg-terrain&format=png&access-token="+STATIC_MAPS_KEY;
 
             Picasso.get().load(mapBigURL).placeholder(R.drawable.defaultmap).into(ivMap);
         }else if (countryData.getCountry().equals("Australia")){
-            String mapAusURL = "https://api.jawg.io/static?zoom=5&center=" + countryData.getCountryInfo().getLat() + "," + countryData.getCountryInfo().getLong() + "&size=1500x1500&layer=jawg-terrain&format=png&access-token=***REMOVED***";
+            String mapAusURL = "https://api.jawg.io/static?zoom=5&center=" + countryData.getCountryInfo().getLat() + "," + countryData.getCountryInfo().getLong() + "&size=1500x1500&layer=jawg-terrain&format=png&access-token="+STATIC_MAPS_KEY;
 
             Picasso.get().load(mapAusURL).placeholder(R.drawable.defaultmap).into(ivMap);
-        }else{
+        }
+        else if (countryData.getCountry().equals("New Zealand")){
+            String mapNZURL  = "https://api.jawg.io/static?zoom=8&center=" + countryData.getCountryInfo().getLat() + "," + countryData.getCountryInfo().getLong() + "&size=1500x1500&layer=jawg-terrain&format=png&access-token="+STATIC_MAPS_KEY;
+            Picasso.get().load(mapNZURL).placeholder(R.drawable.defaultmap).into(ivMap);
+        }
+        else{
             Picasso.get().load(mapURL).placeholder(R.drawable.defaultmap).into(ivMap);
         }
         break;
 
         }//end of switch
-
 
 
 
@@ -264,11 +272,26 @@ public class VaccineDetails extends AppCompatActivity {
 
                         Log.e("x", "onResponse: ja first object Date "+ja.getJSONObject(0).getString("date") );
 
-                        // Setting up the Today CV with data of the fifth to last object in the array as today's data may be not updated yet...
+                        // Setting up the Today CV with data of the before last object in the array as today's data may be not updated yet...
                         TextView tvDosesToday = findViewById(R.id.todayDosesVaccine_id);
                         TextView tvDosesMill = findViewById(R.id.todayDosesPerMillionVaccine_id);
-                        tvDosesToday.setText("+"+ja.optJSONObject(ja.length()-5).getString("daily"));
-                        tvDosesMill.setText("+"+ja.optJSONObject(ja.length()-5).getString("dailyPerMillion"));
+                        tvDosesToday.setText("+"+String.format("%,d",ja.optJSONObject(ja.length()-5).getLong("daily")));
+                        tvDosesMill.setText("+"+String.format("%,d",ja.optJSONObject(ja.length()-5).getLong("dailyPerMillion")));
+
+
+                        //fonts
+                        Typeface fontPoppinsBlack = Typeface.createFromAsset(getAssets(),"fonts/poppins_black.ttf");
+                        Typeface fontPoppins = Typeface.createFromAsset(getAssets(),"fonts/poppins.ttf");
+
+                        tvCountryFullName.setTypeface(fontPoppins);
+                        tvCountryPopulation.setTypeface(fontPoppins);
+                        tvCountryContinent.setTypeface(fontPoppins);
+
+
+                        tvDosesToday.setTypeface(fontPoppinsBlack);
+                        tvDosesMill.setTypeface(fontPoppinsBlack);
+
+
 
 
                         // Setting up the vaccine line chart ...
@@ -362,6 +385,9 @@ public class VaccineDetails extends AppCompatActivity {
 
 
     }//end of onCreate
+
+
+
 
     //Fetching Json Data by country by changing the suffix after '/countries'
     //https://disease.sh/v3/covid-19/vaccine/coverage/countries/{COUNTRY_NAME}?lastdays=200&fullData=true
