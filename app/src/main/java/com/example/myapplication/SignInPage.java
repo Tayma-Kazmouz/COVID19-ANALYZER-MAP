@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.blongho.country_data.World;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -33,6 +34,7 @@ public class SignInPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in_page);
+
 
         email = findViewById(R.id.et_email_id);
         password = findViewById(R.id.et_password_id);
@@ -57,6 +59,7 @@ public class SignInPage extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             if (firebaseAuth.getCurrentUser().isEmailVerified()){
+                                World.init(getApplicationContext()); // Initializes the countries library and loads all data
                                 Intent i= new Intent(SignInPage.this, UserInput.class);
                                 startActivity(i);
                             }else{

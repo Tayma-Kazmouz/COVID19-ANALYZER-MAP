@@ -28,7 +28,7 @@
         <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/font/poppins_bold.xml" value="0.1" />
         <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_analyzed_variant.xml" value="0.33638743455497383" />
         <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_corona_cases_list.xml" value="0.1859375" />
-        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_covid_details.xml" value="0.2" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_covid_details.xml" value="0.1" />
         <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_dash_board.xml" value="0.22" />
         <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_extras.xml" value="0.2" />
         <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_launcher.xml" value="0.1859375" />
@@ -36,13 +36,14 @@
         <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_main.xml" value="0.33425925925925926" />
         <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_maps.xml" value="0.33425925925925926" />
         <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_new_lottie.xml" value="0.371875" />
-        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_report_status1.xml" value="0.25" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_report_status1.xml" value="0.5" />
         <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_report_status2.xml" value="0.1859375" />
         <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_sampled_analyzed_countries.xml" value="0.14" />
-        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_sign_in_page.xml" value="0.1" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_sign_in_page.xml" value="0.25" />
         <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_user_input.xml" value="0.371875" />
         <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_vaccine_details.xml" value="0.1859375" />
         <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_vaccine_list.xml" value="0.22" />
+        <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/activity_verification_page.xml" value="0.25" />
         <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/item.xml" value="0.1859375" />
         <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/mapinfobox.xml" value="0.1859375" />
         <entry key="..\:/FYP/COVID19-ANALYZER-MAP/app/src/main/res/layout/slider_layout2.xml" value="0.1" />

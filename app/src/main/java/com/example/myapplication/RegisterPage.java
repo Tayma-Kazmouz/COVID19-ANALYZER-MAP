@@ -21,13 +21,12 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class RegisterPage extends AppCompatActivity {
 
-
+        //declare
     EditText email, password, username;
     boolean passwordVisible;
-    TextView gotosigninpage;
+    TextView goToSignInPage;
     FirebaseAuth firebaseAuth;
     Button register;
-    TextView teststatus;
 
 
     @Override
@@ -35,7 +34,7 @@ public class RegisterPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        //define
 
 
 
@@ -46,8 +45,6 @@ public class RegisterPage extends AppCompatActivity {
 
 
 
-
-        teststatus = findViewById(R.id.tv_alreadyhave_id);
 
         email = findViewById(R.id.et_email_id);
         password = findViewById(R.id.et_password_id);
@@ -125,8 +122,8 @@ public class RegisterPage extends AppCompatActivity {
 
 
 
-        gotosigninpage = findViewById(R.id.sign_in_id);
-        gotosigninpage.setOnClickListener(new View.OnClickListener() {
+        goToSignInPage = findViewById(R.id.sign_in_id);
+        goToSignInPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(RegisterPage.this,SignInPage.class));

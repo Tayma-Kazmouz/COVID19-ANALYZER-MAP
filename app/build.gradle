@@ -44,7 +44,10 @@ dependencies {
 
     implementation 'com.google.android.gms:play-services-maps:18.0.2'
 
-    implementation 'com.google.firebase:firebase-auth:21.0.3'
+    // Google Firebase
+    implementation platform('com.google.firebase:firebase-bom:30.0.1')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth:21.0.4'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
@@ -78,6 +81,12 @@ dependencies {
 
     // added countries library
     implementation 'com.github.blongho:worldCountryData:1.5.3'
+
+    // added a quantity counter view
+    implementation "com.github.kojofosu:Quantitizer:1.6.7"
+
+    // added custom toasts
+    implementation 'com.github.GrenderG:Toasty:1.5.2'
 
 
 

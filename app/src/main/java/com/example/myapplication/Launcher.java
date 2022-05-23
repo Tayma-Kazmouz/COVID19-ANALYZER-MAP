@@ -37,7 +37,9 @@ public class Launcher extends AppCompatActivity {
         gotoregisterpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Launcher.this,NewLottie.class));
+                Intent reg = new Intent(Launcher.this,NewLottie.class);
+                reg.putExtra("src","reg");
+                startActivity(reg);
             }
         });
 
