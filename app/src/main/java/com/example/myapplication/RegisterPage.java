@@ -1,9 +1,12 @@
 package com.example.myapplication;
 
+import android.accounts.Account;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -18,23 +21,23 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import es.dmoral.toasty.Toasty;
 
 public class RegisterPage extends AppCompatActivity {
 
-        //declare
     EditText email, password, username;
     boolean passwordVisible;
     TextView goToSignInPage;
     FirebaseAuth firebaseAuth;
     Button register;
-
+    User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //define
 
 
 
@@ -53,34 +56,62 @@ public class RegisterPage extends AppCompatActivity {
         register = findViewById(R.id.bt_register_id);
 
 
+
         //firebase authentication
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                firebaseAuth.createUserWithEmailAndPassword(email.getText().toString(),
-                        password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()){
-                            firebaseAuth.getCurrentUser().sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    if (task.isSuccessful()){
-                                        Intent i= new Intent(RegisterPage.this, VerificationPage.class);
-                                        startActivity(i);
-                                    }else{
-                                        Toast.makeText(RegisterPage.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+
+
+
+
+
+                if (email.getText().toString().trim().isEmpty()){
+                    Toasty.warning(getApplicationContext(),"Required Field is Empty!",Toast.LENGTH_LONG,true).show();
+                    email.requestFocus();
+                }
+                else if (username.getText().toString().trim().isEmpty()){
+                    Toasty.warning(getApplicationContext(),"Required Field is Empty!",Toast.LENGTH_LONG,true).show();
+                    username.requestFocus();
+                }
+                else if (password.getText().toString().trim().isEmpty()){
+                    Toasty.warning(getApplicationContext(),"Required Field is Empty!",Toast.LENGTH_LONG,true).show();
+                    password.requestFocus();
+                }
+                else{
+                    firebaseAuth.createUserWithEmailAndPassword(email.getText().toString().trim(),
+                            password.getText().toString().trim()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()){
+                                firebaseAuth.getCurrentUser().sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if (task.isSuccessful()){
+                                            user =User.getInstance();
+                                            Intent i= new Intent(RegisterPage.this, VerificationPage.class);
+                                            user.setName(username.getText().toString().trim());
+                                            user.setEmail(email.getText().toString().trim());
+                                            startActivity(i);
+                                            finish();
+                                        }else{
+                                            Toasty.warning(RegisterPage.this, task.getException().getMessage(), Toast.LENGTH_LONG,true).show();
+                                        }
+
                                     }
+                                });
 
-                                }
-                            });
+                            }else{
+                                Toasty.error(RegisterPage.this, task.getException().getMessage(), Toast.LENGTH_LONG,true).show();
+                            }
 
-                        }else{
-                            Toast.makeText(RegisterPage.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                         }
+                    });
+                }
 
-                    }
-                });
+
+
+
 
             }
             });

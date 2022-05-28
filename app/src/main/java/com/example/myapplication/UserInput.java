@@ -5,11 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 
+import android.widget.RadioButton;
 import android.widget.Spinner;
+import android.widget.Toast;
 //import com.example.myapplication.UserInput;
 import com.blongho.country_data.Country;
 import com.blongho.country_data.World;
@@ -19,6 +22,8 @@ import java.util.List;
 
 
 import java.util.Calendar;
+
+import es.dmoral.toasty.Toasty;
 
 public class UserInput extends AppCompatActivity {
 
@@ -35,6 +40,13 @@ public class UserInput extends AppCompatActivity {
     List<Country> libCountriesList;
     String [] countryNames;
 
+    RadioButton rbMale,rbFemale;
+    String DOB;
+    String Gender;
+    String Country;
+
+    User user;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,22 +54,11 @@ public class UserInput extends AppCompatActivity {
         setContentView(R.layout.activity_user_input);
 
 
-
-
         gotoreport= findViewById(R.id.submitpersonalinfo_id);
+        rbMale = findViewById(R.id.rbmale_id);
+        rbFemale = findViewById(R.id.rbfemale_id);
 
 
-        gotoreport.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                Intent i = new Intent(UserInput.this,ReportStatus1.class);
-                startActivity(i);
-                finish();
-
-            }
-        });
 
 
         //Date&Time
@@ -65,6 +66,7 @@ public class UserInput extends AppCompatActivity {
         dateButton = findViewById(R.id.dobbtn_id);
         dateButton.setText(getTodaysDate());
 
+        // fill in array with country names and iso2 from library
         libCountriesList = World.getAllCountries();
         countryNames = new String[libCountriesList.size()];
         int i =0;
@@ -78,6 +80,38 @@ public class UserInput extends AppCompatActivity {
         adapter = new CountryPickerAdapter(this,countryNames);
         spinner.setAdapter(adapter);
 
+
+        gotoreport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                    if (!rbMale.isChecked() && !rbFemale.isChecked()){
+                        Toasty.warning(UserInput.this,"Please Select Gender", Toast.LENGTH_LONG).show();
+                        return;
+                    }
+
+                    DOB = makeDateString(datePickerDialog.getDatePicker().getDayOfMonth(),datePickerDialog.getDatePicker().getMonth()+1,datePickerDialog.getDatePicker().getYear());
+
+                    Country = spinner.getSelectedItem().toString().trim();
+                    Country = Country.substring(Country.lastIndexOf("(")+1,Country.lastIndexOf(")"));
+
+                    if (rbMale.isChecked())
+                        Gender = "M";
+                    else
+                        Gender = "F";
+
+
+                    user = User.getInstance();
+
+                    user.setDob(DOB.trim());
+                    user.setGender(Gender.trim());
+                    user.setCountry(Country.trim());
+
+                Intent i = new Intent(UserInput.this,ReportStatus1.class);
+                startActivity(i);
+
+            }
+        });
 
     }//end of ONCreate
 
@@ -120,7 +154,7 @@ public class UserInput extends AppCompatActivity {
 
     private String makeDateString(int day, int month, int year) {
 
-        return getMonthFormat(month) + "/" + day + "/" + year;
+        return  day+ "/" + getMonthFormat(month) + "/" + year;
     }
 
 
@@ -170,7 +204,10 @@ public class UserInput extends AppCompatActivity {
 
 
 
-
+    @Override
+    public void onBackPressed() {
+        Toasty.info(getApplicationContext(), "Please enter your details!", Toast.LENGTH_SHORT, true).show();
+    }
 
 
 

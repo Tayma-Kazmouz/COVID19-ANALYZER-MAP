@@ -93,7 +93,7 @@
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/male_id"
+            android:id="@+id/rbmale_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/male"
@@ -102,7 +102,7 @@
             />
 
         <RadioButton
-            android:id="@+id/female_id"
+            android:id="@+id/rbfemale_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/female"

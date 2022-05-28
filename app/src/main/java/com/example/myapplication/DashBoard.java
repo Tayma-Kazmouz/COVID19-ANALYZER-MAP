@@ -45,6 +45,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import es.dmoral.toasty.Toasty;
+
 public class DashBoard extends AppCompatActivity {
 
 
@@ -513,7 +515,7 @@ public class DashBoard extends AppCompatActivity {
             @Override                       // WHEN AN ERROR OCCURS
             public void onErrorResponse(VolleyError error) {
                 pd.dismiss();
-                Toast.makeText(DashBoard.this,"Data Fetch Err",Toast.LENGTH_LONG).show();
+                Toasty.error(getApplicationContext(), "Cant Retrieve Data", Toast.LENGTH_LONG,true).show();
                 error.printStackTrace();
             }
         });

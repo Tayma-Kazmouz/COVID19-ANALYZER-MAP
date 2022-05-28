@@ -27,6 +27,13 @@ public class ReportStatus1 extends AppCompatActivity {
 
     CheckBox cbPfizer,cbModerna,cbJJ,cbSinovac,cbAstra,cbNone;
     HorizontalQuantitizer pfizerCounter,modernaCounter,jjCounter,sinovacCounter,astraCounter;
+    Intent x;
+    String Name;
+    String Email;
+    String DOB;
+    String Gender;
+    String Country;
+
 
 
     @Override
@@ -45,14 +52,6 @@ public class ReportStatus1 extends AppCompatActivity {
             }
         });
 
-
-
-        gotoreporttwo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(ReportStatus1.this,ReportStatus2.class));
-            }
-        });
 
         cbPfizer = findViewById(R.id.checkBox1);
         cbModerna = findViewById(R.id.checkBox2);
@@ -299,8 +298,29 @@ public class ReportStatus1 extends AppCompatActivity {
 
 
 
-
+        gotoreporttwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ReportStatus1.this,ReportStatus2.class));
+            }
+        });
 
 
     }//end of onCreate
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        x = getIntent();
+        Name = x.getStringExtra("Name");
+        Email = x.getStringExtra("Email");
+        DOB = x.getStringExtra("DOB");
+        Gender = x.getStringExtra("Gender");
+        Country = x.getStringExtra("Country");
+
+    }//end of onStart
+
+
 }//end of class

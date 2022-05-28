@@ -3,7 +3,9 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import android.accounts.Account;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -15,10 +17,13 @@ public class Launcher extends AppCompatActivity {
 
     TextView gotosigninpage;
     TextView gotoregisterpage;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launcher);
+
 
         World.init(getApplicationContext()); // Initializes the countries library and loads all data
 
@@ -54,23 +59,8 @@ public class Launcher extends AppCompatActivity {
 
 
 
+    }//end of onCreate
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
-}
+}//end of Class

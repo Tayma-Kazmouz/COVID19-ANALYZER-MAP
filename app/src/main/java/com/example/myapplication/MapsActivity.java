@@ -41,6 +41,8 @@ import com.squareup.picasso.Picasso;
 import java.util.HashMap;
 import java.util.Map;
 
+import es.dmoral.toasty.Toasty;
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     //declare
@@ -95,7 +97,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         getJsonData(new VolleyResponseListener() {
             @Override
             public void onError(String message) {
-                Toast.makeText(MapsActivity.this,"Cant Retrieve Data",Toast.LENGTH_LONG).show();
+                Toasty.error(MapsActivity.this,"Cant Retrieve Data",Toast.LENGTH_LONG).show();
+                Log.e("x", "onError: "+message );
             }
 
             @Override

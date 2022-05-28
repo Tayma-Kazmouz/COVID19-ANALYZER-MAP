@@ -49,6 +49,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+import es.dmoral.toasty.Toasty;
+
 public class VaccineDetails extends AppCompatActivity {
 
     String COUNTRY_NAME;
@@ -260,7 +262,8 @@ public class VaccineDetails extends AppCompatActivity {
             getVaccineTimeline(new TimelineVolleyResponseListener() {
                 @Override
                 public void onError(String message) {
-                    Toast.makeText(VaccineDetails.this,message,Toast.LENGTH_LONG).show();
+                    Toasty.error(getApplicationContext(), "Cant Retrieve Data", Toast.LENGTH_LONG,true).show();
+                    Log.e("x", "onError: "+message );
                 }
 
                 @Override
