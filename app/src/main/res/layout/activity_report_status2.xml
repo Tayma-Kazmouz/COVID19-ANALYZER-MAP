@@ -137,7 +137,7 @@
                 android:orientation="vertical">
 
             <RadioButton
-                android:id="@+id/checkBox1"
+                android:id="@+id/rb1_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/positive"
@@ -155,7 +155,7 @@
                 />
 
             <RadioButton
-                android:id="@+id/checkBox2"
+                android:id="@+id/rb2_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/negative"
@@ -176,7 +176,7 @@
                 />
 
             <RadioButton
-                android:id="@+id/checkBox3"
+                android:id="@+id/rb3_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/contacted_before"
@@ -193,7 +193,7 @@
                />
 
             <RadioButton
-                android:id="@+id/checkBox4"
+                android:id="@+id/rb4_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 

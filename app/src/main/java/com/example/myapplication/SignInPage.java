@@ -3,7 +3,9 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.accounts.Account;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -19,6 +21,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+
+import es.dmoral.toasty.Toasty;
 
 public class SignInPage extends AppCompatActivity {
 
@@ -41,6 +45,7 @@ public class SignInPage extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         signin = findViewById(R.id.bt_signin_id);
 
+
         //takes you back to register page
         gotoregisterpage = findViewById(R.id.register_id);
         gotoregisterpage.setOnClickListener(new View.OnClickListener() {
@@ -54,63 +59,54 @@ public class SignInPage extends AppCompatActivity {
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                firebaseAuth.signInWithEmailAndPassword(email.getText().toString(),password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            if (firebaseAuth.getCurrentUser().isEmailVerified()){
-                                World.init(getApplicationContext()); // Initializes the countries library and loads all data
-                                Intent i= new Intent(SignInPage.this, UserInput.class);
-                                startActivity(i);
+
+                if (email.getText().toString().trim().isEmpty()){
+                    Toasty.warning(getApplicationContext(),"Required Field is Empty!",Toast.LENGTH_LONG,true).show();
+                    email.requestFocus();
+                }
+                else if (password.getText().toString().trim().isEmpty()){
+                    Toasty.warning(getApplicationContext(),"Required Field is Empty!",Toast.LENGTH_LONG,true).show();
+                    password.requestFocus();
+                }else{
+
+
+
+                    firebaseAuth.signInWithEmailAndPassword(email.getText().toString().trim(),password.getText().toString().trim()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(task.isSuccessful()){
+                                if (firebaseAuth.getCurrentUser().isEmailVerified()){
+//                                if ("ACCOUNT SET UP CORRECTLY"){
+                                    World.init(getApplicationContext()); // Initializes the countries library and loads all data
+                                    Intent i= new Intent(SignInPage.this, DashBoard.class);
+                                    startActivity(i);
+                                    finish();
+//                                }else{
+//                                    Toasty.info(SignInPage.this,"Please enter your information..", Toast.LENGTH_LONG,true).show();
+//                                    startActivity(new Intent(SignInPage.this,UserInput.class));
+//                                }
+                                }else{
+                                    Toasty.info(SignInPage.this,"Please verify your email!", Toast.LENGTH_LONG,true).show();
+                                    startActivity(new Intent(SignInPage.this,VerificationPage.class));
+                                    finish();
+                                }
                             }else{
-                                Toast.makeText(SignInPage.this,"Please verify your email!", Toast.LENGTH_LONG).show();
+                                Toasty.error(SignInPage.this, task.getException().getMessage(), Toast.LENGTH_LONG,true).show();
                             }
-                        }else{
-                            Toast.makeText(SignInPage.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                         }
-                    }
-                });
+                    });
+
+
+                }
+
+
+
             }
         });
 
 
-//    //going to lottie test
-//    gotolottie= findViewById(R.id.tv_donthaveacc_id);
-//    gotolottie.setOnClickListener(new View.OnClickListener() {
-//        @Override
-//        public void onClick(View view) {
-//            startActivity(new Intent(SignInPage.this,NewLottie.class));
-//        }
-//    });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//        //takes you to dashboard
-//        goToDashBoard = findViewById(R.id.bt_signin_id);
-//        goToDashBoard.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(SignInPage.this,DashBoard.class));
-//            }
-//        });
-
-
-        //password icon fucntionality
-        email = findViewById(R.id.et_email_id);
-        password = findViewById(R.id.et_password_id);
+        //password icon functionality
 
         password.setOnTouchListener(new View.OnTouchListener() {
             @Override

@@ -24,6 +24,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.squareup.picasso.Picasso;
 
+import es.dmoral.toasty.Toasty;
+
 public class CoronaCasesList extends AppCompatActivity {
 
 
@@ -74,7 +76,8 @@ public class CoronaCasesList extends AppCompatActivity {
         getJsonData(new VolleyResponseListener() {
             @Override
             public void onError(String message) {
-                Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
+                Toasty.error(getApplicationContext(), "Cant Retrieve Data", Toast.LENGTH_LONG,true).show();
+                Log.e("x", "onError: "+message );
             }
 
             @Override

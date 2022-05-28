@@ -39,6 +39,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import es.dmoral.toasty.Toasty;
+
 public class VaccineList extends AppCompatActivity {
 
 
@@ -273,7 +275,8 @@ public class VaccineList extends AppCompatActivity {
         getJsonData(new CountryVolleyResponseListener() {
             @Override
             public void onError(String message) {
-                Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
+                Toasty.error(getApplicationContext(), "Cant Retrieve Data", Toast.LENGTH_LONG,true).show();
+                Log.e("x", "onError: "+message );
             }
 
             @Override
@@ -295,7 +298,8 @@ public class VaccineList extends AppCompatActivity {
         }, new VaccineVolleyResponseListener() {
             @Override
             public void onError(String message) {
-                Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
+                Toasty.error(getApplicationContext(), "Cant Retrieve Data", Toast.LENGTH_LONG,true).show();
+                Log.e("x", "onError: "+message );
             }
 
             @Override
