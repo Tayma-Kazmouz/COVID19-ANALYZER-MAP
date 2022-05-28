@@ -39,6 +39,28 @@ public class Extras extends AppCompatActivity {
         });
 
 
+        MaterialCardView myprofile = findViewById(R.id.myprofilecard); //user profile page
+        myprofile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent x = new Intent(Extras.this,ProfilePage.class);
+                x.putExtra("src","extra");
+                startActivity(x);
+            }
+        });
+
+
+        MaterialCardView community = findViewById(R.id.community_id); //community page
+        community.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent x = new Intent(Extras.this,CommunityVaccinePage.class);
+                x.putExtra("src","extra");
+                startActivity(x);
+            }
+        });
+
+
 
 
     }//end of onCreate
