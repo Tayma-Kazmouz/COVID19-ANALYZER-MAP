@@ -12,11 +12,17 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.mcdev.quantitizerlibrary.AnimationStyle;
 import com.mcdev.quantitizerlibrary.HorizontalQuantitizer;
 import com.mcdev.quantitizerlibrary.QuantitizerListener;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import es.dmoral.toasty.Toasty;
 
 
 public class ReportStatus1 extends AppCompatActivity {
@@ -27,13 +33,8 @@ public class ReportStatus1 extends AppCompatActivity {
 
     CheckBox cbPfizer,cbModerna,cbJJ,cbSinovac,cbAstra,cbNone;
     HorizontalQuantitizer pfizerCounter,modernaCounter,jjCounter,sinovacCounter,astraCounter;
-    Intent x;
-    String Name;
-    String Email;
-    String DOB;
-    String Gender;
-    String Country;
-
+    Map<String, Integer> Vaccines = new HashMap<>();
+    User user;
 
 
     @Override
@@ -61,6 +62,7 @@ public class ReportStatus1 extends AppCompatActivity {
         cbNone = findViewById(R.id.checkBox6);
 
         pfizerCounter = findViewById(R.id.biontechVal_id);
+        pfizerCounter.setTag("pfizer");
         pfizerCounter.setMinusIconBackgroundColor("#75FF647C");
         pfizerCounter.setTextAnimationStyle(AnimationStyle.FALL_IN);
         pfizerCounter.setAnimationDuration(300);
@@ -72,6 +74,7 @@ public class ReportStatus1 extends AppCompatActivity {
         pfizerCounter.setVisibility(View.INVISIBLE);
 
         modernaCounter = findViewById(R.id.modernaVal_id);
+        modernaCounter.setTag("moderna");
         modernaCounter.setMinusIconBackgroundColor("#75FF647C");
         modernaCounter.setTextAnimationStyle(AnimationStyle.FALL_IN);
         modernaCounter.setAnimationDuration(300);
@@ -83,6 +86,7 @@ public class ReportStatus1 extends AppCompatActivity {
         modernaCounter.setVisibility(View.INVISIBLE);
 
         jjCounter = findViewById(R.id.jjVal_id);
+        jjCounter.setTag("jj");
         jjCounter.setMinusIconBackgroundColor("#75FF647C");
         jjCounter.setTextAnimationStyle(AnimationStyle.FALL_IN);
         jjCounter.setAnimationDuration(300);
@@ -94,6 +98,7 @@ public class ReportStatus1 extends AppCompatActivity {
         jjCounter.setVisibility(View.INVISIBLE);
 
         sinovacCounter = findViewById(R.id.sinovacVal_id);
+        sinovacCounter.setTag("sinovac");
         sinovacCounter.setMinusIconBackgroundColor("#75FF647C");
         sinovacCounter.setTextAnimationStyle(AnimationStyle.FALL_IN);
         sinovacCounter.setAnimationDuration(300);
@@ -105,6 +110,7 @@ public class ReportStatus1 extends AppCompatActivity {
         sinovacCounter.setVisibility(View.INVISIBLE);
 
         astraCounter = findViewById(R.id.astraVal_id);
+        astraCounter.setTag("astra");
         astraCounter.setMinusIconBackgroundColor("#75FF647C");
         astraCounter.setTextAnimationStyle(AnimationStyle.FALL_IN);
         astraCounter.setAnimationDuration(300);
@@ -114,6 +120,7 @@ public class ReportStatus1 extends AppCompatActivity {
         astraCounter.setMaxValue(6);
         astraCounter.setMinValue(1);
         astraCounter.setVisibility(View.INVISIBLE);
+
 
         //disable/enable all options based on click checkbox
         cbNone.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -297,30 +304,35 @@ public class ReportStatus1 extends AppCompatActivity {
         });
 
 
-
         gotoreporttwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ReportStatus1.this,ReportStatus2.class));
+
+                    // check if no option was selected
+                if (!cbPfizer.isChecked() && !cbModerna.isChecked() && !cbJJ.isChecked() && !cbSinovac.isChecked() && !cbAstra.isChecked() && !cbNone.isChecked()){
+                    Toasty.warning(ReportStatus1.this,"Please Select an Option!", Toast.LENGTH_LONG).show();
+                }else{
+
+                    user = User.getInstance();
+                    HorizontalQuantitizer[] counters = {pfizerCounter, modernaCounter, jjCounter, sinovacCounter, astraCounter};
+
+                    // search in array called counters for visible ones and set the visible one's tags string attribute to Vaccines Map along with the corresponding values
+                    for (HorizontalQuantitizer c : counters){
+                        if (c.getVisibility() == View.VISIBLE){
+                            Vaccines.put(c.getTag().toString(),c.getValue());
+                        }
+                    }
+
+                    user.setVaccines(Vaccines);
+
+                    startActivity(new Intent(ReportStatus1.this,ReportStatus2.class));
+                }
+
             }
         });
 
 
     }//end of onCreate
-
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        x = getIntent();
-        Name = x.getStringExtra("Name");
-        Email = x.getStringExtra("Email");
-        DOB = x.getStringExtra("DOB");
-        Gender = x.getStringExtra("Gender");
-        Country = x.getStringExtra("Country");
-
-    }//end of onStart
 
 
 }//end of class
