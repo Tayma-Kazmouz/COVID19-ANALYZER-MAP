@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommunityVaccinePage">
+
+
+    <TextView
+        android:id="@+id/community_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Community"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/toppage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/backarrow_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toStartOf="@id/containerstart_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_backarrow" />
+
+
+    <Switch
+        android:id="@+id/vaccineSwitch_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/toppage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/switchstart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toTopOf="@id/topcardbottom"
+        app:layout_constraintEnd_toEndOf="@id/cardend"
+        app:layout_constraintStart_toStartOf="@id/containerstart_id"
+        app:layout_constraintTop_toBottomOf="@id/toppage"
+        app:strokeColor="#22000000"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/profileicon_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_group_6826"
+                app:layout_constraintEnd_toEndOf="@id/insidecardend"
+                app:layout_constraintStart_toStartOf="@id/insidecardstart"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/vaccinedata_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="Vaccine Data"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@id/endoftitle"
+                app:layout_constraintStart_toStartOf="@id/insidecardstart"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <View
+                android:id="@+id/horizontalline1_id"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#66E4E4E4"
+                app:layout_constraintEnd_toStartOf="@id/lineguidlineend"
+                app:layout_constraintStart_toStartOf="@id/lineguidlinestart"
+                app:layout_constraintTop_toBottomOf="@id/vaccinedata_id" />
+
+            <TextView
+                android:id="@+id/tv_aggregateddatap_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Aggregated and analyzed data from Vaccine data shared by the app users"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toStartOf="@id/endoftitle"
+                app:layout_constraintStart_toStartOf="@id/insidecardstart"
+                app:layout_constraintTop_toBottomOf="@id/vaccinedata_id"> </TextView>
+
+            <TextView
+                android:id="@+id/tv_total_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Total Vaccinated Users: 83.24 m"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/endoftitle"
+                app:layout_constraintStart_toStartOf="@id/insidecardstart"
+                app:layout_constraintTop_toBottomOf="@id/tv_aggregateddatap_id"> </TextView>
+
+
+            <!-- guidlines for top card -->
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/insidecardstart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.2" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/insidecardend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.3" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/endoftitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.8" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/lineguidlinestart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/lineguidlineend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toTopOf="@id/secondcardbottom"
+        app:layout_constraintEnd_toEndOf="@id/cardend"
+        app:layout_constraintStart_toStartOf="@id/containerstart_id"
+        app:layout_constraintTop_toBottomOf="@id/topcardbottom"
+        app:strokeColor="#22000000"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_age_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/poppins"
+                android:text="Age"
+                android:textSize="20sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/lineguidestart2"
+                app:layout_constraintStart_toStartOf="parent"
+             ></TextView>
+
+
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:id="@+id/firstchart_id"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="35dp"
+                app:layout_constraintStart_toStartOf="@id/chartstart"
+                app:layout_constraintEnd_toEndOf="@id/lineguideend2"
+                app:layout_constraintTop_toTopOf="@id/tv_age_id"
+                />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:id="@+id/secondchart_id"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="35dp"
+                app:layout_constraintStart_toStartOf="@id/chartstart"
+                app:layout_constraintEnd_toEndOf="@id/lineguideend2"
+                app:layout_constraintTop_toBottomOf="@id/firstchart_id"
+                />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:id="@+id/thirdchart_id"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="35dp"
+                app:layout_constraintStart_toStartOf="@id/chartstart"
+                app:layout_constraintEnd_toEndOf="@id/lineguideend2"
+                app:layout_constraintTop_toBottomOf="@id/secondchart_id"
+                />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:id="@+id/fourthchart_id"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="35dp"
+                app:layout_constraintStart_toStartOf="@id/chartstart"
+                app:layout_constraintEnd_toEndOf="@id/lineguideend2"
+                app:layout_constraintTop_toBottomOf="@id/thirdchart_id"
+                />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:id="@+id/fifthchart_id"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="35dp"
+                app:layout_constraintStart_toStartOf="@id/chartstart"
+                app:layout_constraintEnd_toEndOf="@id/lineguideend2"
+                app:layout_constraintTop_toBottomOf="@id/fourthchart_id"
+                />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:id="@+id/sixthchart_id"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="35dp"
+                app:layout_constraintStart_toStartOf="@id/chartstart"
+                app:layout_constraintEnd_toEndOf="@id/lineguideend2"
+                app:layout_constraintTop_toBottomOf="@id/fifthchart_id"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+
+
+
+
+
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/lineguidestart2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.16" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/chartstart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/lineguideend2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/toppage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/containerstart_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/switchstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.81" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/cardend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topcardbottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/secondcardbottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
