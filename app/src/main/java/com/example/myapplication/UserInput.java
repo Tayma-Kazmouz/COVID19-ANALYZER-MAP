@@ -40,10 +40,13 @@ public class UserInput extends AppCompatActivity {
     List<Country> libCountriesList;
     String [] countryNames;
 
+    Calendar dob,today;
+
     RadioButton rbMale,rbFemale;
     String DOB;
     String Gender;
     String Country;
+    Long Age;
 
     User user;
 
@@ -101,9 +104,26 @@ public class UserInput extends AppCompatActivity {
                         Gender = "F";
 
 
+                    today = Calendar.getInstance();
+                    dob = Calendar.getInstance();
+
+                    dob.set(datePickerDialog.getDatePicker().getYear(), datePickerDialog.getDatePicker().getMonth()+1, datePickerDialog.getDatePicker().getDayOfMonth());
+
+                        int age = today.get(Calendar.YEAR) - dob.get(Calendar.YEAR);
+
+                        if (today.get(Calendar.DAY_OF_YEAR) < dob.get(Calendar.DAY_OF_YEAR)){
+                            age--;
+                        }
+
+                        Age = (long) age;
+
+                        if (Age == -1)
+                            Age = 0L ;
+
                     user = User.getInstance();
 
                     user.setDob(DOB.trim());
+                    user.setAge(Age);
                     user.setGender(Gender.trim());
                     user.setCountry(Country.trim());
 
