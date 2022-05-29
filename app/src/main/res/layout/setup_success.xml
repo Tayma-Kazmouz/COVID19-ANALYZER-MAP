@@ -25,7 +25,7 @@
                 android:layout_height="200dp"
                 app:lottie_rawRes="@raw/success_lottie"
                 app:lottie_autoPlay="true"
-                app:lottie_loop="true"
+                app:lottie_loop="false"
                 >
             </com.airbnb.lottie.LottieAnimationView>
 

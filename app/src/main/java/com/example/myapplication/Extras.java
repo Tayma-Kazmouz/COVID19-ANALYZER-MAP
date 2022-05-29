@@ -43,8 +43,7 @@ public class Extras extends AppCompatActivity {
         myprofile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent x = new Intent(Extras.this,ProfilePage.class);
-                x.putExtra("src","extra");
+                Intent x = new Intent(Extras.this,ProfileActivity.class);
                 startActivity(x);
             }
         });
@@ -54,8 +53,7 @@ public class Extras extends AppCompatActivity {
         community.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent x = new Intent(Extras.this, CommunityPage.class);
-                x.putExtra("src","extra");
+                Intent x = new Intent(Extras.this, CommunityActivity.class);
                 startActivity(x);
             }
         });

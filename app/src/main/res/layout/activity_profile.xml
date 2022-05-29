@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="15dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivExtrasBackArrow_id"
+            android:layout_width="44dp"
+            android:layout_height="34dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_backbuttonsvg" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="12"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_profileiconsvg"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="User Profile"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_medium"/>
+
+        </LinearLayout>
+
+        <ToggleButton
+            android:id="@+id/toggleEdit_id"
+            android:layout_width="15dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_edit_alt"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textOff=""
+            android:textOn="" />
+
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/myprofilecard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="5dp"
+                    app:strokeColor="#22000000"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="20dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/full_name"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@font/poppins_medium"/>
+
+
+                        <EditText
+                            android:id="@+id/et_profile_name_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittext_newlook"
+                            android:hint="@string/full_name"
+                            android:inputType="textPersonName"
+                            android:focusedByDefault="false"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="20dp"
+                            android:textSize="14sp"
+                            android:enabled="false"
+                            />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/email"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins_medium"/>
+
+
+                        <EditText
+                            android:id="@+id/et_profile_email_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittext_newlook"
+                            android:hint="@string/email"
+                            android:inputType="textEmailAddress"
+                            android:focusedByDefault="false"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="20dp"
+                            android:textSize="14sp"
+                            android:enabled="false"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/password"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins_medium"/>
+
+                        <Button
+                            android:id="@+id/bt_profile_passReset_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/resetprofileselector"
+                            android:letterSpacing="0.02"
+                            android:text="Reset Password"
+                            android:textAllCaps="false"
+                            android:textColor="#85000000"
+                            android:textSize="15sp"
+                            android:enabled="false"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="DOB : "
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins_medium"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="10/10/2010"
+                            android:textSize="15sp"
+                            android:textColor="#999999"
+                            android:fontFamily="@font/poppins_medium"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Gender : "
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins_medium"/>
+
+                        <RadioGroup
+                            android:id="@+id/radiobtns_profile_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rbmale_profile_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/male"
+                                android:textSize="15sp"
+                                android:textColor="#999999"
+                                android:layout_marginRight="30dp"
+                                android:enabled="false"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/rbfemale_profile_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#999999"
+                                android:text="@string/female"
+                                android:textSize="15sp"
+                                android:enabled="false"/>
+
+                        </RadioGroup>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Country : "
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins_medium"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/ivFlag_id"
+                                android:layout_width="50dp"
+                                android:layout_height="30dp"
+                                android:adjustViewBounds="true"
+                                android:elevation="2dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_sampleflagsvg"
+                                app:shapeAppearanceOverlay="@style/roundedflagimage" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Country Name"
+                                android:layout_marginLeft="10dp"
+                                android:textSize="15sp"
+                                android:textColor="#999999"
+                                android:fontFamily="@font/poppins_medium"/>
+
+
+                        </LinearLayout>
+
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Vaccines : "
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins_medium"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Pfizer : 2\nModerna : 1"
+                            android:textSize="15sp"
+                            android:textColor="#999999"
+                            android:fontFamily="@font/poppins_medium"/>
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <Button
+                    android:id="@+id/btn_profile_save_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/capbuttonpressselector"
+                    android:enabled="true"
+                    android:letterSpacing="0.02"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    />
+
+
+            </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

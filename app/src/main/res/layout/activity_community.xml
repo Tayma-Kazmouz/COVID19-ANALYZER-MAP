@@ -1,0 +1,1233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".CommunityActivity">
+
+    <TextView
+        android:id="@+id/vaccineTitle_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Community"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <ImageView
+        android:id="@+id/imageViewBack_id"
+        android:layout_width="44dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/guideline1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.028"
+        app:srcCompat="@drawable/ic_backbuttonsvg" />
+
+    <LinearLayout
+        android:id="@+id/coronaCommunity_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline1">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/covidcommunitydatacard_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    app:cardCornerRadius="5dp"
+                    app:strokeColor="#22000000"
+                    app:strokeWidth="1dp">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/profileicon_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_group_6826"
+                            app:layout_constraintEnd_toEndOf="@id/insidecardend"
+                            app:layout_constraintStart_toStartOf="@id/insidecardstart"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/covidcommunitydata_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="Covid Data"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toStartOf="@id/endoftitle"
+                            app:layout_constraintStart_toStartOf="@id/insidecardstart"
+                            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                        <View
+                            android:id="@+id/horizontalline1_id"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#66E4E4E4"
+                            app:layout_constraintEnd_toStartOf="@id/lineguidlineend"
+                            app:layout_constraintStart_toStartOf="@id/lineguidlinestart"
+                            app:layout_constraintTop_toBottomOf="@id/covidcommunitydata_id" />
+
+                        <TextView
+                            android:id="@+id/tv_aggregateddatap_id"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Aggregated and analyzed data from Covid data shared by the app users"
+                            android:textSize="10sp"
+                            android:gravity="center"
+                            app:layout_constraintEnd_toStartOf="@id/endoftitle"
+                            app:layout_constraintStart_toStartOf="@id/insidecardstart"
+                            app:layout_constraintTop_toBottomOf="@id/covidcommunitydata_id"> </TextView>
+
+                        <TextView
+                            android:id="@+id/tv_total_id"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginBottom="25dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Total Users: 83.24 m"
+                            android:textSize="10sp"
+                            android:gravity="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/endoftitle"
+                            app:layout_constraintStart_toStartOf="@id/insidecardstart"
+                            app:layout_constraintTop_toBottomOf="@id/tv_aggregateddatap_id"> </TextView>
+
+
+                        <!-- guidlines for top card -->
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/insidecardstart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.2" />
+
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/insidecardend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.3" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/endoftitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.8" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/lineguidlinestart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.1" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/lineguidlineend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.9" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/ageCovidcard_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    app:cardCornerRadius="5dp"
+                    app:strokeColor="#22000000"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_age_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="Age"
+                            android:textSize="20sp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="25dp"
+                            android:background="#66E4E4E4"/>
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:layout_gravity="center"
+                            android:id="@+id/positvechart_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            >
+
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@drawable/indicatorcommunitypositive" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#999999"
+                                android:text=" Answered Positive"
+                                android:fontFamily="@font/poppins"/>
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="25dp"
+                            android:background="#66E4E4E4"/>
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:layout_gravity="center"
+                            android:id="@+id/negativechart_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            >
+
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@drawable/indicatorcommunitynegative" />
+
+                            <TextView
+                                android:id="@+id/pfizerFrance_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#999999"
+                                android:text=" Answered Negative "
+                                android:fontFamily="@font/poppins"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="25dp"
+                            android:background="#66E4E4E4"/>
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:layout_gravity="center"
+                            android:id="@+id/contactedchart_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            >
+
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@drawable/indicatorcommunitycontacted" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#999999"
+                                android:text=" Answered Contacted Before"
+                                android:fontFamily="@font/poppins"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="25dp"
+                            android:background="#66E4E4E4"/>
+
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:layout_gravity="center"
+                            android:id="@+id/nonechart_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="10dp"
+                            />
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            >
+
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@drawable/indicatesnone" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#999999"
+                                android:text=" Answered None"
+                                android:fontFamily="@font/poppins"/>
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/gendercovidcard_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    app:cardCornerRadius="5dp"
+                    app:strokeColor="#22000000"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_gendercovid_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="Gender"
+                            android:textSize="20sp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="25dp"
+                            android:background="#66E4E4E4"/>
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/positivegenderpiechartcovid_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="15dp" />
+
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            >
+
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@drawable/indicatorcommunitymale" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#999999"
+                                android:text=" Males who answered positive"
+                                android:fontFamily="@font/poppins"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            >
+
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@drawable/indicatorcommunityfemale" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#999999"
+                                android:text=" Females who answered positive"
+                                android:fontFamily="@font/poppins"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="25dp"
+                            android:background="#66E4E4E4"/>
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/negativegenderpiechartcovid_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="15dp" />
+
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            >
+
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@drawable/indicatorcommunitymale" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#999999"
+                                android:text=" Males who answered negative"
+                                android:fontFamily="@font/poppins"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            >
+
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@drawable/indicatorcommunityfemale" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#999999"
+                                android:text=" Females who answered negative"
+                                android:fontFamily="@font/poppins"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="25dp"
+                            android:background="#66E4E4E4"/>
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/contactedgenderpiechartcovid_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="15dp" />
+
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            >
+
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@drawable/indicatorcommunitymale" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#999999"
+                                android:text=" Males who answered contacted before"
+                                android:fontFamily="@font/poppins"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            >
+
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@drawable/indicatorcommunityfemale" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#999999"
+                                android:text=" Females who answered contacted before"
+                                android:fontFamily="@font/poppins"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="25dp"
+                            android:background="#66E4E4E4"/>
+
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/nonegenderpiechartcovid_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="15dp" />
+
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            >
+
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@drawable/indicatorcommunitymale" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#999999"
+                                android:text=" Males who answered none"
+                                android:fontFamily="@font/poppins"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            >
+
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@drawable/indicatorcommunityfemale" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#999999"
+                                android:text=" Females who answered none"
+                                android:fontFamily="@font/poppins"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+<!--  ________________________  VACCINE LINEAR LAYOUT HERE ______________________________________-->
+
+
+    <LinearLayout
+        android:id="@+id/vaccineCommunity_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline1"
+        android:visibility="visible">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/Vcommunitydatacard_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    app:cardCornerRadius="5dp"
+                    app:strokeColor="#22000000"
+                    app:strokeWidth="1dp">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/Vprofileicon_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_group_6826"
+                            app:layout_constraintEnd_toEndOf="@id/insidecardendV"
+                            app:layout_constraintStart_toStartOf="@id/insidecardstartV"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/Vcommunitydata_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="Vaccine Data"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toStartOf="@id/endoftitleV"
+                            app:layout_constraintStart_toStartOf="@id/insidecardstartV"
+                            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                        <View
+                            android:id="@+id/Vhorizontalline1_id"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#66E4E4E4"
+                            app:layout_constraintEnd_toStartOf="@id/lineguidlineendV"
+                            app:layout_constraintStart_toStartOf="@id/lineguidlinestartV"
+                            app:layout_constraintTop_toBottomOf="@id/Vcommunitydata_id" />
+
+                        <TextView
+                            android:id="@+id/tv_aggregateddatapV_id"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Aggregated and analyzed data from Vaccine data shared by the app users"
+                            android:textSize="10sp"
+                            android:gravity="center"
+                            app:layout_constraintEnd_toStartOf="@id/endoftitleV"
+                            app:layout_constraintStart_toStartOf="@id/insidecardstartV"
+                            app:layout_constraintTop_toBottomOf="@id/Vcommunitydata_id"> </TextView>
+
+                        <TextView
+                            android:id="@+id/tv_totalV_id"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginBottom="25dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Total Users: 83.24 m"
+                            android:textSize="10sp"
+                            android:gravity="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/endoftitleV"
+                            app:layout_constraintStart_toStartOf="@id/insidecardstartV"
+                            app:layout_constraintTop_toBottomOf="@id/tv_aggregateddatapV_id"> </TextView>
+
+
+                        <!-- guidlines for top card -->
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/insidecardstartV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.2" />
+
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/insidecardendV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.3" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/endoftitleV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.8" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/lineguidlinestartV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.1" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/lineguidlineendV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.9" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/ageVcard_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    app:cardCornerRadius="5dp"
+                    app:strokeColor="#22000000"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_ageV_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="Age"
+                            android:textSize="20sp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="25dp"
+                            android:background="#66E4E4E4"/>
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:layout_gravity="center"
+                            android:id="@+id/pfizerchartV_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            >
+
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@drawable/indicatespfizer" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginBottom="7dp"
+                                android:textColor="#999999"
+                                android:text=" Answered Pfizer/BioNTech"
+                                android:fontFamily="@font/poppins"/>
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="25dp"
+                            android:background="#66E4E4E4"/>
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:layout_gravity="center"
+                            android:id="@+id/modernachartV_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            >
+
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@drawable/indicatesmoderna" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginBottom="7dp"
+                                android:textColor="#999999"
+                                android:text=" Answered Moderna"
+                                android:fontFamily="@font/poppins"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="25dp"
+                            android:background="#66E4E4E4"/>
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:layout_gravity="center"
+                            android:id="@+id/jjchartV_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            >
+
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@drawable/indicatesjj" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginBottom="7dp"
+                                android:layout_marginLeft="3dp"
+                                android:textColor="#999999"
+                                android:text="@string/answered_johnson_and_johnson"
+                                android:fontFamily="@font/poppins"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="25dp"
+                            android:background="#66E4E4E4"/>
+
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:layout_gravity="center"
+                            android:id="@+id/sinochartV_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="10dp"
+                            />
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            >
+
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@drawable/indicatessinovac" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginBottom="7dp"
+                                android:textColor="#999999"
+                                android:text=" Answered Sinovac"
+                                android:fontFamily="@font/poppins"/>
+
+                        </LinearLayout>
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:layout_gravity="center"
+                            android:id="@+id/astrachartV_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            >
+
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@drawable/indicatesoxford" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginBottom="7dp"
+                                android:textColor="#999999"
+                                android:text=" Answered AstraZeneca"
+                                android:fontFamily="@font/poppins"/>
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="25dp"
+                            android:background="#66E4E4E4"/>
+
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:layout_gravity="center"
+                            android:id="@+id/nonechartV_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            >
+
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@drawable/indicatesnone" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginBottom="7dp"
+                                android:textColor="#999999"
+                                android:text=" Answered None"
+                                android:fontFamily="@font/poppins"/>
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="25dp"
+                            android:background="#66E4E4E4"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/genderVaccinecard_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    app:cardCornerRadius="5dp"
+                    app:strokeColor="#22000000"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_gendertotalVaccine_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="Gender"
+                            android:textSize="20sp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="25dp"
+                            android:background="#66E4E4E4"/>
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/totalVaccinesgenderpiechart_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="15dp" />
+
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            >
+
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@drawable/indicatorcommunitymale" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#999999"
+                                android:text=" Number of male users vaccinated"
+                                android:fontFamily="@font/poppins"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="7dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            >
+
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@drawable/indicatorcommunityfemale" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textColor="#999999"
+                                android:text=" Number of female users vaccinated"
+                                android:fontFamily="@font/poppins"/>
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="25dp"
+                            android:background="#66E4E4E4"/>
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:id="@+id/negativegenderpiechart_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="15dp" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginBottom="7dp"
+                                android:textColor="#999999"
+                                android:text="Statistics from male users"
+                                android:fontFamily="@font/poppins"/>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="25dp"
+                            android:background="#66E4E4E4"/>
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:id="@+id/contactedgenderpiechart_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="15dp" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginBottom="7dp"
+                                android:textColor="#999999"
+                                android:text="Statistics from female users "
+                                android:fontFamily="@font/poppins"/>
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <Switch
+        android:id="@+id/CommunitySwitch_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.071" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
