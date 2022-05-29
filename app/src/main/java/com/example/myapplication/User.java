@@ -11,8 +11,7 @@ public class User {
     private String gender;
     private String country;
     private String covid;
-    private Map<String,Object> vaccines;
-    private Boolean set;
+    private Map<String, Integer> vaccines;
 
     private User(){
         // empty constructor for firebase
@@ -89,19 +88,12 @@ public class User {
         this.covid = covid;
     }
 
-    public Map<String, Object> getVaccines() {
+    public Map<String, Integer> getVaccines() {
         return vaccines;
     }
 
-    public void setVaccines(Map<String, Object> vaccines) {
+    public void setVaccines(Map<String, Integer> vaccines) {
         this.vaccines = vaccines;
     }
 
-    public Boolean getSet() {
-        return set;
-    }
-
-    public void setSet(Boolean set) {
-        this.set = set;
-    }
 }//end of class
