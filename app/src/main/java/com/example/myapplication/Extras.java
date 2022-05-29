@@ -54,7 +54,7 @@ public class Extras extends AppCompatActivity {
         community.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent x = new Intent(Extras.this,CommunityVaccinePage.class);
+                Intent x = new Intent(Extras.this, CommunityPage.class);
                 x.putExtra("src","extra");
                 startActivity(x);
             }

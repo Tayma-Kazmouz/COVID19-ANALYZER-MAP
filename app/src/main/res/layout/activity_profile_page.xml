@@ -59,16 +59,14 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
             app:cardCornerRadius="10dp"
-            app:layout_constraintBottom_toTopOf="@id/bt_save_id"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline1"
             app:strokeColor="#22000000"
             app:strokeWidth="2dp">
 
-            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools"
+            <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fillViewport="true">
@@ -272,9 +270,30 @@
                     app:layout_constraintEnd_toEndOf="@id/editiconstart"
                     app:layout_constraintStart_toStartOf="@id/cardstart"
                     app:layout_constraintTop_toBottomOf="@id/vaccineexample"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/bt_save_id"
                     />
 
+
+                <Button
+                    android:id="@+id/bt_save_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/capbuttonpressselector"
+                    android:enabled="true"
+                    android:letterSpacing="0.02"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/editiconstart"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@id/cardstart"
+                    app:layout_constraintTop_toBottomOf="@id/vaccineexample2"
+                    app:layout_constraintVertical_bias="0.0"></Button>
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/cardstart"
@@ -291,7 +310,6 @@
                     app:layout_constraintGuide_percent="0.87" />
 
 
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             </ScrollView>
@@ -299,22 +317,6 @@
         </com.google.android.material.card.MaterialCardView>
 
 
-        <Button
-            android:id="@+id/bt_save_id"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/capbuttonpressselector"
-            android:enabled="true"
-            android:letterSpacing="0.02"
-            android:text="Save"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/buttonend"
-            app:layout_constraintStart_toStartOf="@id/buttonstart"
-            app:layout_constraintTop_toBottomOf="@id/cardcontainer"></Button>
 
 
         <androidx.constraintlayout.widget.Guideline
