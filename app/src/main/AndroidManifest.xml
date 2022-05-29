@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
             android:name=".SampledAnalyzedCountries"
             android:exported="false" />
         <activity
@@ -25,7 +28,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="${MAPS_API_KEY}" />
-
 
         <activity
             android:name=".MapsActivity"
@@ -80,15 +82,11 @@
             android:exported="false" />
         <activity
             android:name=".RegisterPage"
-            android:exported="true"/>
-
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
-
-
     </application>
 
 </manifest>

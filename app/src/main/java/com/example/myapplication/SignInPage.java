@@ -45,6 +45,7 @@ public class SignInPage extends AppCompatActivity {
 
     boolean passwordVisible;
     TextView gotoregisterpage;
+    TextView goToForgotPassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +64,14 @@ public class SignInPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(SignInPage.this, RegisterPage.class));
+            }
+        });
+
+        goToForgotPassword = findViewById(R.id.forgotPassword_id);
+        goToForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SignInPage.this,ForgotPassword.class));
             }
         });
 
