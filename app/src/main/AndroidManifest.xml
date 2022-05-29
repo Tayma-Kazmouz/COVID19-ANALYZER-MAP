@@ -13,6 +13,11 @@
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true">
         <activity
+
+            android:name=".CommunityPage"
+            android:exported="false" />
+        <activity
+            android:name=".ProfilePage"
             android:name=".ForgotPassword"
             android:exported="false" />
         <activity
