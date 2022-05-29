@@ -13,7 +13,7 @@
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".CommunityVaccinePage"
+            android:name=".CommunityPage"
             android:exported="false" />
         <activity
             android:name=".ProfilePage"
