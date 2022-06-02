@@ -57,7 +57,7 @@ public class CovidDetails extends AppCompatActivity {
         sbRecovered = findViewById(R.id.sbRecovered_id);
         sbDeaths = findViewById(R.id.sbDeaths_id);
 
-        ivFlag = findViewById(R.id.ivFlag_id);
+        ivFlag = findViewById(R.id.ivCountryFlagProfile_id);
         ivMap = findViewById(R.id.ivMap_id);
 
         myPieChart = findViewById(R.id.detailedPieChart_id);

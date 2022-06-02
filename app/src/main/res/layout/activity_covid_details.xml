@@ -69,7 +69,7 @@
 
 
                     <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/ivFlag_id"
+                        android:id="@+id/ivCountryFlagProfile_id"
                         android:layout_width="100dp"
                         android:layout_height="60dp"
                         android:adjustViewBounds="true"
@@ -100,7 +100,7 @@
                         app:layout_constraintBottom_toTopOf="@+id/view3"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.049"
-                        app:layout_constraintStart_toEndOf="@+id/ivFlag_id"
+                        app:layout_constraintStart_toEndOf="@+id/ivCountryFlagProfile_id"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.484" />
 

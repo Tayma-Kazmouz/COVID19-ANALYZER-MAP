@@ -33,7 +33,7 @@ public class ReportStatus1 extends AppCompatActivity {
 
     CheckBox cbPfizer,cbModerna,cbJJ,cbSinovac,cbAstra,cbNone;
     HorizontalQuantitizer pfizerCounter,modernaCounter,jjCounter,sinovacCounter,astraCounter;
-    Map<String, Integer> Vaccines = new HashMap<>();
+    Map<String, Long> Vaccines = new HashMap<>();
     User user;
 
 
@@ -98,7 +98,7 @@ public class ReportStatus1 extends AppCompatActivity {
         jjCounter.setVisibility(View.INVISIBLE);
 
         sinovacCounter = findViewById(R.id.sinovacVal_id);
-        sinovacCounter.setTag("sinovac");
+        sinovacCounter.setTag("sino");
         sinovacCounter.setMinusIconBackgroundColor("#75FF647C");
         sinovacCounter.setTextAnimationStyle(AnimationStyle.FALL_IN);
         sinovacCounter.setAnimationDuration(300);
@@ -319,7 +319,7 @@ public class ReportStatus1 extends AppCompatActivity {
                     // search in array called counters for visible ones and set the visible one's tags string attribute to Vaccines Map along with the corresponding values
                     for (HorizontalQuantitizer c : counters){
                         if (c.getVisibility() == View.VISIBLE){
-                            Vaccines.put(c.getTag().toString(),c.getValue());
+                            Vaccines.put(c.getTag().toString(), (long) c.getValue());
                         }
                     }
 

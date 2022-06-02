@@ -15,11 +15,18 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.WriteBatch;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import es.dmoral.toasty.Toasty;
 
@@ -34,7 +41,13 @@ public class ReportStatus2 extends AppCompatActivity {
     private String uid; // unique user id
     private FirebaseFirestore db;
     private FirebaseAuth firebaseAuth;
+    private DocumentReference refUsers;
+    private DocumentReference refReports;
 
+    boolean correctlySetup;
+    String ageGroup;
+    String gender;
+    Map<String,Object> aggregateMap = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +65,9 @@ public class ReportStatus2 extends AppCompatActivity {
         rbNone = findViewById(R.id.rb4_id);
         rbNone.setTag("none");
 
-        User user = User.getInstance();
-        Log.e("x", "onCreate: " + user.getName() +" "+user.getEmail()+" "+user.getCountry() +" "+user.getGender()+" "+user.getDob() +" "+ user.getVaccines().toString());
+        correctlySetup = false;
+
+        user = User.getInstance();
 
         backarrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,18 +101,8 @@ public class ReportStatus2 extends AppCompatActivity {
                     firebaseAuth = FirebaseAuth.getInstance();
                     uid = firebaseAuth.getCurrentUser().getUid();
 
-                    // start a document in Firestore with the user's unique id and set the values as user object
-                    db.collection("Users").document(uid).set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void unused) {
-                            successDialog();
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toasty.error(getApplicationContext(), "Storing details failed!", Toast.LENGTH_SHORT, true).show();
-                        }
-                    });
+                    // store user data in Firebase Firestore
+                    makeBatchWrite();
 
                 }
             }
@@ -110,7 +114,95 @@ public class ReportStatus2 extends AppCompatActivity {
 
     }
 
+    private String getAgeGroup() {
+        Long userAge = user.getAge();
+        if (userAge <= 10){
+            return "age10";
+        }else if (userAge < 20){
+            return "age11";
+        }else if (userAge <30){
+            return  "age20";
+        }else  if (userAge <40){
+            return "age30";
+        } else  if (userAge <50){
+            return  "age40";
+        }else  if (userAge <60){
+            return  "age50";
+        }else if (userAge <70){
+            return  "age60";
+        }else if (userAge <80){
+            return "age70";
+        }else {
+            return "age80";
+        }
+    }//end of getAgeGroup
+
+    //atomically (all or nothing approach) write to Users and Update Reports Collections
+    private void makeBatchWrite(){
+
+        //these will be used to refer to the correct fields in "aggregate" document
+        ageGroup = getAgeGroup().trim();
+        gender = user.getGender().toLowerCase().trim();
+
+        // ____________________________ Aggregate Vaccines Data ____________________________________
+
+        // if user got no vaccines... increment "nonev" in aggregate document
+        if (user.getVaccines().isEmpty()){
+            aggregateMap.put("nonev."+ageGroup, FieldValue.increment(1));
+            aggregateMap.put("nonev."+gender, FieldValue.increment(1));
+        }else {
+
+            // iterate of user's vaccine map keys to increment them in Firestore in the code below
+            for (String vaccine : user.getVaccines().keySet()){
+                aggregateMap.put(vaccine.toLowerCase().trim()+"."+ageGroup, FieldValue.increment(1));
+                aggregateMap.put(vaccine.toLowerCase().trim()+"."+gender, FieldValue.increment(1));
+            }
+        }
+        // ____________________________ Aggregate Covid Condition Data ____________________________________
+
+        aggregateMap.put(Condition+"."+ageGroup, FieldValue.increment(1));
+        aggregateMap.put(Condition+"."+gender, FieldValue.increment(1));
+
+        // ____________________________ Aggregate males/females fields  ____________________________________
+        if (gender.equals("m")){
+            aggregateMap.put("males", FieldValue.increment(1));
+        }else {
+            aggregateMap.put("females", FieldValue.increment(1));
+        }
+
+        // make a user write batch
+        WriteBatch userWriteBatch = db.batch();
+
+        // start a document in Firestore with the user's unique id and set the values as user object
+        refUsers = db.collection("Users").document(uid);
+
+        // refer to aggregate doc which contains all the users collected data
+        refReports = db.collection("Report").document("aggregate");
+
+        refUsers.set(user);
+
+        refReports.update(aggregateMap);
+
+
+        // commit the Users Write, Reports Update batch
+        userWriteBatch.commit().addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+                    successDialog();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toasty.error(getApplicationContext(), "Storing details failed! try again later..", Toast.LENGTH_SHORT, true).show();
+            }
+        });
+
+    }// end of db write function
+
+
     private void successDialog() {
+
+        correctlySetup = true;
 
         Dialog dialog=new Dialog(this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
         dialog.setContentView(R.layout.setup_success);
@@ -134,6 +226,15 @@ public class ReportStatus2 extends AppCompatActivity {
 
             }
         }.start();
-    }
 
-}
+    }//end of successDialog
+
+    @Override
+    public void onBackPressed() {
+        if (correctlySetup){
+            return;
+        }else {
+            super.onBackPressed();
+        }
+    }
+}//end of class

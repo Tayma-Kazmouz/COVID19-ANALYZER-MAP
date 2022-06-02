@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbars="none"
+    android:background="#FFFFFF"
     android:fillViewport="true">
 
     <LinearLayout
@@ -146,6 +147,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_light"
                     android:text="@string/biontech"
+                    android:textColor="@color/black"
                     android:textSize="14sp" />
 
                 <com.mcdev.quantitizerlibrary.HorizontalQuantitizer
@@ -175,6 +177,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_light"
                     android:text="@string/moderna"
+                    android:textColor="@color/black"
                     android:textSize="14sp" />
 
                 <com.mcdev.quantitizerlibrary.HorizontalQuantitizer
@@ -205,6 +208,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_light"
                     android:text="@string/johnson_johnson"
+                    android:textColor="@color/black"
                     android:textSize="14sp" />
 
                 <com.mcdev.quantitizerlibrary.HorizontalQuantitizer
@@ -236,6 +240,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_light"
                     android:text="@string/sinovac"
+                    android:textColor="@color/black"
                     android:textSize="14sp" />
 
                 <com.mcdev.quantitizerlibrary.HorizontalQuantitizer
@@ -266,6 +271,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_light"
                     android:text="@string/astrazeneca"
+                    android:textColor="@color/black"
                     android:textSize="14sp" />
 
                 <com.mcdev.quantitizerlibrary.HorizontalQuantitizer
@@ -291,6 +297,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_light"
                     android:text="@string/none"
+                    android:textColor="@color/black"
                     android:textSize="14sp" />
 
             <View

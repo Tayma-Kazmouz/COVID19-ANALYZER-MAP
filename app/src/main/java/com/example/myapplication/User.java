@@ -11,7 +11,9 @@ public class User {
     private String gender;
     private String country;
     private String covid;
-    private Map<String, Integer> vaccines;
+    private Map<String, Long> vaccines;
+
+
 
     private User(){
         // empty constructor for firebase
@@ -88,11 +90,11 @@ public class User {
         this.covid = covid;
     }
 
-    public Map<String, Integer> getVaccines() {
+    public Map<String, Long> getVaccines() {
         return vaccines;
     }
 
-    public void setVaccines(Map<String, Integer> vaccines) {
+    public void setVaccines(Map<String, Long> vaccines) {
         this.vaccines = vaccines;
     }
 

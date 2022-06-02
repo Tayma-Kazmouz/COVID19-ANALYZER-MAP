@@ -6,12 +6,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.blongho.country_data.World;
 import com.google.android.material.card.MaterialCardView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import es.dmoral.toasty.Toasty;
 
 public class Extras extends AppCompatActivity {
 
     //Declare
+    private FirebaseAuth firebaseAuth;
+    private FirebaseUser fbUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +27,11 @@ public class Extras extends AppCompatActivity {
         setContentView(R.layout.activity_extras);
 
         //Define
+        World.init(getApplicationContext());
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        fbUser = firebaseAuth.getCurrentUser();
+
 
         ImageView ivBack = findViewById(R.id.ivExtrasBackArrow_id);
         ivBack.setOnClickListener(new View.OnClickListener() {
@@ -43,8 +56,16 @@ public class Extras extends AppCompatActivity {
         myprofile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent x = new Intent(Extras.this,ProfileActivity.class);
-                startActivity(x);
+
+                if (fbUser == null){
+                    Toasty.error(getApplicationContext(), "No User Signed In", Toast.LENGTH_SHORT,true).show();
+                    return;
+                }else{
+                    Intent x = new Intent(Extras.this,ProfileActivity.class);
+                    startActivity(x);
+                }
+
+
             }
         });
 

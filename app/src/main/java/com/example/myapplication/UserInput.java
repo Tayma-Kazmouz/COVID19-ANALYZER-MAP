@@ -93,6 +93,7 @@ public class UserInput extends AppCompatActivity {
                         return;
                     }
 
+
                     DOB = makeDateString(datePickerDialog.getDatePicker().getDayOfMonth(),datePickerDialog.getDatePicker().getMonth()+1,datePickerDialog.getDatePicker().getYear());
 
                     Country = spinner.getSelectedItem().toString().trim();
@@ -119,6 +120,7 @@ public class UserInput extends AppCompatActivity {
 
                         if (Age == -1)
                             Age = 0L ;
+
 
                     user = User.getInstance();
 
