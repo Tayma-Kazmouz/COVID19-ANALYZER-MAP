@@ -81,6 +81,26 @@ public class Extras extends AppCompatActivity {
 
 
 
+        MaterialCardView aboutus = findViewById(R.id.aboutuspage_id); //aboutus page
+        aboutus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent x = new Intent(Extras.this, AboutUs.class);
+                startActivity(x);
+            }
+        });
+
+
+        MaterialCardView resources = findViewById(R.id.resourcespage_id); //resources page
+        resources.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent x = new Intent(Extras.this, Resources.class);
+                startActivity(x);
+            }
+        });
+
+
 
     }//end of onCreate
 
