@@ -144,7 +144,7 @@
                             app:layout_constraintTop_toBottomOf="@id/covidcommunitydata_id"> </TextView>
 
                         <TextView
-                            android:id="@+id/tv_total_id"
+                            android:id="@+id/tv_total_covid_id"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="18dp"
@@ -202,6 +202,71 @@
 
                 </com.google.android.material.card.MaterialCardView>
 
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/totalCovidcard_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    app:cardCornerRadius="5dp"
+                    app:strokeColor="#22000000"
+                    app:strokeWidth="1dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="Total"
+                            android:textSize="20sp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="25dp"
+                            android:background="#66E4E4E4"/>
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:layout_gravity="center"
+                            android:id="@+id/totalchartCovid_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="25dp"
+                            android:background="#66E4E4E4"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins"
+                            android:text="total number of each condition reported from users"
+                            />
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/ageCovidcard_id"
@@ -215,6 +280,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:paddingLeft="5dp"
                         android:orientation="vertical">
 
                         <TextView
@@ -449,6 +515,17 @@
                                 android:fontFamily="@font/poppins"/>
 
                         </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/community_covidPositive_males_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_black"
+                            android:text="160,914"
+                            android:textColor="#6CA0DC"
+                            android:textSize="23sp" />
+
                         <LinearLayout
                             android:layout_marginTop="5dp"
                             android:layout_width="match_parent"
@@ -470,6 +547,16 @@
                                 android:fontFamily="@font/poppins"/>
 
                         </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/community_covidPositive_females_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_black"
+                            android:text="160,914"
+                            android:textColor="#FFC0CB"
+                            android:textSize="23sp" />
 
                         <View
                             android:layout_width="match_parent"
@@ -507,6 +594,17 @@
                                 android:fontFamily="@font/poppins"/>
 
                         </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/community_covidNegative_males_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_black"
+                            android:text="160,914"
+                            android:textColor="#6CA0DC"
+                            android:textSize="23sp" />
+
                         <LinearLayout
                             android:layout_marginTop="5dp"
                             android:layout_width="match_parent"
@@ -528,6 +626,16 @@
                                 android:fontFamily="@font/poppins"/>
 
                         </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/community_covidNegative_females_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_black"
+                            android:text="160,914"
+                            android:textColor="#FFC0CB"
+                            android:textSize="23sp" />
 
                         <View
                             android:layout_width="match_parent"
@@ -565,6 +673,17 @@
                                 android:fontFamily="@font/poppins"/>
 
                         </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/community_covidContacted_males_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_black"
+                            android:text="160,914"
+                            android:textColor="#6CA0DC"
+                            android:textSize="23sp" />
+
                         <LinearLayout
                             android:layout_marginTop="5dp"
                             android:layout_width="match_parent"
@@ -586,6 +705,17 @@
                                 android:fontFamily="@font/poppins"/>
 
                         </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/community_covidContacted_females_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_black"
+                            android:text="160,914"
+                            android:textColor="#FFC0CB"
+                            android:textSize="23sp" />
+
 
                         <View
                             android:layout_width="match_parent"
@@ -624,6 +754,17 @@
                                 android:fontFamily="@font/poppins"/>
 
                         </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/community_covidNone_males_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_black"
+                            android:text="160,914"
+                            android:textColor="#6CA0DC"
+                            android:textSize="23sp" />
+
                         <LinearLayout
                             android:layout_marginTop="5dp"
                             android:layout_width="match_parent"
@@ -645,6 +786,17 @@
                                 android:fontFamily="@font/poppins"/>
 
                         </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/community_covidNone_females_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_black"
+                            android:text="160,914"
+                            android:textColor="#FFC0CB"
+                            android:textSize="23sp" />
 
                     </LinearLayout>
 
@@ -805,6 +957,72 @@
 
                 </com.google.android.material.card.MaterialCardView>
 
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/totalVcard_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    app:cardCornerRadius="5dp"
+                    app:strokeColor="#22000000"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="Total"
+                            android:textSize="20sp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="25dp"
+                            android:background="#66E4E4E4"/>
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:layout_gravity="center"
+                            android:id="@+id/totalchartV_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="25dp"
+                            android:background="#66E4E4E4"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins"
+                            android:text="total number of each vaccine reported from users"
+                          />
+
+                    </LinearLayout>
+
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/ageVcard_id"
@@ -818,7 +1036,9 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
 
                         <TextView
                             android:id="@+id/tv_ageV_id"
@@ -968,7 +1188,6 @@
                             />
                         <LinearLayout
                             android:layout_marginTop="5dp"
-                            android:layout_marginBottom="20dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
@@ -990,6 +1209,14 @@
                                 android:fontFamily="@font/poppins"/>
 
                         </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="25dp"
+                            android:background="#66E4E4E4"/>
 
                         <com.github.mikephil.charting.charts.BarChart
                             android:layout_gravity="center"
@@ -1087,6 +1314,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:paddingLeft="5dp"
                         android:orientation="vertical">
 
                         <TextView
@@ -1136,6 +1364,16 @@
 
                         </LinearLayout>
 
+                        <TextView
+                            android:id="@+id/community_vaccine_males_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_black"
+                            android:text="160,914"
+                            android:textColor="#6CA0DC"
+                            android:textSize="23sp" />
+
                         <LinearLayout
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="7dp"
@@ -1159,6 +1397,18 @@
                                 android:fontFamily="@font/poppins"/>
 
                         </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/community_vaccine_females_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_black"
+                            android:text="160,914"
+                            android:textColor="#FFC0CB"
+                            android:textSize="23sp" />
+
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -1168,7 +1418,7 @@
                             android:background="#66E4E4E4"/>
 
                         <com.github.mikephil.charting.charts.BarChart
-                            android:id="@+id/negativegenderpiechart_id"
+                            android:id="@+id/vaccine_community_males_barchart_id"
                             android:layout_width="match_parent"
                             android:layout_height="250dp"
                             android:layout_marginTop="10dp"
@@ -1195,7 +1445,7 @@
                             android:background="#66E4E4E4"/>
 
                         <com.github.mikephil.charting.charts.BarChart
-                            android:id="@+id/contactedgenderpiechart_id"
+                            android:id="@+id/vaccine_community_females_barchart_id"
                             android:layout_width="match_parent"
                             android:layout_height="250dp"
                             android:layout_marginTop="10dp"

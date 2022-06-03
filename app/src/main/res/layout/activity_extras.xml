@@ -161,6 +161,7 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/notificationsCV_id"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_marginRight="5dp"
