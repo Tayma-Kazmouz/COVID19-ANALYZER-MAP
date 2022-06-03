@@ -239,6 +239,7 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/aboutuspage_id"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_marginRight="5dp"
@@ -273,6 +274,7 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/resourcespage_id"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_marginLeft="5dp"

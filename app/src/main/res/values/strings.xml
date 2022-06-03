@@ -102,6 +102,15 @@ Most people infected with the virus will experience mild to moderate respiratory
 
     <string name="a_center_to_reach_information_and_statistics_about_the_covid_19_pandemic_in_a_simple_and_user_friendly_way">A center to reach information and statistics about the COVID-19 pandemic in a simple and user-friendly way.</string>
     <string name="answered_johnson_and_johnson">Answered Johnson &amp; Johnson</string>
+    <string name="aboutusp1"><![CDATA[This COVID ANALYZER MAP is the capstone project #1010315 for the SEN (software engineering) & ENM (management engineering) departments. The SEN department built the application using the ENM\'s analysed data.]]></string>
+    <string name="aboutusp2">We hope this application will benefit the people and provide all the necessary information required.</string>
+
+
+
+
+    //hyperlink
+
+    <string name="hyperlink1"> <a href="https://disease.sh/">disease.sh</a> </string>
 
 
 </resources>
