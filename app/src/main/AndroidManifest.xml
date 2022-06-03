@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true">
+
+
         <activity
             android:name=".Notifications"
             android:exported="false" />
@@ -27,6 +29,15 @@
         <activity
             android:name=".SampledAnalyzedCountries"
             android:exported="false" />
+
+        <activity
+            android:name=".AboutUs"
+            android:exported="false" />
+
+        <activity
+            android:name=".Resources"
+            android:exported="false" />
+
         <activity
             android:name=".AnalyzedVariant"
             android:exported="false" />

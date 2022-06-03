@@ -89,8 +89,9 @@
                     android:layout_marginTop="5dp"
                     android:text="@string/aboutusp1"
                     android:gravity="left"
-                    android:textColor="#535353"
+                    android:textColor="#99000000"
                     android:textSize="14sp"
+                    android:lineSpacingExtra="8dp"
                     android:fontFamily="@font/poppins"/>
 
 
@@ -101,8 +102,9 @@
                    android:layout_marginTop="15dp"
                    android:text="@string/aboutusp2"
                    android:gravity="left"
-                   android:textColor="#535353"
+                   android:textColor="#99000000"
                    android:textSize="14sp"
+                   android:lineSpacingExtra="8dp"
                    android:fontFamily="@font/poppins"/>
 
 
