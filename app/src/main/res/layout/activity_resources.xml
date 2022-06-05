@@ -66,7 +66,7 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/aboutuscard_id"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 app:cardCornerRadius="5dp"
@@ -83,23 +83,113 @@
                     android:padding="20dp"
                     >
 
-                <TextView
-                    android:id="@+id/resource1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/hyperlink1"
-                    android:gravity="left"
-                    android:textColor="#535353"
-                    android:textSize="14sp"
-                    android:fontFamily="@font/poppins"/>
+                    <TextView
+                        android:id="@+id/resource1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/hyperlink1"
+                        android:gravity="left"
+                        android:textColor="#535353"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins"/>
 
+                    <TextView
+                        android:id="@+id/resource2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/hyperlink2"
+                        android:gravity="left"
+                        android:textColor="#535353"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins"/>
 
+                    <TextView
+                        android:id="@+id/resource3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/hyperlink3"
+                        android:gravity="left"
+                        android:textColor="#535353"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins"/>
 
+                    <TextView
+                        android:id="@+id/resource4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/hyperlink4"
+                        android:gravity="left"
+                        android:textColor="#535353"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins"/>
 
+                    <TextView
+                        android:id="@+id/resource5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/hyperlink5"
+                        android:gravity="left"
+                        android:textColor="#535353"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins"/>
 
+                    <TextView
+                        android:id="@+id/resource6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/hyperlink6"
+                        android:gravity="left"
+                        android:textColor="#535353"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins"/>
 
+                    <TextView
+                        android:id="@+id/resource7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/hyperlink7"
+                        android:gravity="left"
+                        android:textColor="#535353"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins"/>
+
+                    <TextView
+                        android:id="@+id/resource8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/hyperlink8"
+                        android:gravity="left"
+                        android:textColor="#535353"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins"/>
+
+                    <TextView
+                        android:id="@+id/resource9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/hyperlink9"
+                        android:gravity="left"
+                        android:textColor="#535353"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>

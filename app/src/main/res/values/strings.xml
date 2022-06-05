@@ -110,7 +110,16 @@ Most people infected with the virus will experience mild to moderate respiratory
 
     //hyperlink
 
-    <string name="hyperlink1"> <a href="https://disease.sh/">disease.sh</a> </string>
+    <string name="hyperlink1">Resource #1: Corona Cases  \n<a href="https://disease.sh/docs/#/COVID-19%3A%20Worldometers/get_v3_covid_19_countries">www.disease.sh/covid19_countries</a> </string>
+    <string name="hyperlink2">Resource #2: Detailed Corona Cases \n<a href="https://disease.sh/docs/#/COVID-19%3A%20Worldometers/get_v3_covid_19_countries__country_">www.disease.sh/covid19_country</a></string>
+    <string name="hyperlink3">Resource #3: Vaccines\n<a href="https://disease.sh/docs/#/COVID-19%3A%20Vaccine/get_v3_covid_19_vaccine_coverage_countries">www.disease.sh/covid19_vaccinations</a></string>
+    <string name="hyperlink4">Resource #4: Detailed Vaccines \n<a href="https://disease.sh/docs/#/COVID-19%3A%20Vaccine/get_v3_covid_19_vaccine_coverage_countries__country_">www.disease.sh/covid19_vaccinations_country</a></string>
+    <string name="hyperlink5">Resource #5: Analyzed Data France \n<a href="https://www.data.gouv.fr/fr/">www.data.gouv.fr/fr/</a>\nDate: 10-MAR-2022</string>
+    <string name="hyperlink6">Resource #6: Analyzed Data Germany \n<a href="https://en.wikipedia.org/wiki/COVID-19_vaccination_in_Germany">www.wikipedia.com/germany_vaccinations</a>\nDate: 11-MAR-2022</string>
+    <string name="hyperlink7">Resource #7: Analyzed Data Ukraine \n<a href="https://www.statista.com/statistics/1243623/covid-19-vaccination-by-region-ukraine/">www.statista.com/vaccination_ukraine/</a>\nDate: 21-FEB-2022</string>
+    <string name="hyperlink8">Resource #8: Analyzed Data USA \n<a href="https://ourworldindata.org/us-states-vaccinations">ourworldindata.org/us-vaccinations </a>\nDate: 12-JAN-2021 to 9-APR-2022</string>
+    <string name="hyperlink9">Resource #9: Analyzed Data Variants \n<a href="https://www.healthdata.org/covid/covid-19-vaccine-efficacy-summary">www.healthdata.org/vaccine-efficacy </a>\nDate: 18-FEB-2022</string>
+
 
 
 </resources>
