@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.app.AlarmManager;
 import android.app.NotificationChannel;
@@ -92,7 +93,7 @@ public class Notifications extends AppCompatActivity {
                     if (pendingIntent != null && alarmManager != null){
 
                         alarmManager.cancel(pendingIntent);
-                        Toasty.info(getApplicationContext(),"Canceled Notification...",Toast.LENGTH_SHORT,true).show();
+                        Toasty.info(getApplicationContext(),"Disable The Notification...",Toast.LENGTH_SHORT,true).show();
 
                         SharedPreferences.Editor editor = getSharedPreferences("SP_Notifications",MODE_PRIVATE).edit();
                         editor.putString("country","Canceled");
@@ -241,6 +242,15 @@ public class Notifications extends AppCompatActivity {
 
             }
     }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // force disable night mode
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+    }
+
 
 
 }//end of Activity class

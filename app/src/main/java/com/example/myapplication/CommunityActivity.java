@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -776,5 +777,14 @@ public class CommunityActivity extends AppCompatActivity {
 
 
     } //end of createCovidTotalBarChart()
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // force disable night mode
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+    }
+
 
 }//end of class

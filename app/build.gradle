@@ -4,6 +4,7 @@ plugins {
     id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 
     id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
 
 
 }
@@ -46,12 +47,18 @@ dependencies {
 
     // Google Firebase
     implementation platform('com.google.firebase:firebase-bom:30.0.1')
-    implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-auth:21.0.4'
     implementation 'com.google.firebase:firebase-firestore:24.1.2'
+    implementation 'com.google.firebase:firebase-analytics:21.0.0'
+
 
     // for Encrypted SP
     implementation 'androidx.security:security-crypto:1.0.0'
+
+
+
+    implementation 'com.google.firebase:firebase-crashlytics:18.2.11'
+
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

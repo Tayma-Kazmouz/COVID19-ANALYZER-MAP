@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.blongho.country_data.World;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 public class Launcher extends AppCompatActivity {
 
@@ -25,18 +27,15 @@ public class Launcher extends AppCompatActivity {
         setContentView(R.layout.activity_launcher);
 
 
+        FirebaseApp.initializeApp(getApplicationContext());
+        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true);
+
+
         World.init(getApplicationContext()); // Initializes the countries library and loads all data
 
         // force disable night mode
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
-        TextView gotoUserInput = findViewById(R.id.launchtitle_id);
-        gotoUserInput.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Launcher.this,UserInput.class));
-            }
-        });
 
         gotoregisterpage = findViewById(R.id.bt_register_id);
         gotoregisterpage.setOnClickListener(new View.OnClickListener() {
@@ -61,6 +60,12 @@ public class Launcher extends AppCompatActivity {
 
     }//end of onCreate
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // force disable night mode
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+    }
 
 
 }//end of Class

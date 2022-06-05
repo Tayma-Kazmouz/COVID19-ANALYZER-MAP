@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -294,6 +295,9 @@ public class DashBoard extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+
+        // force disable night mode
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         plotData();
 
@@ -649,6 +653,9 @@ public class DashBoard extends AppCompatActivity {
 
 
     }//end of parseJsonObjs
+
+
+
 
 
 }//end of class

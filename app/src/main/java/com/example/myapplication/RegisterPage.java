@@ -1,12 +1,9 @@
 package com.example.myapplication;
 
-import android.accounts.Account;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -16,12 +13,14 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.concurrent.atomic.AtomicInteger;
 
 import es.dmoral.toasty.Toasty;
 
@@ -39,13 +38,14 @@ public class RegisterPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
+        AtomicInteger click = new AtomicInteger();
         TextView tempTV = findViewById(R.id.register_id);
         tempTV.setOnClickListener(view -> {
+            click.getAndIncrement();
+            if (click.get() >= 20){
             startActivity(new Intent(RegisterPage.this,DashBoard.class));
+            }
         });
-
 
 
 
@@ -166,6 +166,12 @@ public class RegisterPage extends AppCompatActivity {
 
     }//end of onCreate
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // force disable night mode
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+    }
 
 
 }//end of class

@@ -199,7 +199,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="7dp"
                         android:textColor="#999999"
-                        android:text="Total: 141204880 (100%) "
+                        android:text="Total: 141,204,880 (100%) "
                         android:fontFamily="@font/poppins"/>
 
 
@@ -391,7 +391,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="7dp"
                         android:textColor="#999999"
-                        android:text="Total: 170977292 (100%)"
+                        android:text="Total: 170,977,292 (100%)"
                         android:fontFamily="@font/poppins"/>
 
 
@@ -540,7 +540,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="7dp"
                         android:textColor="#999999"
-                        android:text="Total: 579242327 (100%)"
+                        android:text="Total: 579,242,327 (100%)"
                         android:fontFamily="@font/poppins"/>
 
 
@@ -734,7 +734,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="7dp"
                         android:textColor="#999999"
-                        android:text="Total: 31668577 (100%)"
+                        android:text="Total: 31,668,577 (100%)"
                         android:fontFamily="@font/poppins"/>
 
 

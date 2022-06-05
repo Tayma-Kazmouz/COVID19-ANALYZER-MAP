@@ -67,7 +67,6 @@
         android:scrollbars="none"
         android:fillViewport="true">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -75,27 +74,52 @@
             android:padding="20dp">
 
 
-            <TextView
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/aboutuscard_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_medium"
-                android:gravity="center"
-                android:textColor="#99000000"
-                android:textSize="17sp"
-                android:layout_marginTop="20dp"
-                android:text="Please select a country to receive daily Covid 19 alerts "/>
+                app:cardCornerRadius="5dp"
+                app:strokeColor="#22000000"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:textColor="#99000000"
+                        android:textSize="17sp"
+                        android:layout_marginTop="20dp"
+                        android:text="Please select a country to receive daily Covid 19 alerts "/>
 
 
 
-            <Spinner
-                android:visibility="visible"
-                android:id="@+id/spinnerNotifications_id"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp" />
+                    <Spinner
+                        android:visibility="visible"
+                        android:id="@+id/spinnerNotifications_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"/>
+
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
 
 
         </LinearLayout>
+
 
 
     </ScrollView>
