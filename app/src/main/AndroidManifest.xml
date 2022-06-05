@@ -3,6 +3,7 @@
     package="com.example.myapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
 
     <application
         android:allowBackup="true"
@@ -17,6 +18,12 @@
         <activity
             android:name=".Notifications"
             android:exported="false" />
+        
+        <receiver android:name=".NotificationsBroadcast"
+            android:enabled="true"
+            android:exported="true">
+        </receiver>
+
         <activity
             android:name=".ProfileActivity"
             android:exported="false" />

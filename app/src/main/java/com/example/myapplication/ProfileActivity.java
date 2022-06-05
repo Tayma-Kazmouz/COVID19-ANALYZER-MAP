@@ -4,10 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.security.crypto.EncryptedSharedPreferences;
+import androidx.security.crypto.MasterKeys;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -44,7 +47,9 @@ import com.google.firebase.firestore.WriteBatch;
 import com.mcdev.quantitizerlibrary.AnimationStyle;
 import com.mcdev.quantitizerlibrary.HorizontalQuantitizer;
 
+import java.io.IOException;
 import java.lang.reflect.Array;
+import java.security.GeneralSecurityException;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -393,6 +398,37 @@ public class ProfileActivity extends AppCompatActivity {
             aggregateMap.put("females", FieldValue.increment(1));
         }
 
+
+        // write to encrypted SP to use in every sign in
+
+        // ENCRYPTED USER SP
+
+        try {
+
+            String  mainKeyAlias;
+            SharedPreferences encSharedPreferences;
+            SharedPreferences.Editor enEdit;
+            String ENCRYPTED_SHARED_PREFERENCE = "Encrypted_User_SP";
+            mainKeyAlias = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC);
+
+
+            // We Pass The name & keyAlias defined above + Context , key encryption , value encryption .
+            encSharedPreferences = EncryptedSharedPreferences.create(
+                    ENCRYPTED_SHARED_PREFERENCE,
+                    mainKeyAlias,
+                    getApplicationContext(),
+                    EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+                    EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM);
+
+            enEdit = encSharedPreferences.edit();
+            // Edit/Write the user's Password shared preferences...
+            enEdit.putString("DOB",user.getDob());
+            enEdit.putString("AGE", String.valueOf(user.getAge()));
+            enEdit.apply();
+
+
+        } catch (Exception e) {
+            e.printStackTrace(); }
 
 
 
