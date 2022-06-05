@@ -192,7 +192,7 @@ public class Notifications extends AppCompatActivity {
         // at Hour 22:30
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR_OF_DAY,22);
-        calendar.set(Calendar.MINUTE,36);
+        calendar.set(Calendar.MINUTE,30);
         calendar.set(Calendar.SECOND,00);
 
         if (Calendar.getInstance().after(calendar)){
