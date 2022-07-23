@@ -147,7 +147,7 @@ public class SignInPage extends AppCompatActivity {
 
 
 
-                                    // Read from EN_SP to load password
+                                    // Read from EN_SP to load the  password
                                     try {
                                         mainKeyAlias = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC);
                                         // We Pass The name & keyAlias defined above + Context , key encryption , value encryption .
