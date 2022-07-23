@@ -1013,7 +1013,7 @@
                             android:layout_marginBottom="10dp"
                             android:gravity="center"
                             android:fontFamily="@font/poppins"
-                            android:text="total number of each vaccine reported from users"
+                            android:text="total number of doses for each vaccine reported from users"
                           />
 
                     </LinearLayout>
@@ -1085,7 +1085,7 @@
                                 android:layout_marginTop="7dp"
                                 android:layout_marginBottom="7dp"
                                 android:textColor="#999999"
-                                android:text=" Answered Pfizer/BioNTech"
+                                android:text="  Pfizer/BioNTech doses reported"
                                 android:fontFamily="@font/poppins"/>
 
                         </LinearLayout>
@@ -1124,7 +1124,7 @@
                                 android:layout_marginTop="7dp"
                                 android:layout_marginBottom="7dp"
                                 android:textColor="#999999"
-                                android:text=" Answered Moderna"
+                                android:text="  Moderna doses reported"
                                 android:fontFamily="@font/poppins"/>
 
                         </LinearLayout>
@@ -1205,7 +1205,7 @@
                                 android:layout_marginTop="7dp"
                                 android:layout_marginBottom="7dp"
                                 android:textColor="#999999"
-                                android:text=" Answered Sinovac"
+                                android:text="  Sinovac doses reported"
                                 android:fontFamily="@font/poppins"/>
 
                         </LinearLayout>
@@ -1245,7 +1245,7 @@
                                 android:layout_marginTop="7dp"
                                 android:layout_marginBottom="7dp"
                                 android:textColor="#999999"
-                                android:text=" Answered AstraZeneca"
+                                android:text="  AstraZeneca doses reported"
                                 android:fontFamily="@font/poppins"/>
 
                         </LinearLayout>
@@ -1432,7 +1432,7 @@
                                 android:layout_marginTop="7dp"
                                 android:layout_marginBottom="7dp"
                                 android:textColor="#999999"
-                                android:text="Statistics from male users"
+                                android:text="Doses statistics from male users"
                                 android:fontFamily="@font/poppins"/>
 
 
@@ -1459,7 +1459,7 @@
                                 android:layout_marginTop="7dp"
                                 android:layout_marginBottom="7dp"
                                 android:textColor="#999999"
-                                android:text="Statistics from female users "
+                                android:text="Doses statistics from female users "
                                 android:fontFamily="@font/poppins"/>
 
 

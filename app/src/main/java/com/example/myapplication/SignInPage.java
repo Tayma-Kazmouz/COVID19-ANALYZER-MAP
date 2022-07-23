@@ -183,7 +183,7 @@ public class SignInPage extends AppCompatActivity {
                                         refUsers.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                                             @Override
                                             public void onSuccess(DocumentSnapshot documentSnapshot) {
-                                                if (documentSnapshot.exists()){
+                                                if (documentSnapshot.contains("gender")){
 
 
                                                     String DOB = documentSnapshot.getString("dob");
