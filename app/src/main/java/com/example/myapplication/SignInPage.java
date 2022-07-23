@@ -135,7 +135,7 @@ public class SignInPage extends AppCompatActivity {
 
 
     /*
-     here we know email is verified and it'll check if the account has been correctly
+     here weeee know email is verified and it'll check if the account has been correctly
      set up in the Users collection and transfer the user accordingly to an activity
      */
 
@@ -147,7 +147,7 @@ public class SignInPage extends AppCompatActivity {
 
 
 
-                                    // Read from EN_SP to load the  password
+                                    // Read from EN_SP to load the  passworddd
                                     try {
                                         mainKeyAlias = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC);
                                         // We Pass The name & keyAlias defined above + Context , key encryption , value encryption .

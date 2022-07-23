@@ -168,9 +168,9 @@ public class Notifications extends AppCompatActivity {
         }
 
 
-        // if the spinner value wasnt found show msg
+        // if the spinner value was not found show message
         if (!found){
-            Toasty.warning(getApplicationContext(), "Country Data Not Available", Toast.LENGTH_SHORT).show();
+            Toasty.warning(getApplicationContext(), "Country Data Is Not Available", Toast.LENGTH_SHORT).show();
             return;
         }
 
